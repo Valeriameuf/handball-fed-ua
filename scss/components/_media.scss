@@ -1,0 +1,136 @@
+@import "./breakpoint";
+
+@include desktop {
+  .header {
+    &__logo {
+      img {
+        height: 83px;
+      }
+    }
+    &__link {
+      font-size: 12px;
+    }
+  }
+}
+@include laptopxl {
+  .header {
+    &__btn {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: transparent;
+      z-index: 100;
+
+      &.active {
+        transform: rotate(90deg);
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &__list {
+      display: none;
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   height: 100vh;
+      //   width: 320px;
+      //   margin: 0 auto;
+      //   background-color: var(--color-dark);
+      //   font-size: 32px;
+      //   display: block;
+      //   text-align: center;
+      //   padding: 248px 30px;
+      //   transform: translateY(-100%);
+      //   transition: transform 0.7s ease;
+    }
+
+    &__btn--decor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      background-color: $color-brand-white;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .header__top-item {
+    .menu-link {
+      font-size: 12px;
+    }
+  }
+  .search-button {
+    margin-left: 20px;
+  }
+  .hero-section {
+    padding-top: 140px;
+    &__container {
+      grid-template-columns: 1fr 1fr;
+    }
+    .large-title {
+      font-size: 30px;
+    }
+  }
+}
+@include laptopl {
+  .header {
+    &__top-social-icon {
+      width: 30px;
+      height: 30px;
+      margin: 0px 5px;
+    }
+  }
+  .hero-section__content {
+    p,
+    span {
+      font-size: 16px;
+    }
+  }
+}
+@include tablet {
+  .hero-section {
+    &__btn {
+      a {
+        padding: 15px 25px;
+      }
+    }
+    .large-title {
+      font-size: 25px;
+    }
+  }
+}
+@include mobilel {
+  .header {
+    &__top-list {
+      display: none;
+    }
+  }
+  .hero-section {
+    .large-title {
+      font-size: 23px;
+    }
+    &__btn {
+      a {
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+
+@include mobilexs {
+  .header {
+    &__top {
+      display: none;
+    }
+  }
+  .hero-section {
+    padding-top: 30px;
+    &__container {
+      grid-template-columns: 1fr;
+    }
+    &__content {
+      margin-bottom: 20px;
+    }
+  }
+}
