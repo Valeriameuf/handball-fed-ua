@@ -1,0 +1,189 @@
+.news-section {
+  margin-bottom: 30px;
+  &__container {
+    padding-top: 90px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    h2 {
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      color: $color-brand-dark;
+    }
+  }
+
+  &__btn {
+    a {
+      display: inline-flex;
+      font-size: 18px;
+      align-items: center;
+      background-color: $color-brand-yellow;
+      padding: 13px 16px;
+      color: #000;
+      border-radius: 5px;
+      background-image: url("../img/down-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px 16px;
+      padding-right: 40px;
+    }
+  }
+}
+.news-section {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 55%;
+  }
+
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    background: $color-brand-white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &__image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+    }
+    &__date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 2;
+        color: #b8b8b8;
+      }
+    }
+    &__icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+    &__divider {
+      height: 1px;
+      background-color: #ccc;
+      margin: 10px 0;
+    }
+
+    &__title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #353535;
+      margin: 10px 15px;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-weight: 200;
+      color: #353535;
+      margin: 10px 15px;
+    }
+
+    &__btn {
+      a {
+        display: inline-block;
+        padding: 10px 15px;
+        border: 1px solid #035ca2;
+        background-color: $color-brand-white;
+        color: #000;
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 10px 15px 15px;
+        text-align: center;
+        margin-top: auto;
+
+        &:hover {
+          background-color: darken($color-brand-yellow, 10%);
+        }
+      }
+    }
+  }
+  .news-card__category {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: $color-brand-light;
+  }
+  .news-section {
+    &__banner {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: #f0f0f0;
+
+      .banner__image {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+
+        .banner__img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+
+      .banner__content {
+        padding: 10px;
+
+        .banner__title {
+          background-color: #003366;
+          color: #fff;
+          text-align: center;
+
+          h2 {
+            margin: 0; // Убираем отступы у заголовка
+            font-size: 18px; // Размер шрифта
+          }
+        }
+
+        .banner__logo {
+          position: absolute; // Позиционирование логотипа
+          bottom: 10px; // Отступ от нижней грани
+          right: 10px; // Отступ от правой грани
+
+          .banner__logo-img {
+            width: 50px; // Ширина логотипа
+            height: auto; // Адаптивная высота
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    height: 300px;
+    background-color: $color-brand-light;
+  }
+}
