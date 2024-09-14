@@ -64,9 +64,10 @@
     margin-left: 20px;
   }
   .hero-section {
-    padding-top: 140px;
+    padding: 40px 0 50px;
     &__container {
-      grid-template-columns: 1fr 1fr;
+      flex-direction: column;
+      gap: 20px;
     }
     .large-title {
       font-size: 30px;

@@ -1,9 +1,10 @@
 .hero-section {
-  padding-top: 180px;
+  padding: 90px 0 85px;
+  position: relative;
   &__container {
-    display: grid;
-    grid-template-columns: 592px 1fr;
-    align-items: flex-start;
+    display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
     padding: 40px 20px;
   }
 
@@ -58,19 +59,19 @@
   text-transform: uppercase;
   transition: text-decoration-color 0.3s;
   margin-bottom: 10px;
+  width: 118%;
 }
 
 .image-container {
   position: relative;
   box-shadow: 0 12px 20px -4px #030829b3;
   border-radius: 25px;
-  height: 100%;
   width: 100%;
 
   img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 792/517;
+    aspect-ratio: 792 / 517;
     object-fit: cover;
     border-radius: 25px;
   }

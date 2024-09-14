@@ -36,23 +36,19 @@
       padding-right: 40px;
     }
   }
-}
-.news-section {
   &__content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    gap: 30px;
     width: 100%;
   }
-
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 55%;
+    gap: 20px 30px;
   }
-
   .news-card {
+    width: 100%;
+    max-width: 387px;
     display: flex;
     flex-direction: column;
     background: $color-brand-white;
@@ -62,7 +58,7 @@
 
     &__image {
       width: 100%;
-      height: 150px;
+      aspect-ratio: 567 / 378;
       object-fit: cover;
       border-radius: 10px 10px 0 0;
     }
@@ -71,7 +67,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 15px;
+      padding: 15px 15px 0;
+      margin-bottom: 15px;
     }
     &__date {
       display: flex;
@@ -91,99 +88,110 @@
     }
     &__divider {
       height: 1px;
-      background-color: #ccc;
+      background-color: #e1e1e1;
       margin: 10px 0;
     }
 
-    &__title {
-      font-size: 22px;
-      font-weight: 600;
-      color: #353535;
-      margin: 10px 15px;
-    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 100%;
+      margin: 20px;
+      &__title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #353535;
+        margin-bottom: 10px;
+      }
 
-    &__text {
-      font-size: 18px;
-      font-weight: 200;
-      color: #353535;
-      margin: 10px 15px;
-    }
+      &__text {
+        font-size: 18px;
+        font-weight: 200;
+        color: #353535;
+        margin-bottom: 15px;
+      }
 
-    &__btn {
-      a {
-        display: inline-block;
-        padding: 10px 15px;
-        border: 1px solid #035ca2;
-        background-color: $color-brand-white;
-        color: #000;
-        border-radius: 5px;
-        text-decoration: none;
-        margin: 10px 15px 15px;
-        text-align: center;
+      &__btn {
         margin-top: auto;
-
-        &:hover {
-          background-color: darken($color-brand-yellow, 10%);
-        }
-      }
-    }
-  }
-  .news-card__category {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1.3;
-    text-transform: uppercase;
-    color: $color-brand-light;
-  }
-  .news-section {
-    &__banner {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      background-color: #f0f0f0;
-
-      .banner__image {
-        width: 100%;
-        height: 50%;
-        overflow: hidden;
-
-        .banner__img {
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-        }
-      }
-
-      .banner__content {
-        padding: 10px;
-
-        .banner__title {
-          background-color: #003366;
-          color: #fff;
+        a {
+          display: inline-block;
+          padding: 10px 15px;
+          border: 1px solid #035ca2;
+          background-color: $color-brand-white;
+          color: #000;
+          border-radius: 5px;
+          text-decoration: none;
           text-align: center;
 
-          h2 {
-            margin: 0; // Убираем отступы у заголовка
-            font-size: 18px; // Размер шрифта
-          }
-        }
-
-        .banner__logo {
-          position: absolute; // Позиционирование логотипа
-          bottom: 10px; // Отступ от нижней грани
-          right: 10px; // Отступ от правой грани
-
-          .banner__logo-img {
-            width: 50px; // Ширина логотипа
-            height: auto; // Адаптивная высота
+          &:hover {
+            background-color: darken($color-brand-yellow, 10%);
           }
         }
       }
     }
+    &__category {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      color: $color-brand-light;
+    }
   }
+}
+.banner {
+  position: relative;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
+  &__image {
+    width: 100%;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
   .content {
-    height: 300px;
-    background-color: $color-brand-light;
+    max-width: 417px;
+    width: 417px;
+    height: 611px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/bg.svg") no-repeat;
+    background-position: 10%;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 10px;
+
+    &__title {
+      color: $color-brand-white;
+      text-align: center;
+
+      h2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.3;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .logo-container {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    z-index: 20;
+    overflow: visible;
+    .logo {
+      &__img {
+        height: auto;
+        max-width: 103px;
+      }
+    }
   }
 }
