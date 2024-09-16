@@ -20,7 +20,8 @@
     }
   }
 
-  &__btn {
+  &__btn,
+  &__btn-mobile {
     a {
       display: inline-flex;
       font-size: 18px;
@@ -35,6 +36,9 @@
       background-size: 16px 16px;
       padding-right: 40px;
     }
+  }
+  &__btn-mobile {
+    display: none;
   }
   &__content {
     display: flex;
@@ -157,7 +161,6 @@
   }
   .content {
     max-width: 417px;
-    width: 417px;
     height: 611px;
     display: flex;
     flex-direction: column;
