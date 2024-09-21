@@ -1,0 +1,21 @@
+.header {
+  .submenu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    &__item {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+      &:hover {
+        color: $color-brand-yellow;
+      }
+    }
+  }
+  &__logo {
+    &--indent {
+      margin-bottom: 11px;
+    }
+  }
+}
