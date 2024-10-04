@@ -1,0 +1,14 @@
+.slider-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #f9e725;
+  border-radius: 50%;
+  color: #000;
+  padding: 18px;
+  transition: background 0.3s;
+  &:hover {
+    background-color: $color-brand-yellow;
+  }
+}

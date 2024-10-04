@@ -11,6 +11,11 @@
       font-size: 12px;
     }
   }
+  .footer {
+    .nav-container {
+      gap: 50px;
+    }
+  }
 }
 @include laptopxl {
   .header {
@@ -108,6 +113,54 @@
       }
     }
   }
+  .news {
+    &__section {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .card {
+      max-width: 860px;
+      &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 34px;
+      }
+    }
+    .divider {
+      max-width: 350px;
+      &--hidden {
+        display: none;
+      }
+    }
+  }
+  .related-news {
+    .news-card {
+      flex: 0 0 40%;
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
+  .footer {
+    &__container {
+      padding-top: 60px;
+    }
+    .logo-section {
+      .partners-container {
+        gap: 45px;
+      }
+    }
+    .nav-section {
+      flex-direction: column;
+    }
+    .nav-container {
+      justify-content: space-around;
+      margin-bottom: 30px;
+      &__container {
+        gap: 160px;
+      }
+    }
+  }
 }
 @include laptopl {
   .header {
@@ -142,6 +195,19 @@
       }
     }
   }
+  .title {
+    font-size: 35px;
+  }
+  .footer {
+    &__container {
+      padding-top: 60px;
+    }
+    .nav-container {
+      &__container {
+        gap: 100px;
+      }
+    }
+  }
 }
 @include tablet {
   .hero-section {
@@ -162,6 +228,20 @@
       &__divider {
         margin: 5px 0;
       }
+    }
+  }
+  .related-news {
+    .news-card {
+      flex: 0 0 70%;
+      &:nth-child(n + 3) {
+        display: none;
+      }
+    }
+  }
+  .footer {
+    .nav-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
@@ -194,6 +274,19 @@
 
     .banner {
       display: none;
+    }
+  }
+  .title {
+    font-size: 30px;
+  }
+  .footer {
+    &__container {
+      padding-top: 40px;
+    }
+    .nav-container {
+      &__container {
+        gap: 50px;
+      }
     }
   }
 }
@@ -232,6 +325,14 @@
       h2 {
         font-size: 25px;
       }
+    }
+  }
+  .title {
+    font-size: 20px;
+  }
+  .footer {
+    .social-icons {
+      justify-content: center;
     }
   }
 }
