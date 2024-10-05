@@ -25,6 +25,7 @@
       text-decoration: none;
       color: $color-brand-white;
       background: rgb(85 125 201 / 50%);
+      &.active,
       &:hover {
         background-color: $color-brand-yellow;
         color: #000;
