@@ -31,6 +31,12 @@
       }
     }
 
+    &__nav-wrapper {
+      margin-left: 0;
+      flex-grow: 0;
+      justify-content: initial;
+    }
+
     &__list {
       display: none;
       //   position: absolute;
@@ -76,6 +82,7 @@
     }
     .large-title {
       font-size: 30px;
+      width: auto;
     }
   }
   .news-section {
