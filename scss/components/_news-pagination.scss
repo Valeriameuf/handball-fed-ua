@@ -1,0 +1,49 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  &__button {
+    background-color: transparent;
+    border: 1px solid $color-brand-yellow;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    &:hover {
+      background-color: $color-brand-yellow;
+    }
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  &__numbers {
+    display: flex;
+    gap: 5px;
+  }
+  &__number {
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    color: #353535;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    &:hover {
+      border: 2px solid $color-brand-light;
+    }
+  }
+  &__number.active {
+    background-color: $color-brand-light;
+    color: $color-brand-white;
+  }
+}
