@@ -91,6 +91,17 @@ body {
   color: #035ca2;
 }
 
+.hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 @font-face {
   font-family: "Oswald", sans-serif;
   src: url("/fonts/Oswald-ExtraLight.woff2") format("woff2"), url("/fonts/Oswald-ExtraLight.woff") format("woff");
