@@ -1,4 +1,5 @@
 .news-card {
+  position: relative;
   width: 100%;
   max-width: 387px;
   display: flex;
@@ -7,7 +8,15 @@
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-
+  &__link {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
   &__image {
     width: 100%;
     aspect-ratio: 567 / 378;
@@ -72,19 +81,20 @@
 
     &__btn {
       margin-top: auto;
-      a {
-        display: inline-block;
-        padding: 10px 15px;
-        border: 1px solid #035ca2;
-        background-color: $color-brand-white;
-        color: #000;
-        border-radius: 5px;
-        text-decoration: none;
-        text-align: center;
-
-        &:hover {
-          background-color: $color-brand-light;
-        }
+    }
+    &__link {
+      position: relative;
+      display: inline-block;
+      padding: 10px 15px;
+      border: 1px solid #035ca2;
+      background-color: $color-brand-white;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      z-index: 6;
+      &:hover {
+        background-color: $color-brand-light;
       }
     }
   }

@@ -1,0 +1,41 @@
+@import "./breakpoint";
+
+@include desktop {
+}
+@include laptopxl {
+}
+@include laptopl {
+  .general-news {
+    .general-news-section {
+      &__cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+@include tablet {
+}
+@include mobilel {
+  .general-news {
+    &__top {
+      a {
+        font-size: 12px;
+        padding: 11px 15px;
+      }
+    }
+    &__bar {
+      padding: 15px;
+    }
+    .general-news-section {
+      &__cards {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+@include mobilexs {
+}

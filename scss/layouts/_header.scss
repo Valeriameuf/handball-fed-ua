@@ -1,3 +1,4 @@
+@use "../utils/variables";
 .header {
   &__container {
     width: 100%;
@@ -133,7 +134,7 @@
     transition: background-color 0.3s;
   }
   &__top-social-icon.active {
-    background-color: $color-brand-white;
+    background-color: s$color-brand-white;
   }
   &__top-social-icon img {
     width: 18px;
@@ -183,7 +184,7 @@
 .menu-link {
   position: relative;
   font-size: 15px;
-  color: $color-brand-white;
+  // color: $color-brand-white;
   z-index: 1;
   transition: color 0.3s;
   &:hover {

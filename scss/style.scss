@@ -1,9 +1,9 @@
 @import "./reset";
 @import "./base";
-
 @import "./utils/fonts";
 @import "./utils/variables";
 
+// Импорт макетов
 @import "./layouts/header";
 @import "./layouts/header-news";
 @import "./layouts/hero-section";
@@ -14,9 +14,11 @@
 @import "./layouts/general-news";
 @import "./layouts/footer";
 
+// Импорт компонентов
 @import "./components/media";
 @import "./components/slider-btn";
 @import "./components/nav-bar";
 @import "./components/search";
 @import "./components/news-cards";
 @import "./components/news-pagination";
+@import "./components/general-news-media";
