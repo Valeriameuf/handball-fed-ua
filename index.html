@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,9 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="wrapper">
-        <div class="menu--close menu--open"></div>
         <header class="header header--position">
             <div style="background: #fff; color: #000; text-align: center; padding: 15px 0; font-size: 24px;">
                 Сайт перебуває у розробці
@@ -62,44 +63,121 @@
                         </div>
                     </div>
                 </div>
-                <div class="header__main">
-                    <div class="header__bottom">
+                <div class="header__bottom header__bottom--bg">
+                    <div class="header__wrapper">
                         <div class="header__container container">
-                            <div class="header__logo">
+                            <div class="header__logo header__logo--indent">
                                 <a class="logo-link" href="index.html">
                                     <img src="img/logo.png" alt="logo">
                                 </a>
                             </div>
-                            <div class="header__nav-wrapper">
-                                <nav class="header__nav">
-                                    <div class="header__btn--decor">
-                                        <button class="header__btn">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </button>
+                            <nav class="header__nav">
+                                <div class="header__btn--decor">
+                                    <button class="header__btn">
+                                        <span class="header__line"></span>
+                                        <span class="header__line"></span>
+                                        <span class="header__line"></span>
+                                        <span class="header__line"></span>
+                                    </button>
+                                </div>
+                                <ul class="header__list">
+                                    <li class="header__item"><a class="header__link link-style" href="#">ФГУ</a></li>
+                                    <li class="header__item"><a class="header__link link-style" href="#">Новини</a></li>
+                                    <li class="header__item"><a class="header__link link-style" href="#">Досягнення</a>
+                                    </li>
+                                    <li class="header__item"><a class="header__link link-style" href="#">Збірні</a></li>
+                                    <li class="header__item"><a class="header__link link-style" href="#">Команди</a>
+                                    </li>
+                                    <li class="header__item"><a class="header__link link-style" href="#">Судді та
+                                            делегати</a></li>
+                                    <li class="header__item"><a class="header__link link-style" href="#">Мультимедія</a>
+                                    </li>
+                                </ul>
+                                <div class="header__mobile mobile-nav" id="mobileMenu">
+                                    <div class="mobile-nav__top">
+                                        <img src="img/logo.png" alt="logo">
                                     </div>
-                                    <ul class="header__list">
-                                        <li class="header__item"><a class="header__link" href="#">ФГУ</a></li>
-                                        <li class="header__item"><a class="header__link" href="general-news.html">Новини</a></li>
-                                        <li class="header__item"><a class="header__link" href="#">Досягнення</a></li>
-                                        <li class="header__item"><a class="header__link" href="#">Збірні</a></li>
-                                        <li class="header__item"><a class="header__link" href="#">Команди</a></li>
-                                        <li class="header__item"><a class="header__link" href="#">Судді та делегати</a></li>
-                                        <li class="header__item"><a class="header__link" href="#">Мультимедіа</a></li>
+                                    <ul class="mobile-nav__list">
+                                        <li class="mobile-nav__item">
+                                            <a class="mobile-nav__link link-style" href="#">ФГУ</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a class="mobile-nav__link link-style" href="#">Новини</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a class="mobile-nav__link link-style" href="#">Досягнення</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a class="mobile-nav__link link-style" href="#">Збірні</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a class="mobile-nav__link link-style" href="#">Команди</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a class="mobile-nav__link link-style" href="#">Судді та
+                                                делегати</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a href="#" class="mobile-nav__link link-style">Змагання</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a href="#" class="mobile-nav__link link-style">Навчання</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a href="#" class="mobile-nav__link link-style">Партнери</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a href="#" class="mobile-nav__link link-style">Шкільна ліга</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a href="#" class="mobile-nav__link link-style">XPS</a>
+                                        </li>
+                                        <li class="mobile-nav__item">
+                                            <a href="#" class="mobile-nav__link link-style">Документи</a>
+                                        </li>
                                     </ul>
-                                </nav>
+                                    <ul class="menu-social">
+                                        <a href="#" class="menu-social__link" data-color="img/facebook-color.svg"
+                                            data-original="img/facebook.svg">
+                                            <img src="img/facebook-color.svg" alt="facebook">
+                                        </a>
+                                        <a href="#" class="menu-social__link" data-color="img/instagram-color.svg"
+                                            data-original="img/instagram.svg">
+                                            <img src="img/instagram-color.svg" alt="instagram">
+                                        </a>
+                                        <a href="#" class="menu-social__link" data-color="img/youtube-color.svg"
+                                            data-original="img/youtube.svg">
+                                            <img src="img/youtube-color.svg" alt="youtube">
+                                        </a>
+                                    </ul>
+                                </div>
                                 <div class="header__buttons">
                                     <button class="search-button" id="searchButton">
                                         <img id="searchIcon" src="img/search.svg" alt="search">
                                     </button>
                                 </div>
-                            </div>
+                            </nav>
+                        </div>
+                        <div class="submenu container">
+                            <ul class="submenu__list">
+                                <li class="submenu__item">
+                                    <a href="#">Головна</a>
+                                    <img class="submenu__arrow" src="img/right-arrow.svg" alt="arrow yellow">
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#">Новини </a>
+                                    <img class="submenu__arrow" src="img/right-arrow.svg" alt="arrow yellow">
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
         <main class="main">
             <section class="hero-section"
                 style="background:url(./img/bg.svg)no-repeat; background-size: cover;background-position:60%;">
@@ -108,7 +186,8 @@
                         <div class="hero-section__content content">
                             <h1 class="hidden-title">Lorem</h1>
                             <span class="small-title">Новини ФГУ</span>
-                            <a class="large-title" href="#">«Федерація має бути сервісним центром для всього українського гандболу»</a>
+                            <a class="large-title" href="#">«Федерація має бути сервісним центром для всього
+                                українського гандболу»</a>
                             <p>В Україні стартував гандбольний сезон</p>
                             <div class="hero-section__btn">
                                 <a href="#">Читати далі</a>
@@ -254,14 +333,15 @@
                     <div class="partners-container">
                         <div class="partners-container">
                             <a href="https://www.ihf.info/ "><img src="img/partners/ihf.png" alt="partner"
-                                                                  class="sponsor-logo"></a>
+                                    class="sponsor-logo"></a>
                             <a href="https://www.eurohandball.com/"><img src="img/partners/ehf.png" alt="partner"
-                                                                         class="sponsor-logo"></a>
+                                    class="sponsor-logo"></a>
                             <a href="https://mms.gov.ua/"><img src="img/partners/min-mol-sport.png" alt="patrner"
-                                                               class="sponsor-logo"></a>
+                                    class="sponsor-logo"></a>
                             <a href="https://noc-ukr.org/"><img src="img/partners/comitet.png" alt="partner"
-                                                                class="sponsor-logo"></a>
-                            <a href="https://joma.ua/"><img src="img/partners/joma.png" alt="partner" class="sponsor-logo"></a>
+                                    class="sponsor-logo"></a>
+                            <a href="https://joma.ua/"><img src="img/partners/joma.png" alt="partner"
+                                    class="sponsor-logo"></a>
                         </div>
                     </div>
                 </div>
@@ -367,5 +447,7 @@
         </footer>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/general-news.js"></script>
 </body>
+
 </html>

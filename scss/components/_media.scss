@@ -18,6 +18,10 @@
   }
 }
 @include laptopxl {
+  .menu-open,
+  .menu-close {
+    display: block;
+  }
   .header {
     &__btn {
       display: flex;
@@ -25,12 +29,14 @@
       background-color: transparent;
       z-index: 100;
 
-      &.active {
+      .menu-open {
         transform: rotate(90deg);
         transition: transform 0.3s ease;
       }
     }
-
+    &__top {
+      display: none;
+    }
     &__nav-wrapper {
       margin-left: 0;
       flex-grow: 0;
@@ -50,6 +56,16 @@
       background-color: $color-brand-white;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    &__line {
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      transition: 0.3s ease;
+    }
+    .mobile-nav.menu-open {
+      right: 0;
     }
   }
 
