@@ -33,6 +33,13 @@
       }
     }
   }
+  .buttons-bar {
+    margin-bottom: 10px;
+    display: none;
+    &__btn {
+      cursor: pointer;
+    }
+  }
   &__divider {
     height: 2px;
     background-color: rgb(85 125 201 / 50%);

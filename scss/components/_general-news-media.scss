@@ -21,10 +21,20 @@
       a {
         font-size: 12px;
         padding: 11px 15px;
+        display: none;
+        &:nth-child(-n + 5) {
+          display: inline-block;
+        }
       }
     }
     &__bar {
       padding: 15px;
+    }
+    .buttons-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
     }
     .general-news-section {
       &__cards {
@@ -34,8 +44,27 @@
         margin-bottom: 35px;
       }
     }
+    .pagination {
+      &__number {
+        width: 40px;
+        height: 40px;
+      }
+      &__button {
+        padding: 14px;
+      }
+    }
   }
 }
 
 @include mobilexs {
+  .general-news {
+    &__top {
+      a {
+        display: inline-block;
+        &:nth-child(n + 3) {
+          display: none;
+        }
+      }
+    }
+  }
 }
