@@ -11,169 +11,145 @@
 
 <body>
     <div class="wrapper">
-        <header class="header header--position">
+        <header class="header">
             <div style="background: #fff; color: #000; text-align: center; padding: 15px 0; font-size: 24px;">
                 Сайт перебуває у розробці
             </div>
-            <div>
-                <div class="header__top">
+            <div class="header__top top">
+                <div class="header__container container">
+                    <nav class="top__menu">
+                        <ul class="top__list">
+                            <li class="top__item">
+                                <a href="#" class="menu-link">Змагання</a>
+                            </li>
+                            <li class="top__item">
+                                <a href="#" class="menu-link">Навчання</a>
+                            </li>
+                            <li class="top__item">
+                                <a href="#" class="menu-link">Партнери</a>
+                            </li>
+                            <li class="top__item">
+                                <a href="#" class="menu-link">Шкільна ліга</a>
+                            </li>
+                            <li class="top__item">
+                                <a href="#" class="menu-link">XPS</a>
+                            </li>
+                            <li class="top__item">
+                                <a href="#" class="menu-link">Документи</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="top__socials social">
+                        <a href="#" class="social__icon">
+                            <img src="img/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="#" class="social__icon">
+                            <img src="img/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="#" class="social__icon">
+                            <img src="img/youtube.svg" alt="youtube">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__main header__main--bg">
+                <div class="header__bottom">
                     <div class="header__container container">
-                        <nav class="header__top-menu">
-                            <ul class="header__top-list">
-                                <li class="header__top-item">
-                                    <a href="#" class="menu-link">Змагання</a>
-                                    <img class="arrow" src="img/arrow.svg" alt="arrow">
-                                    <div class="highlight"></div>
+                        <div class="header__logo header__logo--indent">
+                            <a class="logo-link" href="index.html">
+                                <img src="img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <nav class="header__nav">
+                            <ul class="header__list">
+                                <li class="header__item"><a class="header__link link-style" href="#">ФГУ</a></li>
+                                <li class="header__item"><a class="header__link link-style" href="#">Новини</a></li>
+                                <li class="header__item"><a class="header__link link-style" href="#">Досягнення</a>
                                 </li>
-                                <li class="header__top-item">
-                                    <a href="#" class="menu-link">Навчання</a>
-                                    <img class="arrow" src="img/arrow.svg" alt="arrow">
+                                <li class="header__item"><a class="header__link link-style" href="#">Збірні</a></li>
+                                <li class="header__item"><a class="header__link link-style" href="#">Команди</a>
                                 </li>
-                                <li class="header__top-item">
-                                    <a href="#" class="menu-link">Партнери</a>
-                                    <img class="arrow" src="img/arrow.svg" alt="arrow">
+                                <li class="header__item"><a class="header__link link-style" href="#">Судді та
+                                        делегати</a>
                                 </li>
-                                <li class="header__top-item">
-                                    <a href="#" class="menu-link">Шкільна ліга</a>
-                                    <img class="arrow" src="img/arrow.svg" alt="arrow">
-                                </li>
-                                <li class="header__top-item">
-                                    <a href="#" class="menu-link">XPS</a>
-                                    <img class="arrow" src="img/arrow.svg" alt="arrow">
-                                </li>
-                                <li class="header__top-item">
-                                    <a href="#" class="menu-link">Документи</a>
-                                    <img class="arrow" src="img/arrow.svg" alt="arrow">
+                                <li class="header__item"><a class="header__link link-style" href="#">Мультимедія</a>
                                 </li>
                             </ul>
                         </nav>
-                        <div class="header__top-socials">
-                            <a href="#" class="header__top-social-icon" data-color="img/facebook-color.svg"
-                                data-original="img/facebook.svg">
-                                <img src="img/facebook.svg" alt="facebook">
-                            </a>
-                            <a href="#" class="header__top-social-icon" data-color="img/instagram-color.svg"
-                                data-original="img/instagram.svg">
-                                <img src="img/instagram.svg" alt="instagram">
-                            </a>
-                            <a href="#" class="header__top-social-icon" data-color="img/youtube-color.svg"
-                                data-original="img/youtube.svg">
-                                <img src="img/youtube.svg" alt="youtube">
-                            </a>
+                        <div class="header__buttons">
+                            <div class="burger burger--decor" onclick="toggleMenu()">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <button class="search-button" id="searchButton">
+                                <img id="searchIcon" src="img/search.svg" alt="search">
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="header__bottom header__bottom--bg">
-                    <div class="header__wrapper">
-                        <div class="header__container container">
-                            <div class="header__logo header__logo--indent">
-                                <a class="logo-link" href="index.html">
-                                    <img src="img/logo.png" alt="logo">
-                                </a>
-                            </div>
-                            <nav class="header__nav">
-                                <div class="header__btn--decor">
-                                    <button class="header__btn">
-                                        <span class="header__line"></span>
-                                        <span class="header__line"></span>
-                                        <span class="header__line"></span>
-                                        <span class="header__line"></span>
-                                    </button>
-                                </div>
-                                <ul class="header__list">
-                                    <li class="header__item"><a class="header__link link-style" href="#">ФГУ</a></li>
-                                    <li class="header__item"><a class="header__link link-style" href="#">Новини</a></li>
-                                    <li class="header__item"><a class="header__link link-style" href="#">Досягнення</a>
-                                    </li>
-                                    <li class="header__item"><a class="header__link link-style" href="#">Збірні</a></li>
-                                    <li class="header__item"><a class="header__link link-style" href="#">Команди</a>
-                                    </li>
-                                    <li class="header__item"><a class="header__link link-style" href="#">Судді та
-                                            делегати</a></li>
-                                    <li class="header__item"><a class="header__link link-style" href="#">Мультимедія</a>
-                                    </li>
-                                </ul>
-                                <div class="header__mobile mobile-nav" id="mobileMenu">
-                                    <div class="mobile-nav__top">
-                                        <img src="img/logo.png" alt="logo">
-                                    </div>
-                                    <ul class="mobile-nav__list">
-                                        <li class="mobile-nav__item">
-                                            <a class="mobile-nav__link link-style" href="#">ФГУ</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a class="mobile-nav__link link-style" href="#">Новини</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a class="mobile-nav__link link-style" href="#">Досягнення</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a class="mobile-nav__link link-style" href="#">Збірні</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a class="mobile-nav__link link-style" href="#">Команди</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a class="mobile-nav__link link-style" href="#">Судді та
-                                                делегати</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a href="#" class="mobile-nav__link link-style">Змагання</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a href="#" class="mobile-nav__link link-style">Навчання</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a href="#" class="mobile-nav__link link-style">Партнери</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a href="#" class="mobile-nav__link link-style">Шкільна ліга</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a href="#" class="mobile-nav__link link-style">XPS</a>
-                                        </li>
-                                        <li class="mobile-nav__item">
-                                            <a href="#" class="mobile-nav__link link-style">Документи</a>
-                                        </li>
-                                    </ul>
-                                    <ul class="menu-social">
-                                        <a href="#" class="menu-social__link" data-color="img/facebook-color.svg"
-                                            data-original="img/facebook.svg">
-                                            <img src="img/facebook-color.svg" alt="facebook">
-                                        </a>
-                                        <a href="#" class="menu-social__link" data-color="img/instagram-color.svg"
-                                            data-original="img/instagram.svg">
-                                            <img src="img/instagram-color.svg" alt="instagram">
-                                        </a>
-                                        <a href="#" class="menu-social__link" data-color="img/youtube-color.svg"
-                                            data-original="img/youtube.svg">
-                                            <img src="img/youtube-color.svg" alt="youtube">
-                                        </a>
-                                    </ul>
-                                </div>
-                                <div class="header__buttons">
-                                    <button class="search-button" id="searchButton">
-                                        <img id="searchIcon" src="img/search.svg" alt="search">
-                                    </button>
-                                </div>
-                            </nav>
-                        </div>
-                        <div class="submenu container">
-                            <ul class="submenu__list">
-                                <li class="submenu__item">
-                                    <a href="#">Головна</a>
-                                    <img class="submenu__arrow" src="img/right-arrow.svg" alt="arrow yellow">
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#">Новини </a>
-                                    <img class="submenu__arrow" src="img/right-arrow.svg" alt="arrow yellow">
-                                </li>
-                            </ul>
-                        </div>
+                <div class="submenu container">
+                    <ul class="submenu__list">
+                        <li class="submenu__item">
+                            <a href="#">Головна</a>
+                            <img class="submenu__arrow" src="img/right-arrow.svg" alt="arrow yellow">
+                        </li>
+                        <li class="submenu__item">
+                            <a href="#">Новини </a>
+                            <img class="submenu__arrow" src="img/right-arrow.svg" alt="arrow yellow">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="header__mobile mobile-nav" id="mobileMenu">
+                    <div class="mobile-nav__top">
+                        <img src="img/logo.png" alt="logo">
+                        <div class="mobile-nav__close" onclick="closeMenu()">✖</div>
                     </div>
+                    <ul class="mobile-nav__list">
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link-style" href="#">ФГУ</a></li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link-style" href="#">Новини</a></li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link-style" href="#">Досягнення</a>
+                        </li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link-style" href="#">Збірні</a></li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link-style" href="#">Команди</a>
+                        </li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link-style" href="#">Судді та
+                                делегати</a></li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link-style" href="#">Мультимедія</a>
+                        </li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link link-style">Змагання</a>
+                        </li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link link-style">Навчання</a>
+                        </li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link link-style">Партнери</a>
+                        </li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link link-style">Шкільна
+                                ліга</a>
+                        </li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link link-style">XPS</a></li>
+                        <li class="mobile-nav__item"><a href="#" class="mobile-nav__link link-style">Документи</a>
+                        </li>
+                    </ul>
+                    <ul class="menu-social">
+                        <li>
+                            <a href="#" class="menu-social__link">
+                                <img src="img/facebook-color.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-social__link">
+                                <img src="img/instagram-color.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-social__link">
+                                <img src="img/youtube-color.svg" alt="youtube">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
@@ -470,7 +446,7 @@
             </div>
         </footer>
     </div>
-    <script src="js/general-news.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

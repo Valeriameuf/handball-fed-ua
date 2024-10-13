@@ -7,9 +7,6 @@
         height: 83px;
       }
     }
-    &__link {
-      font-size: 12px;
-    }
   }
   .footer {
     .nav-container {
@@ -18,65 +15,6 @@
   }
 }
 @include laptopxl {
-  .menu-open,
-  .menu-close {
-    display: block;
-  }
-  .header {
-    &__btn {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: transparent;
-      z-index: 100;
-
-      .menu-open {
-        transform: rotate(90deg);
-        transition: transform 0.3s ease;
-      }
-    }
-    &__top {
-      display: none;
-    }
-    &__nav-wrapper {
-      margin-left: 0;
-      flex-grow: 0;
-      justify-content: initial;
-    }
-
-    &__list {
-      display: none;
-    }
-
-    &__btn--decor {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      background-color: $color-brand-white;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-    &__line {
-      position: absolute;
-      left: 0;
-      width: 32px;
-      height: 2px;
-      transition: 0.3s ease;
-    }
-    .mobile-nav.menu-open {
-      right: 0;
-    }
-  }
-
-  .header__top-item {
-    .menu-link {
-      font-size: 12px;
-    }
-  }
-  .search-button {
-    margin-left: 20px;
-  }
   .hero-section {
     padding: 40px 0 50px;
     &__container {
@@ -174,12 +112,46 @@
 }
 @include laptopl {
   .header {
-    &__top-social-icon {
-      width: 30px;
-      height: 30px;
-      margin: 0px 5px;
+    &__container {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__bottom {
+      display: flex;
+    }
+    &__top {
+      display: none;
+    }
+    &__nav-wrapper {
+      margin-left: 0;
+      flex-grow: 0;
+      justify-content: initial;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__line {
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      transition: 0.3s ease;
+    }
+    .burger {
+      display: flex;
+      margin-left: auto;
     }
   }
+
+  .top__item {
+    .menu-link {
+      font-size: 12px;
+    }
+  }
+
   .hero-section__content {
     p,
     span {
