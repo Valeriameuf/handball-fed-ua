@@ -21,10 +21,10 @@
       a {
         font-size: 12px;
         padding: 11px 15px;
-        display: none;
-        &:nth-child(-n + 5) {
-          display: inline-block;
-        }
+        //display: none;
+        //&:nth-child(-n + 5) {
+        //  display: inline-block;
+        //}
       }
     }
     &__bar {
@@ -57,14 +57,14 @@
 }
 
 @include mobilexs {
-  .general-news {
-    &__top {
-      a {
-        display: inline-block;
-        &:nth-child(n + 3) {
-          display: none;
-        }
-      }
-    }
-  }
+  //.general-news {
+  //  &__top {
+  //    a {
+  //      display: inline-block;
+  //      &:nth-child(n + 3) {
+  //        display: none;
+  //      }
+  //    }
+  //  }
+  //}
 }
