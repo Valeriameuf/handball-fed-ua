@@ -7,9 +7,6 @@
         height: 83px;
       }
     }
-    &__link {
-      font-size: 12px;
-    }
   }
   .footer {
     .nav-container {
@@ -18,49 +15,6 @@
   }
 }
 @include laptopxl {
-  .header {
-    &__btn {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: transparent;
-      z-index: 100;
-
-      &.active {
-        transform: rotate(90deg);
-        transition: transform 0.3s ease;
-      }
-    }
-
-    &__nav-wrapper {
-      margin-left: 0;
-      flex-grow: 0;
-      justify-content: initial;
-    }
-
-    &__list {
-      display: none;
-    }
-
-    &__btn--decor {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      background-color: $color-brand-white;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  .header__top-item {
-    .menu-link {
-      font-size: 12px;
-    }
-  }
-  .search-button {
-    margin-left: 20px;
-  }
   .hero-section {
     padding: 40px 0 50px;
     &__container {
@@ -75,27 +29,6 @@
   .news-section {
     &__container {
       padding-top: 60px;
-    }
-    .news-card {
-      &__info {
-        padding: 10px 10px 0;
-        margin-bottom: 5px;
-      }
-
-      .text {
-        margin: 10px;
-        &__title {
-          font-size: 16px;
-        }
-        &__text {
-          font-size: 12px;
-        }
-      }
-      &__date {
-        span {
-          font-size: 11px;
-        }
-      }
     }
     .banner {
       .content {
@@ -158,10 +91,43 @@
 }
 @include laptopl {
   .header {
-    &__top-social-icon {
-      width: 30px;
-      height: 30px;
-      margin: 0px 5px;
+    &__container {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__bottom {
+      display: flex;
+    }
+    &__top {
+      display: none;
+    }
+    &__nav-wrapper {
+      margin-left: 0;
+      flex-grow: 0;
+      justify-content: initial;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__line {
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      transition: 0.3s ease;
+    }
+    .burger {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+
+  .top__item {
+    .menu-link {
+      font-size: 12px;
     }
   }
   .hero-section__content {
@@ -176,16 +142,37 @@
         font-size: 30px;
       }
     }
-    .news-card {
-      &__category {
-        font-size: 10px;
-      }
-    }
     .text {
       &__btn {
         a {
           font-size: 16px;
         }
+      }
+    }
+  }
+  .news-card {
+    &__info {
+      padding: 10px 10px 0;
+      margin-bottom: 5px;
+    }
+    &__divider {
+      margin: 5px 0;
+    }
+    &__category {
+      font-size: 10px;
+    }
+    &__date {
+      span {
+        font-size: 11px;
+      }
+    }
+    .text {
+      margin: 10px;
+      &__title {
+        font-size: 16px;
+      }
+      &__text {
+        font-size: 12px;
       }
     }
   }
@@ -212,16 +199,6 @@
     }
     .large-title {
       font-size: 25px;
-    }
-  }
-  .news-section {
-    .news-card {
-      &__info {
-        padding: 10px 5px 0;
-      }
-      &__divider {
-        margin: 5px 0;
-      }
     }
   }
   .related-news {
