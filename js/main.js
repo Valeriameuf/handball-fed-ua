@@ -18,7 +18,7 @@ class Menu {
 
   getOpenedTriggers() {
     return Array.from(
-        document.querySelectorAll(`${this.triggersSelector} [data-open]`)
+        document.querySelectorAll(`${this.triggersSelector}[data-open]`)
     );
   }
 
@@ -40,13 +40,13 @@ class Menu {
 
         this.closeOpenedTriggers();
 
-        const isClosed = !trigger.hasAttribute('data-opened')
+        const isClosed = !trigger.parentNode.hasAttribute('data-opened')
 
         if (isClosed) {
-          trigger.setAttribute('data-opened', '');
+          trigger.parentNode.setAttribute('data-opened', '');
           trigger.classList.replace(this.closedIconClass, this.openedIconClass)
         } else {
-          trigger.removeAttribute('data-opened');
+          trigger.parentNode.removeAttribute('data-opened');
           trigger.classList.replace(this.openedIconClass, this.closedIconClass)
         }
 
@@ -62,7 +62,7 @@ class BottomMenu extends Menu {
 class Submenu extends Menu {
   getOpenedTriggers() {
     return Array.from(
-        this.currentEvent.target.closest('ul').querySelectorAll('li > i[data-opened]')
+        this.currentEvent.target.closest('ul').querySelectorAll('li[data-opened] > i')
     );
   }
 }
