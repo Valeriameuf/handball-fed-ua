@@ -4,8 +4,8 @@
   "description": "Init",
   "main": "index.js",
   "scripts": {
-    "build-css": "sass scss/style.scss css/style.css --watch",
-    "compile-sass": "sass scss/style.scss css/style.css --style compressed"
+    "build-css": "sass scss/style.scss ./style.css --watch",
+    "compile-sass": "sass scss/style.scss ./style.css --style compressed"
   },
   "keywords": [],
   "author": "",
