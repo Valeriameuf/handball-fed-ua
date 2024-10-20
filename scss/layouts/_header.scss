@@ -6,6 +6,51 @@
     justify-content: space-between;
     align-items: center;
   }
+  .submenu-real {
+    &__container {
+      position: relative;
+      z-index: 101;
+    }
+    &__menu {
+      background: $color-brand-dark;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-bottom: $color-brand-white 2px solid;
+      padding: 15px;
+      min-height: 130px;
+      display: none;
+      ul {
+        display: inline-block;
+        position: relative;
+      }
+      li {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        i {
+          margin-left: 25px;
+          padding: 0 15px;
+          cursor: pointer;
+        }
+      }
+      li[data-opened] {
+        border-right: 2px solid $color-brand-yellow;
+      }
+      ul ul {
+        margin-left: calc(100%);
+        padding-left: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      ul ul.d-inline-block {
+        display: inline-block;
+      }
+    }
+  }
   &__top {
     position: relative;
     z-index: 1;
@@ -46,18 +91,10 @@
       display: flex;
       gap: 12px;
       margin: 0 15px;
-      &:active .arrow {
-        display: block;
-      }
     }
     &__item:hover {
       .highlight {
         opacity: 1;
-      }
-    }
-    &__item:hover {
-      .arrow {
-        display: inline;
       }
     }
     &__socials {
@@ -93,12 +130,6 @@
     height: 103px;
     width: auto;
   }
-  &__nav-wrapper {
-    flex-grow: 1;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 70px;
-  }
   &__nav {
     display: flex;
     align-items: center;
@@ -110,6 +141,12 @@
   }
   &__item {
     margin: 0 15px;
+    padding: 15px 0;
+    position: relative;
+    i {
+      padding: 0 10px;
+      cursor: pointer;
+    }
   }
   &__link {
     position: relative;
@@ -150,12 +187,9 @@
       gap: 8px;
     }
   }
-}
-.arrow {
-  display: none;
-  margin-left: 5px;
-  width: 10px;
-  height: auto;
+  .d-block {
+    display: block;
+  }
 }
 .highlight {
   position: absolute;
@@ -174,7 +208,7 @@
   font-size: 15px;
   transition: color 0.3s;
   &:hover {
-    color: #f9e725;
+    color: $color-brand-yellow;
   }
 }
 .search-button {
