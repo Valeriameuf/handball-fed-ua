@@ -1,7 +1,93 @@
-@import "../utils/breakpoint";
+@import "./breakpoint";
+
 @include desktop {
+  .header {
+    &__logo {
+      img {
+        height: 83px;
+      }
+    }
+  }
+  .footer {
+    .nav-container {
+      gap: 50px;
+    }
+  }
 }
 @include laptopxl {
+  .hero-section {
+    padding: 40px 0 50px;
+    &__container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .large-title {
+      font-size: 30px;
+      width: auto;
+    }
+  }
+  .news-section {
+    &__container {
+      padding-top: 60px;
+    }
+    .banner {
+      .content {
+        &__title {
+          h2 {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+  .news {
+    &__section {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .card {
+      max-width: 860px;
+      &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 34px;
+      }
+    }
+    .divider {
+      max-width: 350px;
+      &--hidden {
+        display: none;
+      }
+    }
+  }
+  .related-news {
+    .news-card {
+      flex: 0 0 40%;
+      &:nth-child(n + 4) {
+        display: none;
+      }
+    }
+  }
+  .footer {
+    &__container {
+      padding-top: 60px;
+    }
+    .logo-section {
+      .partners-container {
+        gap: 45px;
+      }
+    }
+    .nav-section {
+      flex-direction: column;
+    }
+    .nav-container {
+      justify-content: space-around;
+      margin-bottom: 30px;
+      &__container {
+        gap: 160px;
+      }
+    }
+  }
 }
 @include laptopl {
   .header {
@@ -87,18 +173,80 @@
       }
     }
   }
-
   .title {
     font-size: 35px;
   }
+  .footer {
+    &__container {
+      padding-top: 60px;
+    }
+    .nav-container {
+      &__container {
+        gap: 100px;
+      }
+    }
+  }
 }
 @include tablet {
+  .hero-section {
+    &__btn {
+      a {
+        padding: 15px 25px;
+      }
+    }
+    .large-title {
+      font-size: 25px;
+    }
+  }
+  .related-news {
+    .news-card {
+      flex: 1 0 70%;
+      &:nth-child(n + 3) {
+        display: none;
+      }
+    }
+  }
+  .footer {
+    .nav-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 @include mobilel {
+  .header {
+    &__top-list {
+      display: none;
+    }
+  }
+  .hero-section {
+    .large-title {
+      font-size: 23px;
+    }
+    &__btn {
+      a {
+        padding: 10px 20px;
+      }
+    }
+  }
+  .news-section {
+    &__btn {
+      display: none;
+    }
+    &__btn-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .banner {
+      display: none;
+    }
+  }
   .title {
     font-size: 30px;
   }
-
   .footer {
     &__container {
       padding-top: 40px;
@@ -152,7 +300,77 @@
 }
 
 @include mobilexs {
+  .header {
+    &__top {
+      display: none;
+    }
+  }
+  .hero-section {
+    padding-top: 30px;
+    &__container {
+      grid-template-columns: 1fr;
+    }
+    &__content {
+      margin-bottom: 20px;
+    }
+  }
+  .news-section {
+    &__container {
+      padding-top: 30px;
+    }
+    &__top {
+      margin-bottom: 20px;
+    }
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px 30px;
+      justify-items: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    &__title {
+      h2 {
+        font-size: 25px;
+      }
+    }
+  }
   .title {
     font-size: 23px;
+  }
+  .news {
+    &__container {
+      padding-bottom: 30px;
+    }
+  }
+  .related-news {
+    &__title {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
+
+    .news-wrapper {
+      position: relative;
+      .slider-control {
+        &--left,
+        &--right {
+          position: absolute;
+        }
+        &--left {
+          top: 100%;
+          left: 80px;
+        }
+        &--right {
+          top: 100%;
+          right: 80px;
+        }
+      }
+    }
+  }
+  .footer {
+    .social-icons {
+      justify-content: center;
+    }
   }
 }

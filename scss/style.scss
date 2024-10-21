@@ -12,26 +12,19 @@
 @import "./layouts/news";
 @import "./layouts/related-news";
 @import "./layouts/general-news";
-@import "./layouts/slider-btn";
-@import "./layouts/nav-bar";
-@import "./layouts/search";
-@import "./layouts/news-cards";
-@import "./layouts/news-pagination";
-@import "./layouts/burger-menu";
 @import "./layouts/footer";
 
 // Импорт компонентов
+@import "./components/slider-btn";
+@import "./components/nav-bar";
+@import "./components/search";
+@import "./components/news-cards";
+@import "./components/news-pagination";
+@import "./components/burger-menu";
 @import "./components/media";
-@import "./components/header-media";
-@import "./components/hero-section-media";
-@import "./components/news-section-media";
-@import "./components/news-media";
-@import "./components/related-news-media";
 @import "./components/general-news-media";
 @import "./components/media-nav-bar";
 @import "./components/media-menu-bar";
-
-@import "./components/footer-media";
 
 @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
