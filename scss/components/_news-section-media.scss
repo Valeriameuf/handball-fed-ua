@@ -23,13 +23,6 @@
         font-size: 30px;
       }
     }
-    .text {
-      &__btn {
-        a {
-          font-size: 16px;
-        }
-      }
-    }
   }
   .news-card {
     &__info {
@@ -40,20 +33,20 @@
       margin: 5px 0;
     }
     &__category {
-      font-size: 10px;
+      font-size: 14px;
     }
     &__date {
       span {
-        font-size: 11px;
+        font-size: 14px;
       }
     }
     .text {
       margin: 10px;
       &__title {
-        font-size: 16px;
+        font-size: 20px;
       }
       &__text {
-        font-size: 12px;
+        font-size: 16px;
       }
     }
   }
