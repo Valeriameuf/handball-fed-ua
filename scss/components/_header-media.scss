@@ -21,6 +21,11 @@
     &__top {
       display: none;
     }
+    &__nav-wrapper {
+      margin-left: 0;
+      flex-grow: 0;
+      justify-content: initial;
+    }
 
     &__list {
       display: none;
@@ -36,10 +41,6 @@
     .burger {
       display: flex;
       margin-left: auto;
-    }
-
-    .submenu-real__container {
-      display: none;
     }
   }
 
