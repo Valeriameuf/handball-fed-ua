@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
@@ -20,7 +20,7 @@
                     <nav class="top__menu">
                         <ul class="top__list">
                             <li class="top__item">
-                                <a href="#" class="menu-link">Змагання</a>
+                                <a href="#" class="menu-link">ФГУ</a>
                             </li>
                             <li class="top__item">
                                 <a href="#" class="menu-link">Навчання</a>
@@ -62,17 +62,28 @@
                         </div>
                         <nav class="header__nav">
                             <ul class="header__list">
-                                <li class="header__item"><a class="header__link link-style" href="#">ФГУ</a></li>
-                                <li class="header__item"><a class="header__link link-style" href="#">Новини</a></li>
-                                <li class="header__item"><a class="header__link link-style" href="#">Досягнення</a>
+                                <li class="header__item">
+                                    <a class="header__link link-style" href="#">Змагання</a>
+                                    <i class="fa-solid fa-chevron-down" data-target-node-id="#submenu-zmaganya"></i>
                                 </li>
-                                <li class="header__item"><a class="header__link link-style" href="#">Збірні</a></li>
-                                <li class="header__item"><a class="header__link link-style" href="#">Команди</a>
+                                <li class="header__item">
+                                    <a class="header__link link-style" href="#">Новини</a>
+                                    <i class="fa-solid fa-chevron-down" data-target-node-id="#submenu-news"></i>
                                 </li>
-                                <li class="header__item"><a class="header__link link-style" href="#">Судді та
-                                        делегати</a>
+                                <li class="header__item">
+                                    <a class="header__link link-style" href="#">Досягнення</a>
                                 </li>
-                                <li class="header__item"><a class="header__link link-style" href="#">Мультимедія</a>
+                                <li class="header__item">
+                                    <a class="header__link link-style" href="#">Збірні</a>
+                                </li>
+                                <li class="header__item">
+                                    <a class="header__link link-style" href="#">Команди</a>
+                                </li>
+                                <li class="header__item">
+                                    <a class="header__link link-style" href="#">Судді та делегати</a>
+                                </li>
+                                <li class="header__item">
+                                    <a class="header__link link-style" href="#">Мультимедія</a>
                                 </li>
                             </ul>
                         </nav>
@@ -85,6 +96,99 @@
                             <button class="search-button" id="searchButton">
                                 <img id="searchIcon" src="img/search.svg" alt="search">
                             </button>
+                        </div>
+                    </div>
+                    <div class="container submenu-real__container">
+                        <div id="submenu-zmaganya" class="submenu-real__menu">
+                            <ul>
+                                <li>
+                                    <a class="header__link link-style" href="#">Суперліга</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a class="header__link link-style" href="#">Жінки</a>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                            <ul>
+                                                <li>
+                                                    <a class="header__link link-style" href="#">XXX</a>
+                                                </li>
+                                                <li>
+                                                    <a class="header__link link-style" href="#">YYY</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="header__link link-style" href="#">Чоловіки</a>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                            <ul>
+                                                <li>
+                                                    <a class="header__link link-style" href="#">XXX 2</a>
+                                                </li>
+                                                <li>
+                                                    <a class="header__link link-style" href="#">YYY 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="link-style" href="#">Вища ліга</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a class="link-style" href="#">Жінки 2</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-style" href="#">Чоловіки 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="link-style" href="#">Перша ліга</a>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                    <ul>
+                                        <li>
+                                            <a class="link-style" href="#">Жінки 3</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-style" href="#">Чоловіки 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="link-style" href="#">Кубок України</a>
+                                    <ul>
+                                        <li>
+                                            <a class="link-style" href="#">Жінки</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-style" href="#">Чоловіки</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="link-style" href="#">2008-2009 р.н.</a>
+                                    <ul>
+                                        <li>
+                                            <a class="link-style" href="#">Дівчата</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-style" href="#">Юнаки</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="link-style" href="#">2010-2011 р.н.</a>
+                                    <ul>
+                                        <li>
+                                            <a class="link-style" href="#">Дівчата</a>
+                                        </li>
+                                        <li>
+                                            <a class="link-style" href="#">Юнаки</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
