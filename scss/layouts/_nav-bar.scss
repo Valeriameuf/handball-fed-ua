@@ -1,3 +1,5 @@
+@import "../utils/breakpoint";
+
 // Styles in this file are used only on single-news page
 .navigation-buttons {
   display: flex;
@@ -39,4 +41,19 @@
   width: 1px;
   height: 20px;
   background: #b9b9b9;
+}
+
+@include mobilexs {
+  .navigation-buttons {
+    gap: 0 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    .button {
+      gap: 5px;
+      font-size: 11px;
+      img {
+        padding: 12px;
+      }
+    }
+  }
 }
