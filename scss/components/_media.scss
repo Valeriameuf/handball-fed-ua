@@ -102,6 +102,11 @@
     &__top {
       display: none;
     }
+    &__nav-wrapper {
+      margin-left: 0;
+      flex-grow: 0;
+      justify-content: initial;
+    }
 
     &__list {
       display: none;
@@ -117,10 +122,6 @@
     .burger {
       display: flex;
       margin-left: auto;
-    }
-
-    .submenu-real__container {
-      display: none;
     }
   }
 
@@ -141,6 +142,13 @@
         font-size: 30px;
       }
     }
+    .text {
+      &__btn {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
   }
   .news-card {
     &__info {
@@ -151,25 +159,20 @@
       margin: 5px 0;
     }
     &__category {
-      font-size: 14px;
+      font-size: 10px;
     }
     &__date {
       span {
-        font-size: 14px;
+        font-size: 11px;
       }
     }
     .text {
       margin: 10px;
       &__title {
-        font-size: 20px;
-      }
-      &__text {
         font-size: 16px;
       }
-      &__btn {
-        a {
-          font-size: 18px;
-        }
+      &__text {
+        font-size: 12px;
       }
     }
   }
@@ -269,11 +272,7 @@
     }
     .news-nav {
       .news-text {
-        font-size: 16px;
-        img {
-          width: 100%;
-          height: auto;
-        }
+        font-size: 14px;
       }
     }
   }
@@ -336,7 +335,7 @@
     }
   }
   .title {
-    font-size: 23px;
+    font-size: 20px;
   }
   .news {
     &__container {
