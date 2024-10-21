@@ -1,4 +1,3 @@
-@import "./news-cards";
 .related-news {
   padding-bottom: 60px;
   &__title {
@@ -10,81 +9,13 @@
     justify-content: center;
     gap: 24px;
   }
-  .news-card {
-    background-color: $color-brand-white;
-    border-radius: 15px;
-    max-width: 380px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    .active {
-      display: block;
-    }
-    &__image {
-      width: 100%;
-      aspect-ratio: 567 / 378;
-      object-fit: cover;
-      border-radius: 10px 10px 0 0;
-    }
-    &__info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px 0;
-    }
-    &__category {
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 1.3;
-      text-transform: uppercase;
-      color: $color-brand-light;
-    }
-    &__date {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      span {
-        font-size: 13px;
-        font-weight: 200;
-        line-height: 2;
-        color: #b8b8b8;
-      }
-    }
-    &__icon {
-      width: 16px;
-      margin-right: 5px;
-    }
-    &__divider {
-      height: 1px;
-      background-color: #ddd;
-      margin: 10px 0;
-    }
-    &__text {
-      padding: 0 20px 24px;
-    }
-    &__title {
-      font-size: 22px;
-      font-weight: 600;
-      line-height: 1.3;
-      color: #353535;
-      margin-bottom: 8px;
-    }
-    &__description {
-      font-size: 18px;
-      font-weight: 200;
-      line-height: 1.4;
-      color: #353535;
-      margin-bottom: 15px;
-    }
-  }
   &__button {
     text-align: left;
   }
-
   .round-button-container {
     display: flex;
     align-items: center;
   }
-
   .round-button {
     display: inline-block;
     padding: 10px 15px;
@@ -96,7 +27,6 @@
     text-align: center;
     transition: background-color 0.3s;
   }
-
   .round-button:hover {
     background-color: $color-brand-light;
   }
