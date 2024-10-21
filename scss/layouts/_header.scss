@@ -1,4 +1,6 @@
 @use "../utils/variables";
+@import "../utils/breakpoint";
+
 .header {
   &__container {
     width: 100%;
@@ -231,5 +233,65 @@
   }
   .active {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@include desktop {
+  .header {
+    &__logo {
+      img {
+        height: 83px;
+      }
+    }
+  }
+}
+
+@include laptopl {
+  .header {
+    &__container {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__bottom {
+      display: flex;
+    }
+    &__top {
+      display: none;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__line {
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      transition: 0.3s ease;
+    }
+    .burger {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .submenu-real__container {
+      display: none;
+    }
+  }
+
+  .top__item {
+    .menu-link {
+      font-size: 12px;
+    }
+  }
+}
+
+@include mobilexs {
+  .header {
+    &__top {
+      display: none;
+    }
   }
 }

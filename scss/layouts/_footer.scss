@@ -1,3 +1,5 @@
+@import "../utils/breakpoint";
+
 .footer {
   position: relative;
   background-color: $color-brand-light;
@@ -141,5 +143,75 @@
   .coop-container {
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+@include desktop {
+  .footer {
+    .nav-container {
+      gap: 50px;
+    }
+  }
+}
+@include laptopxl {
+  .footer {
+    &__container {
+      padding-top: 60px;
+    }
+    .logo-section {
+      .partners-container {
+        gap: 45px;
+      }
+    }
+    .nav-section {
+      flex-direction: column;
+    }
+    .nav-container {
+      justify-content: space-around;
+      margin-bottom: 30px;
+      &__container {
+        gap: 160px;
+      }
+    }
+  }
+}
+@include laptopl {
+  .footer {
+    &__container {
+      padding-top: 60px;
+    }
+    .nav-container {
+      &__container {
+        gap: 100px;
+      }
+    }
+  }
+}
+@include tablet {
+  .footer {
+    .nav-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include mobilel {
+  .footer {
+    &__container {
+      padding-top: 40px;
+    }
+    .nav-container {
+      &__container {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@include mobilexs {
+  .footer {
+    .social-icons {
+      justify-content: center;
+    }
   }
 }
