@@ -36,7 +36,11 @@
     }
     .news-nav {
       .news-text {
-        font-size: 14px;
+        font-size: 16px;
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
