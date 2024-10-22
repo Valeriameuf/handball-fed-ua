@@ -54,21 +54,19 @@
 }
 .banner {
   position: relative;
+  max-width: 400px;
   // border-radius: 15px;
   // display: flex;
   // flex-direction: column;
   // overflow: hidden;
 
-  &__image {
-    width: 100%;
-    overflow: hidden;
-  }
   a {
     img {
       display: block;
       border-radius: 15px;
       width: 100%;
       height: 100%;
+      max-width: 100%;
       aspect-ratio: 400/1230;
       object-fit: cover;
     }
@@ -135,6 +133,11 @@
         font-size: 30px;
       }
     }
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px 30px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -149,10 +152,6 @@
       align-items: center;
       margin-top: 18px;
     }
-
-    .banner {
-      display: none;
-    }
   }
 }
 
@@ -164,18 +163,14 @@
     &__top {
       margin-bottom: 20px;
     }
-    &__cards {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px 30px;
-      justify-items: center;
-      align-items: center;
-      margin: 0 auto;
-    }
+
     &__title {
       h2 {
         font-size: 25px;
       }
+    }
+    .banner {
+      display: none;
     }
   }
 }
