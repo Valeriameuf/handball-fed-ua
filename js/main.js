@@ -3,7 +3,7 @@ class Menu {
     triggersSelector,
     openedIconClass,
     closedIconClass,
-    eventCallback,
+    eventCallback
   ) {
     this.triggersSelector = triggersSelector;
     this.openedIconClass = openedIconClass;
@@ -18,7 +18,7 @@ class Menu {
 
   getOpenedTriggers() {
     return Array.from(
-        document.querySelectorAll(`${this.triggersSelector}[data-open]`)
+      document.querySelectorAll(`${this.triggersSelector}[data-open]`)
     );
   }
 
@@ -27,74 +27,77 @@ class Menu {
       if (triggerNode === this.currentEvent.target) {
         continue;
       }
-      triggerNode.dispatchEvent(new Event('click'));
+      triggerNode.dispatchEvent(new Event("click"));
     }
   }
 
   registerListeners() {
-    const triggers = Array.from(document.querySelectorAll(this.triggersSelector));
+    const triggers = Array.from(
+      document.querySelectorAll(this.triggersSelector)
+    );
 
     for (const trigger of triggers) {
-      trigger.addEventListener('click', event => {
+      trigger.addEventListener("click", (event) => {
         this.currentEvent = event;
 
         this.closeOpenedTriggers();
 
-        const isClosed = !trigger.parentNode.hasAttribute('data-opened')
+        const isClosed = !trigger.parentNode.hasAttribute("data-opened");
 
         if (isClosed) {
-          trigger.parentNode.setAttribute('data-opened', '');
-          trigger.classList.replace(this.closedIconClass, this.openedIconClass)
+          trigger.parentNode.setAttribute("data-opened", "");
+          trigger.classList.replace(this.closedIconClass, this.openedIconClass);
         } else {
-          trigger.parentNode.removeAttribute('data-opened');
-          trigger.classList.replace(this.openedIconClass, this.closedIconClass)
+          trigger.parentNode.removeAttribute("data-opened");
+          trigger.classList.replace(this.openedIconClass, this.closedIconClass);
         }
 
         this.eventCallback(trigger);
-      })
+      });
     }
   }
 }
 
-class BottomMenu extends Menu {
-}
+class BottomMenu extends Menu {}
 
 class Submenu extends Menu {
   getOpenedTriggers() {
     return Array.from(
-        this.currentEvent.target.closest('ul').querySelectorAll('li[data-opened] > i')
+      this.currentEvent.target
+        .closest("ul")
+        .querySelectorAll("li[data-opened] > i")
     );
   }
 }
 
 function toggleMenu() {
-  const dropdownMenu = document.getElementById('dropdownMenu');
-  dropdownMenu.classList.toggle('active');
+  const dropdownMenu = document.getElementById("dropdownMenu");
+  dropdownMenu.classList.toggle("active");
 }
 function closeMenu() {
-  const dropdownMenu = document.getElementById('dropdownMenu');
-  dropdownMenu.classList.remove('active');
+  const dropdownMenu = document.getElementById("dropdownMenu");
+  dropdownMenu.classList.remove("active");
 }
 
 const bottomMenu = new BottomMenu(
-    'li.header__item i',
-    'fa-chevron-up',
-    'fa-chevron-down',
-    trigger => {
-      const targetNode = document.querySelector(
-          trigger.getAttribute('data-target-node-id')
-      );
-      targetNode.classList.toggle('d-block');
-    }
+  "li.header__item i",
+  "fa-chevron-up",
+  "fa-chevron-down",
+  (trigger) => {
+    const targetNode = document.querySelector(
+      trigger.getAttribute("data-target-node-id")
+    );
+    targetNode.classList.toggle("d-block");
+  }
 );
 const submenu = new Submenu(
-    '.submenu-real__menu li > i',
-    'fa-arrow-left',
-    'fa-arrow-right',
-    trigger => {
-      const innerMenu = trigger.parentNode.querySelector('ul');
-      innerMenu.classList.toggle('d-inline-block');
-    }
+  ".submenu-real__menu li > i",
+  "fa-arrow-left",
+  "fa-arrow-right",
+  (trigger) => {
+    const innerMenu = trigger.parentNode.querySelector("ul");
+    innerMenu.classList.toggle("d-inline-block");
+  }
 );
 
 bottomMenu.init();
@@ -111,3 +114,25 @@ submenu.init();
 //     this.classList.add("active");
 //   }
 // });
+
+//----------------------------------------------------------------
+const boxes = document.querySelectorAll(".box");
+let currentIndex = boxes.length - 1;
+
+boxes[currentIndex].classList.add("active");
+
+document.getElementById("next").addEventListener("click", () => {
+  boxes[currentIndex].classList.remove("active");
+
+  currentIndex = (currentIndex - 1 + boxes.length) % boxes.length;
+
+  boxes[currentIndex].classList.add("active");
+});
+
+document.getElementById("prev").addEventListener("click", () => {
+  boxes[currentIndex].classList.remove("active");
+
+  currentIndex = (currentIndex + 1) % boxes.length;
+
+  boxes[currentIndex].classList.add("active");
+});

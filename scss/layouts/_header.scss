@@ -128,9 +128,14 @@
       opacity: 0;
     }
   }
-  &__logo img {
-    height: 103px;
-    width: auto;
+  &__logo {
+    &--indent {
+      margin-bottom: 11px;
+    }
+    img {
+      height: 103px;
+      width: auto;
+    }
   }
   &__nav {
     display: flex;
@@ -180,7 +185,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      padding-top: 10px;
       padding-bottom: 15px;
     }
     &__item {
@@ -252,7 +256,11 @@
       align-items: center;
       justify-content: space-between;
     }
-
+    &__logo {
+      &--indent {
+        margin-bottom: 0;
+      }
+    }
     &__bottom {
       display: flex;
     }
