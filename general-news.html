@@ -106,7 +106,9 @@
                 <div class="header__mobile mobile-nav" id="mobileMenu">
                     <div class="mobile-nav__top">
                         <img src="img/logo.png" alt="logo">
-                        <div class="mobile-nav__close" onclick="closeMenu()">✖</div>
+                        <button class="mobile-nav__close" aria-label="close menu" onclick="closeMenu()">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>
                     <ul class="menu-social">
                         <li>
@@ -127,7 +129,10 @@
                     </ul>
                     <ul class="mobile-nav__list">
                         <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">ФГУ</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">ФГУ</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -138,10 +143,15 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Новини</a>
-                            <ul class="mobile-nav__sublist">
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Новини</a>
+                                <i class="fas fa-chevron-up arrow mobile-nav__arrow"></i>
+                            </div>
+                            <ul class="mobile-nav__sublist mobile-nav__sublist--open">
                                 <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Чоловіча Суперіга</a>
+                                    <a class="mobile-nav__sublink" href="#">Чоловіча
+                                        Суперіга
+                                    </a>
                                 </li>
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Жіноча Суперліга</a>
@@ -158,7 +168,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Досягнення</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Досягнення</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow mobile-nav__arrow--hidden"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -169,7 +182,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Збірні</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Збірні</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -180,7 +196,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Команди</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Команди</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -191,8 +210,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Судді та
-                                делегати</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Судді та делегати</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -203,7 +224,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -214,7 +238,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a href="#" class="mobile-nav__link link-style">Змагання</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Змагання</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -225,7 +252,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a href="#" class="mobile-nav__link link-style">Навчання</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Навчання</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -236,7 +266,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a href="#" class="mobile-nav__link link-style">Партнери</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Партнери</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -247,8 +280,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a href="#" class="mobile-nav__link link-style">Шкільна
-                                ліга</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Шкільна ліга</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -259,7 +294,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a href="#" class="mobile-nav__link link-style">XPS</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">XPS</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
@@ -270,7 +308,10 @@
                             </ul>
                         </li>
                         <li class="mobile-nav__item">
-                            <a href="#" class="mobile-nav__link link-style">Документи</a>
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Документи</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
                                     <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
