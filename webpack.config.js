@@ -26,10 +26,10 @@ module.exports = {
             preprocessor: 'ejs', // use EJS templating engine
             // preprocessorOptions: {...},
             js: {
-                filename: 'js/[name].js', // JS output filename
+                filename: 'main.js', // JS output filename
             },
             css: {
-                filename: '../style.css', // CSS output filename
+                filename: 'style.css', // CSS output filename
             },
         }),
     ],
