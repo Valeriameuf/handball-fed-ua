@@ -1,83 +1,6 @@
-class Menu {
-  constructor(
-    triggersSelector,
-    openedIconClass,
-    closedIconClass,
-    eventCallback
-  ) {
-    this.triggersSelector = triggersSelector;
-    this.openedIconClass = openedIconClass;
-    this.closedIconClass = closedIconClass;
-    this.eventCallback = eventCallback;
-    this.currentEvent;
-  }
-
-  init() {
-    this.registerListeners();
-  }
-
-  getOpenedTriggers() {
-    return Array.from(
-      document.querySelectorAll(`${this.triggersSelector}[data-open]`)
-    );
-  }
-
-  closeOpenedTriggers() {
-    for (const triggerNode of this.getOpenedTriggers()) {
-      if (triggerNode === this.currentEvent.target) {
-        continue;
-      }
-      triggerNode.dispatchEvent(new Event("click"));
-    }
-  }
-
-  registerListeners() {
-    const triggers = Array.from(
-      document.querySelectorAll(this.triggersSelector)
-    );
-
-    for (const trigger of triggers) {
-      trigger.addEventListener("click", (event) => {
-        this.currentEvent = event;
-
-        this.closeOpenedTriggers();
-
-        const isClosed = !trigger.parentNode.hasAttribute("data-opened");
-
-        if (isClosed) {
-          trigger.parentNode.setAttribute("data-opened", "");
-          trigger.classList.replace(this.closedIconClass, this.openedIconClass);
-        } else {
-          trigger.parentNode.removeAttribute("data-opened");
-          trigger.classList.replace(this.openedIconClass, this.closedIconClass);
-        }
-
-        this.eventCallback(trigger);
-      });
-    }
-  }
-}
-
-class BottomMenu extends Menu {}
-
-class Submenu extends Menu {
-  getOpenedTriggers() {
-    return Array.from(
-      this.currentEvent.target
-        .closest("ul")
-        .querySelectorAll("li[data-opened] > i")
-    );
-  }
-}
-
-function toggleMenu() {
-  const dropdownMenu = document.getElementById("dropdownMenu");
-  dropdownMenu.classList.toggle("active");
-}
-function closeMenu() {
-  const dropdownMenu = document.getElementById("dropdownMenu");
-  dropdownMenu.classList.remove("active");
-}
+import BottomMenu from "./classes/BottomMenu";
+import Submenu from "./classes/Submenu";
+import {toggleMenu, closeMenu} from "./functions";
 
 const bottomMenu = new BottomMenu(
   "li.header__item i",
@@ -121,18 +44,18 @@ let currentIndex = boxes.length - 1;
 
 boxes[currentIndex].classList.add("active");
 
-document.getElementById("next").addEventListener("click", () => {
-  boxes[currentIndex].classList.remove("active");
+// document.getElementById("next").addEventListener("click", () => {
+//   boxes[currentIndex].classList.remove("active");
+//
+//   currentIndex = (currentIndex - 1 + boxes.length) % boxes.length;
+//
+//   boxes[currentIndex].classList.add("active");
+// });
 
-  currentIndex = (currentIndex - 1 + boxes.length) % boxes.length;
-
-  boxes[currentIndex].classList.add("active");
-});
-
-document.getElementById("prev").addEventListener("click", () => {
-  boxes[currentIndex].classList.remove("active");
-
-  currentIndex = (currentIndex + 1) % boxes.length;
-
-  boxes[currentIndex].classList.add("active");
-});
+// document.getElementById("prev").addEventListener("click", () => {
+//   boxes[currentIndex].classList.remove("active");
+//
+//   currentIndex = (currentIndex + 1) % boxes.length;
+//
+//   boxes[currentIndex].classList.add("active");
+// });

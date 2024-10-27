@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div style="background: #fff; color: #000; text-align: center; padding: 15px 0; font-size: 24px;">
+            Сайт перебуває у розробці
+        </div>
+        <div class="header__top top">
+            <div class="header__container container">
+                <nav class="top__menu">
+                    <ul class="top__list">
+                        <li class="top__item">
+                            <a href="#" class="menu-link">ФГУ</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Навчання</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Партнери</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Шкільна ліга</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">XPS</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Документи</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="top__socials social">
+                    <a href="#" class="social__icon">
+                        <img src="img/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="social__icon">
+                        <img src="img/instagram.svg" alt="instagram">
+                    </a>
+                    <a href="#" class="social__icon">
+                        <img src="img/youtube.svg" alt="youtube">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__main header__main--bg">
+            <div class="header__bottom">
+                <div class="header__container container">
+                    <div class="header__logo header__logo--indent">
+                        <a class="logo-link" href="index.html">
+                            <img src="img/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Змагання</a>
+                                <i class="fa-solid fa-chevron-down" data-target-node-id="#submenu-zmaganya"></i>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="general-news.html">Новини</a>
+                                <i class="fa-solid fa-chevron-down" data-target-node-id="#submenu-news"></i>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Досягнення</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Збірні</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Команди</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Судді та делегати</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Мультимедія</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__buttons">
+                        <div class="burger burger--decor" onclick="toggleMenu()">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <button class="search-button" id="searchButton">
+                            <img id="searchIcon" src="img/search.svg" alt="search">
+                        </button>
+                    </div>
+                </div>
+                <div class="container submenu-real__container">
+                    <div id="submenu-zmaganya" class="submenu-real__menu">
+                        <ul>
+                            <li>
+                                <a class="header__link link-style" href="#">Суперліга</a>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <ul>
+                                    <li>
+                                        <a class="header__link link-style" href="#">Жінки</a>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style" href="#">XXX</a>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style" href="#">YYY</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="header__link link-style" href="#">Чоловіки</a>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style" href="#">XXX 2</a>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style" href="#">YYY 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="link-style" href="#">Вища ліга</a>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <ul>
+                                    <li>
+                                        <a class="link-style" href="#">Жінки 2</a>
+                                    </li>
+                                    <li>
+                                        <a class="link-style" href="#">Чоловіки 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="link-style" href="#">Перша ліга</a>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <ul>
+                                    <li>
+                                        <a class="link-style" href="#">Жінки 3</a>
+                                    </li>
+                                    <li>
+                                        <a class="link-style" href="#">Чоловіки 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="link-style" href="#">Кубок України</a>
+                                <ul>
+                                    <li>
+                                        <a class="link-style" href="#">Жінки</a>
+                                    </li>
+                                    <li>
+                                        <a class="link-style" href="#">Чоловіки</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="link-style" href="#">2008-2009 р.н.</a>
+                                <ul>
+                                    <li>
+                                        <a class="link-style" href="#">Дівчата</a>
+                                    </li>
+                                    <li>
+                                        <a class="link-style" href="#">Юнаки</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="link-style" href="#">2010-2011 р.н.</a>
+                                <ul>
+                                    <li>
+                                        <a class="link-style" href="#">Дівчата</a>
+                                    </li>
+                                    <li>
+                                        <a class="link-style" href="#">Юнаки</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="header__mobile mobile-nav" id="mobileMenu">
+                <div class="mobile-nav__top">
+                    <img src="img/logo.png" alt="logo">
+                    <button class="mobile-nav__close" aria-label="close menu" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="menu-social">
+                    <li>
+                        <a href="#" class="menu-social__link">
+                            <img src="img/facebook-color.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-social__link">
+                            <img src="img/instagram-color.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-social__link">
+                            <img src="img/youtube-color.svg" alt="youtube">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">ФГУ</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="general-news.html">Новини</a>
+                            <i class="fas fa-chevron-up arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist mobile-nav__sublist--open">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Чоловіча
+                                    Суперіга
+                                </a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Жіноча Суперліга</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Вища ліга</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Перша ліга</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Дитячо-юнацький гандбол</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Досягнення</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow mobile-nav__arrow--hidden"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Збірні</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Команди</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Судді та делегати</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Змагання</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Навчання</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Партнери</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Шкільна ліга</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">XPS</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <div class="mobile-nav__inner">
+                            <a class="mobile-nav__link link-style" href="#">Документи</a>
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </div>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<main class="main">
+    <section class="news">
+        <div class="news__container container">
+            <div class="news__section">
+                <aside class="card">
+                    <div class="card__title">Більше матеріалів</div>
+                    <div class="card__content">
+                        <div class="card__item">
+                            <div class="date">
+                                <img class="date__image" src="img/calendar-news.svg" alt="календар">
+                                <div class="date__num">06.01.2024</div>
+                            </div>
+                            <div class="card__article-title">Віталій Халюза: «Ця перемога присвячена захисникам
+                                України»
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="card__item">
+                            <div class="date">
+                                <img class="date__image" src="img/calendar-news.svg" alt="календар">
+                                <div class="date__num">06.01.2024</div>
+                            </div>
+                            <div class="card__article-title">Віталій Халюза: «Ця перемога присвячена захисникам
+                                України»
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="card__item">
+                            <div class="date">
+                                <img class="date__image" src="img/calendar-news.svg" alt="календар">
+                                <div class="date__num">06.01.2024</div>
+                            </div>
+                            <div class="card__article-title">Віталій Халюза: «Ця перемога присвячена захисникам
+                                України»
+                            </div>
+                            <div class="divider divider--hidden"></div>
+                        </div>
+                        <div class="card__item">
+                            <div class="date">
+                                <img class="date__image" src="img/calendar-news.svg" alt="календар">
+                                <div class="date__num">06.01.2024</div>
+                            </div>
+                            <div class="card__article-title">Віталій Халюза: «Ця перемога присвячена захисникам
+                                України»
+                            </div>
+                            <div class="divider divider--hidden"></div>
+                        </div>
+                    </div>
+
+                </aside>
+                <div class="news-nav">
+                    <div class="news-nav__image">
+                        <img src="img/hero-news-img.webp" alt="news image">
+                    </div>
+                    <h1 class="news-nav__title title">Заголовок новини</h1>
+                    <div class="date-container">
+                        <div class="calendar">
+                            <img src="img/calendar-blue.svg" alt="calendar">
+                        </div>
+                        <span>06.01.2024</span>
+                    </div>
+                    <div class="navigation-buttons">
+                        <a class="button">
+                            <img src="img/left-arrow-news.svg" alt="arrow">
+                            Попередня новина
+                        </a>
+                        <div class="divider-up"></div>
+                        <a class="button">
+                            Наступна новина
+                            <img src="img/right-arrow-news.svg" alt="arrow">
+                        </a>
+                    </div>
+                    <div class="news-text">
+                        <div class="news-text__txt">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus consectetur
+                                earum
+                                quos
+                                error enim voluptas odit nobis labore animi, recusandae ad, ipsum vitae quas
+                                iure
+                                facere
+                                optio natus illo ullam.</p>
+                        </div>
+                        <div class="news-text__mark">
+                            <p><strong>Lorem ipsum dolor sit amet consectetur</strong></p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi error mollitia
+                                quasi
+                                voluptatem ducimus necessitatibus quisquam, repellendus laborum? Iste cum quidem
+                                molestias reprehenderit officiis quaerat eveniet consectetur dignissimos nulla
+                                delectus!
+                            </p>
+                        </div>
+                        <div class="news-text__txt">
+                            <p><strong>Ольга Передерій, тренерка жіночої збірної України U-19,
+                                    тренерка національної
+                                    збірної України:</strong></p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quos repellat
+                                fugit
+                                quam
+                                perspiciatis voluptatibus voluptas ab voluptatem, ex aperiam provident deleniti,
+                                aliquid
+                                enim at, eaque cumque expedita possimus praesentium.
+
+                            </p>
+                        </div>
+                        <div class="news-text__txt">
+                            <p><strong>Ольга Передерій, тренерка жіночої збірної України U-19,
+                                    тренерка національної збірної України:</strong></p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quos repellat
+                                fugit
+                                quam
+                                perspiciatis voluptatibus voluptas ab voluptatem, ex aperiam provident deleniti,
+                                aliquid
+                                enim at, eaque cumque expedita possimus praesentium.
+                            </p>
+                        </div>
+                        <div class="news-text__mark">
+                            <p><strong>Lorem ipsum dolor sit amet consectetur</strong></p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi error mollitia
+                                quasi
+                                voluptatem ducimus necessitatibus quisquam, repellendus laborum? Iste cum quidem
+                                molestias reprehenderit officiis quaerat eveniet consectetur dignissimos nulla
+                                delectus!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="menu-bar">
+                        <div class="menu-bar__top">
+                            <div class="menu-bar__titles">
+                                <p class="bar-title"><strong>Федерація гандболу України</strong></p>
+                                <a class="sub-title">
+                                    <p>#Збірні України</p>
+                                </a>
+                            </div>
+                            <div class="navigation-buttons menu-bar__nav">
+                                <a class="button">
+                                    <img src="img/left-arrow-news.svg" alt="arrow">
+                                    Попередня новина
+                                </a>
+                                <div class="divider-up"></div>
+                                <a class="button">
+                                    Наступна новина
+                                    <img src="img/right-arrow-news.svg" alt="arrow">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menu-bar__divider"></div>
+                        <div class="social-links">
+                            <div class="social-link">
+                                <a class="social-link__link">
+                                    <div class="social-link__img"><img src="img/telegram.svg" alt="telegram"
+                                                                       width="24" height="24">
+                                    </div>
+                                    <p>Telegram</p>
+                                </a>
+                            </div>
+                            <div class="social-link">
+                                <a class="social-link__link">
+                                    <div class="social-link__img"><img src="img/facebook-logo.svg"
+                                                                       alt="facebook" width="24" height="24">
+                                    </div>
+                                    <p>Facebook</p>
+                                </a>
+                            </div>
+                            <div class="social-link">
+                                <a class="social-link__link">
+                                    <div class="social-link__img"><img src="img/viber.svg" alt="viber"
+                                                                       width="24" height="24">
+                                    </div>
+                                    <p>Viber</p>
+                                </a>
+                            </div>
+                            <div class="social-link">
+                                <a class="social-link__link">
+                                    <div class="social-link__img"><img src="img/whatsapp.svg" alt="whatsapp"
+                                                                       width="24" height="24">
+                                    </div>
+                                    <p>WhatsApp</p>
+                                </a>
+                            </div>
+                            <div class="social-link">
+                                <a class="social-link__link">
+                                    <div class="social-link__img"><img src="img/mail.svg" alt="mail" width="24"
+                                                                       height="24">
+                                    </div>
+                                    <p>E-mail</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="related-news">
+        <div class="related-news__container container">
+            <h2 class="related-news__title title">Пов’язанні новини</h2>
+            <div class="news-wrapper">
+                <button class="slider-control slider-control--left">
+                    <img class="slider-control__icon" src="img/left-arrow-news.svg" alt="arrow">
+                </button>
+                <div class="news-card">
+                    <img class="news-card__image" src="img/news-photo.webp" alt="новина" />
+                    <div class="news-card__info">
+                        <span class="news-card__category">Збірні України</span>
+                        <div class="news-card__date">
+                            <img src="img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                            <span>12 вересня 2024</span>
+                        </div>
+                    </div>
+                    <div class="news-card__divider"></div>
+                    <div class="text">
+                        <h3 class="text__title">Заголовок новини</h3>
+                        <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                            подію.</p>
+                        <div class="text__btn">
+                            <a class="text__link" href="#">Детальніше</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img class="news-card__image" src="img/news-photo.webp" alt="новина" />
+                    <div class="news-card__info">
+                        <span class="news-card__category">Збірні України</span>
+                        <div class="news-card__date">
+                            <img src="img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                            <span>12 вересня 2024</span>
+                        </div>
+                    </div>
+                    <div class="news-card__divider"></div>
+                    <div class="text">
+                        <h3 class="text__title">Заголовок новини</h3>
+                        <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                            подію.</p>
+                        <div class="text__btn">
+                            <a class="text__link" href="#">Детальніше</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img class="news-card__image" src="img/news-photo.webp" alt="новина" />
+                    <div class="news-card__info">
+                        <span class="news-card__category">Збірні України</span>
+                        <div class="news-card__date">
+                            <img src="img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                            <span>12 вересня 2024</span>
+                        </div>
+                    </div>
+                    <div class="news-card__divider"></div>
+                    <div class="text">
+                        <h3 class="text__title">Заголовок новини</h3>
+                        <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                            подію.</p>
+                        <div class="text__btn">
+                            <a class="text__link" href="#">Детальніше</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-control slider-control--right">
+                    <img class="slider-control__icon" src="img/right-arrow-news.svg" alt="arrow">
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer__container container">
+        <!-- <div class="footer__img">
+            <img class="footer__logo" src="img/logo.png" alt="logo">
+        </div> -->
+        <div class="footer__section logo-section">
+            <div class="partners-container">
+                <div class="partners-container">
+                    <a href="https://www.ihf.info/ "><img src="img/partners/ihf.png" alt="partner"
+                                                          class="sponsor-logo"></a>
+                    <a href="https://www.eurohandball.com/"><img src="img/partners/ehf.png" alt="partner"
+                                                                 class="sponsor-logo"></a>
+                    <a href="https://mms.gov.ua/"><img src="img/partners/min-mol-sport.png" alt="patrner"
+                                                       class="sponsor-logo"></a>
+                    <a href="https://noc-ukr.org/"><img src="img/partners/comitet.png" alt="partner"
+                                                        class="sponsor-logo"></a>
+                    <a href="https://joma.ua/"><img src="img/partners/joma.png" alt="partner"
+                                                    class="sponsor-logo"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__section">
+            <div class="nav-section">
+                <div class="nav-info">
+                    <h4 class="navigation__title footer__title">
+                        Навігація
+                    </h4>
+                    <div class="nav-container">
+                        <div class="nav-container__container">
+                            <ul class="nav-container__nav navigation">
+                                <li class="nav-container__item"><a class="nav-container__link" href="#">Шкільна
+                                    ліга</a>
+                                </li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Навчання</a>
+                                </li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Партнери</a>
+                                </li>
+                            </ul>
+                            <ul class="nav-container__nav navigation">
+                                <li class="nav-container__item"><a class="nav-container__link" href="#">XPS</a>
+                                </li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Вакансії</a>
+                                </li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Фундамент</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-container__container">
+                            <ul class="nav-container__nav navigation">
+                                <li class="nav-container__item"><a class="nav-container__link" href="#">ФГУ</a>
+                                </li>
+                                <li class="nav-container__item"><a class="nav-container__link" href="#">Судді та
+                                    делегати</a>
+                                </li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="general-news.html">Новини</a></li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Досягнення</a>
+                                </li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Змагання</a>
+                                </li>
+                            </ul>
+                            <ul class="nav-container__nav navigation">
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Збірні</a></li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Команди</a></li>
+                                <li class="nav-container__item"><a class="nav-container__link"
+                                                                   href="#">Мультимедія</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h4 class="footer__title">
+                        Контакти
+                    </h4>
+                    <div class="contacts__section">
+                        <ul class="footer__contacts contacts">
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="#" target="_blank">
+                                    <img src="img/pin.svg" alt="location icon">
+                                    <span>м. Київ, вул. Січових стрільців, 10 офіс 39,04053</span>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="tel:+380967899962">
+                                    <img src="img/phone-call.svg" alt="phone icon">
+                                    <span>Тел: +38 (096) 789 99 62</span>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <a class="contacts__link" href="mailto:unf@nbi.com.ua">
+                                    <img src="img/mail.svg" alt="email icon">
+                                    <span>Електронна пошта: UHF@NBI.COM.UA; UHF15@UKR.NET</span>
+                                </a>
+
+                            </li>
+                        </ul>
+                        <div class="social-icons">
+                            <a class="social-icons__link" href="#" target="_blank">
+                                <img src="img/facebook.svg" alt="Facebook">
+                            </a>
+                            <a class="social-icons__link" href="#" target="_blank">
+                                <img src="img/instagram.svg" alt="Instagram">
+                            </a>
+                            <a class="social-icons__link" href="#" target="_blank">
+                                <img src="img/youtube.svg" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-section coop-section">
+            <div class="coop-container">
+                <p>Cooperating 2024</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="js/main.js"></script>
+</body>
+
+</html>
