@@ -116,23 +116,3 @@ submenu.init();
 // });
 
 //----------------------------------------------------------------
-const boxes = document.querySelectorAll(".box");
-let currentIndex = boxes.length - 1;
-
-boxes[currentIndex].classList.add("active");
-
-document.getElementById("next").addEventListener("click", () => {
-  boxes[currentIndex].classList.remove("active");
-
-  currentIndex = (currentIndex - 1 + boxes.length) % boxes.length;
-
-  boxes[currentIndex].classList.add("active");
-});
-
-document.getElementById("prev").addEventListener("click", () => {
-  boxes[currentIndex].classList.remove("active");
-
-  currentIndex = (currentIndex + 1) % boxes.length;
-
-  boxes[currentIndex].classList.add("active");
-});

@@ -97,19 +97,13 @@
       z-index: 6;
       &:hover {
         background-color: $color-brand-light;
+        color: $color-brand-white;
       }
     }
   }
 }
 
 @include laptopl {
-  .news-section {
-    &__title {
-      h2 {
-        font-size: 30px;
-      }
-    }
-  }
   .news-card {
     &:nth-child(2),
     &:nth-child(4) {
