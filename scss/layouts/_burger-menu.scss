@@ -1,4 +1,5 @@
-@import "../utils/breakpoint";
+@use "../utils/breakpoint";
+@use "../utils/variables";
 
 .header {
   .mobile-nav {
@@ -22,7 +23,7 @@
       align-items: center;
       cursor: pointer;
       font-size: 24px;
-      color: $color-brand-light;
+      color: variables.$color-brand-light;
       transition: background-color 0.3s;
       &:hover {
         background-color: rgba(145, 143, 143, 0.8);
@@ -42,7 +43,7 @@
       color: #333;
       transition: color 0.3s;
       &:hover {
-        color: $color-brand-light;
+        color: variables.$color-brand-light;
       }
     }
     &__arrow {
@@ -50,7 +51,7 @@
         display: none;
       }
       &:hover {
-        color: $color-brand-light;
+        color: variables.$color-brand-light;
       }
     }
 
@@ -73,7 +74,7 @@
       font-weight: 200;
       line-height: 1.2;
       &:hover {
-        color: $color-brand-dark;
+        color: variables.$color-brand-dark;
         text-decoration: underline;
       }
     }
@@ -111,7 +112,7 @@
   display: none;
   overflow-y: auto;
   flex-direction: column;
-  background-color: $color-brand-white;
+  background-color: variables.$color-brand-white;
   color: #333;
   position: fixed;
   top: 0;
@@ -125,7 +126,7 @@
   display: flex;
 }
 
-@include laptopl {
+@include breakpoint.laptopl {
   .burger {
     cursor: pointer;
     flex-direction: column;
@@ -146,7 +147,7 @@
       align-items: center;
       width: 50px;
       height: 50px;
-      background-color: $color-brand-white;
+      background-color: variables.$color-brand-white;
       border-radius: 50%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }

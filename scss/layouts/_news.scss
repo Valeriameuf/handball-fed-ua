@@ -1,4 +1,5 @@
-@import "../utils/breakpoint";
+@use "../utils/breakpoint";
+@use "../utils/variables";
 
 .news {
   &__container {
@@ -15,13 +16,13 @@
   height: 50%;
   width: 100%;
   max-width: 285px;
-  background-color: $color-brand-white;
+  background-color: variables.$color-brand-white;
   border-radius: 10px;
   box-shadow: 0px 10px 30px rgba(137, 137, 137, 0.25);
   padding: 23px 20px;
 
   &__title {
-    color: $color-brand-light;
+    color: variables.$color-brand-light;
     font-size: 22px;
     font-weight: 600;
     line-height: 1;
@@ -205,7 +206,7 @@
   }
 }
 
-@include laptopxl {
+@include breakpoint.laptopxl {
   .news {
     &__section {
       flex-direction: column-reverse;
@@ -228,7 +229,7 @@
   }
 }
 
-@include mobilel {
+@include breakpoint.mobilel {
   .news {
     &__container {
       padding-top: 20px;
@@ -251,7 +252,7 @@
   }
 }
 
-@include mobilexs {
+@include breakpoint.mobilexs {
   .news {
     &__container {
       padding-bottom: 30px;

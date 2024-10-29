@@ -1,30 +1,32 @@
+@use "./variables";
+
 @mixin desktop() {
-  @media (max-width: $breakpoint_xxl) {
+  @media (max-width: variables.$breakpoint_xxl) {
     @content;
   }
 }
 @mixin laptopxl() {
-  @media (max-width: $breakpoint_xl) {
+  @media (max-width: variables.$breakpoint_xl) {
     @content;
   }
 }
 @mixin laptopl() {
-  @media (max-width: $breakpoint_l) {
+  @media (max-width: variables.$breakpoint_l) {
     @content;
   }
 }
 @mixin tablet() {
-  @media (max-width: $breakpoint_m) {
+  @media (max-width: variables.$breakpoint_m) {
     @content;
   }
 }
 @mixin mobilel() {
-  @media (max-width: $breakpoint_s) {
+  @media (max-width: variables.$breakpoint_s) {
     @content;
   }
 }
 @mixin mobilexs() {
-  @media (max-width: $breakpoint_xs) {
+  @media (max-width: variables.$breakpoint_xs) {
     @content;
   }
 }
