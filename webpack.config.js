@@ -72,7 +72,6 @@ module.exports = {
             '@scss': path.join(__dirname, '/scss/'),
             '@js': path.join(__dirname, '/js/'),
             '@img': path.join(__dirname, '/img/'),
-            '@var': path.join(__dirname, '/var/'),
         },
     },
 };
