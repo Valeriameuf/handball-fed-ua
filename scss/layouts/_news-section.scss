@@ -132,6 +132,9 @@
       align-items: center;
       margin-top: 18px;
     }
+    .banner {
+      display: none;
+    }
   }
 }
 
@@ -142,9 +145,6 @@
     }
     &__top {
       margin-bottom: 20px;
-    }
-    .banner {
-      display: none;
     }
   }
 }

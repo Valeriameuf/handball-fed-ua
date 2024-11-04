@@ -1,6 +1,6 @@
-import BottomMenu from "./classes/BottomMenu";
-import Submenu from "./classes/Submenu";
-import { toggleMenu, closeMenu } from "./functions";
+import BottomMenu from "@js/classes/BottomMenu";
+import Submenu from "@js/classes/Submenu";
+import MobileMenu from "@js/classes/MobileMenu";
 
 const bottomMenu = new BottomMenu(
   "li.header__item i",
@@ -23,17 +23,12 @@ const submenu = new Submenu(
   }
 );
 
+const mobileMenu = new MobileMenu(
+    '#mobile-menu-open',
+    '#mobile-menu-close',
+    '#dropdownMenu'
+)
+
 bottomMenu.init();
 submenu.init();
-
-// document.getElementById("searchButton").addEventListener("click", function () {
-//   const searchIcon = document.getElementById("searchIcon");
-//
-//   if (this.classList.contains("active")) {
-//     searchIcon.src = "img/search.svg";
-//     this.classList.remove("active");
-//   } else {
-//     searchIcon.src = "img/close.svg";
-//     this.classList.add("active");
-//   }
-// });
+mobileMenu.init();

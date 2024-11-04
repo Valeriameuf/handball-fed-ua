@@ -88,14 +88,14 @@
                             </ul>
                         </nav>
                         <div class="header__buttons">
-                            <div class="burger burger--decor" onclick="toggleMenu()">
+                            <div id="mobile-menu-open" class="burger burger--decor">
                                 <div></div>
                                 <div></div>
                                 <div></div>
                             </div>
-                            <button class="search-button" id="searchButton">
-                                <img id="searchIcon" src="img/search.svg" alt="search">
-                            </button>
+<!--                            <button class="search-button" id="searchButton">-->
+<!--                                <img id="searchIcon" src="img/search.svg" alt="search">-->
+<!--                            </button>-->
                         </div>
                     </div>
                     <div class="container submenu-real__container">
@@ -193,12 +193,11 @@
                     </div>
                 </div>
             </div>
-            <div class="overlay" id="overlay" onclick="closeMenu()"></div>
             <div class="dropdown-menu" id="dropdownMenu">
-                <div class="header__mobile mobile-nav" id="mobileMenu">
+                <div class="header__mobile mobile-nav">
                     <div class="mobile-nav__top">
                         <img src="img/logo.png" alt="logo">
-                        <button class="mobile-nav__close" aria-label="close menu" onclick="closeMenu()">
+                        <button id="mobile-menu-close" class="mobile-nav__close" aria-label="close menu">
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
@@ -222,112 +221,8 @@
                     <ul class="mobile-nav__list">
                         <li class="mobile-nav__item">
                             <div class="mobile-nav__inner">
-                                <a class="mobile-nav__link link-style" href="#">ФГУ</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
-                            </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <div class="mobile-nav__inner">
                                 <a class="mobile-nav__link link-style" href="#">Новини</a>
-                                <i class="fas fa-chevron-up arrow mobile-nav__arrow"></i>
                             </div>
-                            <ul class="mobile-nav__sublist mobile-nav__sublist--open">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Чоловіча
-                                        Суперіга
-                                    </a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Жіноча Суперліга</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Вища ліга</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Перша ліга</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Дитячо-юнацький гандбол</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <div class="mobile-nav__inner">
-                                <a class="mobile-nav__link link-style" href="#">Досягнення</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow mobile-nav__arrow--hidden"></i>
-                            </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <div class="mobile-nav__inner">
-                                <a class="mobile-nav__link link-style" href="#">Збірні</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
-                            </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <div class="mobile-nav__inner">
-                                <a class="mobile-nav__link link-style" href="#">Команди</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
-                            </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <div class="mobile-nav__inner">
-                                <a class="mobile-nav__link link-style" href="#">Судді та делегати</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
-                            </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <div class="mobile-nav__inner">
-                                <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
-                            </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="mobile-nav__item">
                             <div class="mobile-nav__inner">
@@ -336,82 +231,106 @@
                             </div>
                             <ul class="mobile-nav__sublist">
                                 <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
+                                    <a class="mobile-nav__sublink" href="#">Суперліга / Жінки</a>
                                 </li>
                                 <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
+                                    <a class="mobile-nav__sublink" href="#">Суперліга / Чоловіки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Вища ліга / Жінки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Вища ліга / Чоловіки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Перша ліга / Жінки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Перша ліга / Чоловіки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Кубок України / Жінки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Кубок України / Чоловіки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">2008-2009 р.н. / Дівчата</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">2008-2009 р.н. / Юнаки</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">2010-2011 р.н. / Дівчата</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">2010-2011 р.н. / Юнаки</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Досягнення</a>
+                            </div>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Збірні</a>
+                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                            </div>
+                            <ul class="mobile-nav__sublist">
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Жіноча збірна України</a>
+                                </li>
+                                <li class="mobile-nav__subitem">
+                                    <a class="mobile-nav__sublink" href="#">Чоловіча збірна України</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Команди</a>
+                            </div>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Судді та делегати</a>
+                            </div>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
+                            </div>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <div class="mobile-nav__inner">
+                                <a class="mobile-nav__link link-style" href="#">ФГУ</a>
+                            </div>
                         </li>
                         <li class="mobile-nav__item">
                             <div class="mobile-nav__inner">
                                 <a class="mobile-nav__link link-style" href="#">Навчання</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
                             </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="mobile-nav__item">
                             <div class="mobile-nav__inner">
                                 <a class="mobile-nav__link link-style" href="#">Партнери</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
                             </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="mobile-nav__item">
                             <div class="mobile-nav__inner">
                                 <a class="mobile-nav__link link-style" href="#">Шкільна ліга</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
                             </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="mobile-nav__item">
                             <div class="mobile-nav__inner">
                                 <a class="mobile-nav__link link-style" href="#">XPS</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
                             </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="mobile-nav__item">
                             <div class="mobile-nav__inner">
                                 <a class="mobile-nav__link link-style" href="#">Документи</a>
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
                             </div>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 1</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Підпункт 2</a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
