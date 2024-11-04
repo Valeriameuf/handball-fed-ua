@@ -1,4 +1,6 @@
 @use "../utils/variables";
+@import "../utils/breakpoint";
+
 .header {
   &__container {
     width: 100%;
@@ -126,9 +128,14 @@
       opacity: 0;
     }
   }
-  &__logo img {
-    height: 103px;
-    width: auto;
+  &__logo {
+    &--indent {
+      margin-bottom: 11px;
+    }
+    img {
+      height: 103px;
+      width: auto;
+    }
   }
   &__nav {
     display: flex;
@@ -178,7 +185,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      padding-top: 10px;
       padding-bottom: 15px;
     }
     &__item {
@@ -231,5 +237,69 @@
   }
   .active {
     background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@include desktop {
+  .header {
+    &__logo {
+      img {
+        height: 83px;
+      }
+    }
+  }
+}
+
+@include laptopl {
+  .header {
+    &__container {
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__logo {
+      &--indent {
+        margin-bottom: 0;
+      }
+    }
+    &__bottom {
+      display: flex;
+    }
+    &__top {
+      display: none;
+    }
+
+    &__list {
+      display: none;
+    }
+
+    &__line {
+      position: absolute;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      transition: 0.3s ease;
+    }
+    .burger {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .submenu-real__container {
+      display: none;
+    }
+  }
+
+  .top__item {
+    .menu-link {
+      font-size: 12px;
+    }
+  }
+}
+
+@include mobilexs {
+  .header {
+    &__top {
+      display: none;
+    }
   }
 }

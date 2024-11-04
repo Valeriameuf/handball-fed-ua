@@ -1,3 +1,5 @@
+@import "../utils/breakpoint";
+
 .news-section {
   margin-bottom: 30px;
   &__container {
@@ -8,16 +10,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-  }
-
-  &__title {
-    h2 {
-      font-size: 45px;
-      font-weight: 700;
-      line-height: 1.3;
-      text-transform: uppercase;
-      color: $color-brand-dark;
-    }
   }
 
   &__btn,
@@ -34,6 +26,10 @@
       background-position: right 10px center;
       background-size: 16px 16px;
       padding-right: 40px;
+      &:hover {
+        background-color: $color-brand-light;
+        color: $color-brand-white;
+      }
     }
   }
   &__btn-mobile {
@@ -52,19 +48,22 @@
 }
 .banner {
   position: relative;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+  max-width: 400px;
+  // border-radius: 15px;
+  // display: flex;
+  // flex-direction: column;
+  // overflow: hidden;
 
-  &__image {
-    width: 100%;
-    overflow: hidden;
-  }
-  &__img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  a {
+    img {
+      display: block;
+      border-radius: 15px;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      aspect-ratio: 400/1230;
+      object-fit: cover;
+    }
   }
   .content {
     max-width: 417px;
@@ -101,6 +100,51 @@
         height: auto;
         max-width: 103px;
       }
+    }
+  }
+}
+
+@include laptopxl {
+  .news-section {
+    &__container {
+      padding-top: 60px;
+    }
+  }
+}
+@include laptopl {
+  .news-section {
+    &__cards {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px 30px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include mobilel {
+  .news-section {
+    &__btn {
+      display: none;
+    }
+    &__btn-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 18px;
+    }
+    .banner {
+      display: none;
+    }
+  }
+}
+
+@include mobilexs {
+  .news-section {
+    &__container {
+      padding-top: 30px;
+    }
+    &__top {
+      margin-bottom: 20px;
     }
   }
 }

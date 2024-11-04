@@ -1,7 +1,14 @@
+@import "../utils/breakpoint";
+
 .hero-section {
-  padding: 90px 0 85px;
+  background: url("./img/bg.svg") no-repeat;
+  background-size: cover;
+  background-position: 60%;
+  padding: 90px 0 0;
   position: relative;
+  background:url('@img/bg.svg') no-repeat; background-size:cover; background-position:50% 50%;
   &__container {
+    position: relative;
     display: flex;
     padding: 40px 20px;
   }
@@ -29,8 +36,11 @@
       margin-bottom: 22px;
     }
   }
-
   &__btn {
+    margin-bottom: 50px;
+  }
+  &__btn,
+  &__btn-mobile {
     a {
       display: inline-block;
       background-color: $color-brand-yellow;
@@ -42,7 +52,16 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       padding: 17px 30px;
+      &:hover {
+        background-color: $color-brand-light;
+        color: $color-brand-white;
+        border: 2px solid $color-brand-white;
+      }
     }
+  }
+  &__btn-mobile {
+    text-align: center;
+    display: none;
   }
 }
 
@@ -65,7 +84,7 @@
   box-shadow: 0 12px 20px -4px #030829b3;
   border-radius: 25px;
   width: 100%;
-
+  margin-bottom: 37px;
   img {
     width: 100%;
     height: 100%;
@@ -91,4 +110,103 @@
   height: 40px;
   cursor: pointer;
   margin: 0 5px;
+}
+.navigation-section {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  display: flex;
+  gap: 5px;
+  &__box {
+    width: 20px;
+    height: 5px;
+    background-color: $color-brand-white;
+    border-radius: 5px;
+    transition: width 0.3s, background-color 0.3s;
+    &--active {
+      width: 100px;
+      background-color: $color-brand-yellow;
+    }
+  }
+}
+
+@include laptopxl {
+  .hero-section {
+    background: url("./img/bg-tablet.svg") no-repeat;
+    background-size: cover;
+    // background-position: 60%;
+    padding: 40px 0 0;
+    &__container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .large-title {
+      font-size: 30px;
+      width: auto;
+    }
+    &__btn {
+      margin-bottom: 20px;
+    }
+  }
+}
+@include laptopl {
+  .hero-section {
+    &__btn {
+      display: none;
+    }
+    .navigation-section {
+      bottom: 105px;
+    }
+    &__btn-mobile {
+      display: inline-block;
+    }
+    &__content {
+      p {
+        margin-bottom: 10px;
+      }
+      p,
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@include tablet {
+  .hero-section {
+    &__btn {
+      a {
+        padding: 15px 0;
+      }
+    }
+  }
+  @include mobilel {
+    .hero-section {
+      background-image: url("./img/bg-mobile.svg");
+      .large-title {
+        font-size: 23px;
+      }
+      &__btn {
+        a {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@include mobilexs {
+  .hero-section {
+    padding-top: 30px;
+    &__container {
+      gap: 10px;
+    }
+    &__content {
+      margin-bottom: 5px;
+    }
+    &__btn-mobile {
+      a {
+        padding: 10px 20px;
+      }
+    }
+  }
 }

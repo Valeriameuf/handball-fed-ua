@@ -1,3 +1,5 @@
+@import "../utils/breakpoint";
+
 .news {
   &__container {
     padding-top: 42px;
@@ -199,6 +201,73 @@
       border-radius: 5px;
       padding: 8px;
       margin-right: 10px;
+    }
+  }
+}
+
+@include laptopxl {
+  .news {
+    &__section {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .card {
+      max-width: 860px;
+      &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 34px;
+      }
+    }
+    .divider {
+      max-width: 350px;
+      &--hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+@include mobilel {
+  .news {
+    &__container {
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    .card {
+      &__content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .news-nav {
+      .news-text {
+        font-size: 16px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@include mobilexs {
+  .news {
+    &__container {
+      padding-bottom: 30px;
+    }
+  }
+  .news-nav {
+    .social-links {
+      justify-content: flex-start;
+      .social-link {
+        padding: 5px;
+        &__link {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }
