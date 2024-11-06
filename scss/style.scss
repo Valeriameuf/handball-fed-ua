@@ -18,6 +18,7 @@
 @use "./layouts/news-cards";
 @use "./layouts/news-pagination";
 @use "./layouts/burger-menu";
+@use "./layouts/events";
 @use "./layouts/footer";
 
 // Импорт компонентов
@@ -28,3 +29,7 @@
 @use "~@fortawesome/fontawesome-free/scss/solid";
 @use "~@fortawesome/fontawesome-free/scss/v4-shims";
 @use "~@fortawesome/fontawesome-free/scss/brands";
+
+@use "~swiper/scss";
+@use "~swiper/scss/navigation";
+@use "~swiper/scss/pagination";

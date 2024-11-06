@@ -80,6 +80,7 @@ module.exports = {
       "@js": path.join(__dirname, "/js/"),
       "@img": path.join(__dirname, "/img/"),
       "@var": path.join(__dirname, "/var/"),
+      "@flags": path.join(__dirname, "/node_modules/svg-country-flags/"),
     },
   },
 };
