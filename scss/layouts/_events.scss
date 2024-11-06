@@ -151,8 +151,6 @@
   }
 }
 
-@include breakpoint.desktop {
-}
 @include breakpoint.laptopxl {
   .calendar-cards {
     &__container {
@@ -160,35 +158,38 @@
     }
   }
 }
+
 @include breakpoint.laptopl {
   .calendar-cards {
     .calendar-card {
-      &__titles {
-        span {
-          font-size: 20px;
-        }
-      }
-      &__score {
-        height: 40px;
-        width: 40px;
-      }
+      //&__titles {
+      //  span {
+      //    font-size: 20px;
+      //  }
+      //}
+      //&__score {
+      //  height: 40px;
+      //  width: 40px;
+      //}
     }
   }
 }
-@include breakpoint.tablet {
-}
+
 @include breakpoint.mobilel {
   .calendar-cards {
+    &__container {
+      padding: 20px 15px;
+    }
     &__title {
       margin-bottom: 15px;
     }
-    &____inner {
+    &__inner {
       padding: 15px 0;
     }
     .calendar-card {
       &__titles {
         span {
-          font-size: 12px;
+          font-size: 20px;
         }
       }
       &__left,
@@ -197,15 +198,12 @@
       }
       &__titles {
         p {
-          font-size: 10px;
+          font-size: 13px;
         }
       }
       &__country {
-        font-size: 12px;
+        font-size: 13px;
       }
     }
   }
-}
-
-@include breakpoint.mobilexs {
 }
