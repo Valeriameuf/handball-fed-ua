@@ -1,14 +1,17 @@
+@use "../utils/variables";
+@use "../utils/breakpoint";
+
 .slider-control {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  border: 1px solid $color-brand-yellow;
+  border: 1px solid variables.$color-brand-yellow;
   border-radius: 50%;
   color: #000;
   padding: 18px;
   transition: background 0.3s;
   &:hover {
-    background-color: $color-brand-yellow;
+    background-color: variables.$color-brand-yellow;
   }
 }

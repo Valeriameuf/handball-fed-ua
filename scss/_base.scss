@@ -1,11 +1,11 @@
-@import "./utils/variables";
+@use "./utils/variables";
 
 body {
   height: 100%;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: 400;
-  color: $color-brand-white;
+  color: variables.$color-brand-white;
   line-height: 1.2;
 }
 .main {
@@ -29,7 +29,7 @@ body {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: $color-brand-light;
+  color: variables.$color-brand-light;
 }
 .hidden-title {
   position: absolute;
@@ -46,7 +46,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-  color: $color-brand-white;
+  color: variables.$color-brand-white;
   transition: color 0.3s, text-decoration 0.3s;
   white-space: nowrap;
 }

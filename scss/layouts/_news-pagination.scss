@@ -1,3 +1,5 @@
+@use "../utils/variables";
+
 .pagination {
   display: flex;
   align-items: center;
@@ -6,7 +8,7 @@
   margin-bottom: 20px;
   &__button {
     background-color: transparent;
-    border: 1px solid $color-brand-yellow;
+    border: 1px solid variables.$color-brand-yellow;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -14,7 +16,7 @@
     justify-content: center;
     padding: 18px;
     &:hover {
-      background-color: $color-brand-yellow;
+      background-color: variables.$color-brand-yellow;
     }
     img {
       width: 14px;
@@ -39,11 +41,11 @@
     width: 50px;
     height: 50px;
     &:hover {
-      border: 2px solid $color-brand-light;
+      border: 2px solid variables.$color-brand-light;
     }
   }
   &__number.active {
-    background-color: $color-brand-light;
-    color: $color-brand-white;
+    background-color: variables.$color-brand-light;
+    color: variables.$color-brand-white;
   }
 }

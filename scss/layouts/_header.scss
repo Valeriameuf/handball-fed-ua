@@ -1,5 +1,5 @@
 @use "../utils/variables";
-@import "../utils/breakpoint";
+@use "../utils/breakpoint";
 
 .header {
   &__container {
@@ -14,12 +14,12 @@
       z-index: 101;
     }
     &__menu {
-      background: $color-brand-dark;
+      background: variables.$color-brand-dark;
       position: absolute;
       width: 100%;
       top: 0;
       left: 0;
-      border-bottom: $color-brand-white 2px solid;
+      border-bottom: variables.$color-brand-white 2px solid;
       padding: 15px;
       min-height: 130px;
       display: none;
@@ -38,7 +38,7 @@
         }
       }
       li[data-opened] {
-        border-right: 2px solid $color-brand-yellow;
+        border-right: 2px solid variables.$color-brand-yellow;
       }
       ul ul {
         margin-left: calc(100%);
@@ -69,7 +69,7 @@
       z-index: 100;
     }
     &--bg {
-      background-color: $color-brand-light;
+      background-color: variables.$color-brand-light;
     }
   }
   &__bottom {
@@ -117,7 +117,7 @@
       transition: background-color 0.3s;
     }
     &__icon.active {
-      background-color: s$color-brand-white;
+      background-color: variables.$color-brand-white;
     }
     &__icon img {
       width: 18px;
@@ -158,7 +158,7 @@
   &__link {
     position: relative;
     &:hover {
-      color: $color-brand-yellow;
+      color: variables.$color-brand-yellow;
     }
     &::after {
       content: "";
@@ -167,7 +167,7 @@
       bottom: -5px;
       width: 100%;
       height: 1px;
-      background-color: $color-brand-yellow;
+      background-color: variables.$color-brand-yellow;
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -214,14 +214,14 @@
   font-size: 15px;
   transition: color 0.3s;
   &:hover {
-    color: $color-brand-yellow;
+    color: variables.$color-brand-yellow;
   }
 }
 .search-button {
   width: 50px;
   height: 50px;
   border: none;
-  background-color: $color-brand-yellow;
+  background-color: variables.$color-brand-yellow;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -240,7 +240,7 @@
   }
 }
 
-@include desktop {
+@include breakpoint.desktop {
   .header {
     &__logo {
       img {
@@ -250,7 +250,7 @@
   }
 }
 
-@include laptopl {
+@include breakpoint.laptopl {
   .header {
     &__container {
       align-items: center;
@@ -296,7 +296,7 @@
   }
 }
 
-@include mobilexs {
+@include breakpoint.mobilexs {
   .header {
     &__top {
       display: none;

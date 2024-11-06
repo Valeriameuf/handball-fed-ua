@@ -1,4 +1,5 @@
-@import "../utils/breakpoint";
+@use "../utils/breakpoint";
+@use "../utils/variables";
 
 .general-news {
   padding-top: 33px;
@@ -6,10 +7,10 @@
     margin-bottom: 14px;
   }
   &__bar {
-    background-color: $color-brand-light;
+    background-color: variables.$color-brand-light;
     border-radius: 15px;
     padding: 20px;
-    color: $color-brand-white;
+    color: variables.$color-brand-white;
     margin-bottom: 33px;
   }
   &__top {
@@ -22,15 +23,15 @@
       font-size: 16px;
       font-weight: 400;
       line-height: 1.6;
-      border: 2px solid $color-brand-white;
+      border: 2px solid variables.$color-brand-white;
       border-radius: 15px;
       padding: 14px 17px;
       text-decoration: none;
-      color: $color-brand-white;
+      color: variables.$color-brand-white;
       background: rgb(85 125 201 / 50%);
       &.active,
       &:hover {
-        background-color: $color-brand-yellow;
+        background-color: variables.$color-brand-yellow;
         color: #000;
       }
     }
@@ -63,11 +64,11 @@
   }
 }
 
-@include desktop {
+@include breakpoint.desktop {
 }
-@include laptopxl {
+@include breakpoint.laptopxl {
 }
-@include laptopl {
+@include breakpoint.laptopl {
   .general-news {
     .general-news-section {
       &__cards {
@@ -76,9 +77,9 @@
     }
   }
 }
-@include tablet {
+@include breakpoint.tablet {
 }
-@include mobilel {
+@include breakpoint.mobilel {
   .general-news {
     &__top {
       a {
@@ -119,7 +120,7 @@
   }
 }
 
-@include mobilexs {
+@include breakpoint.mobilexs {
   //.general-news {
   //  &__top {
   //    a {

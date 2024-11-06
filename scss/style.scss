@@ -1,30 +1,35 @@
-@import "./reset";
-@import "./base";
-@import "./utils/fonts";
-@import "./utils/variables";
+@use "./reset";
+@use "./base";
+@use "./utils/fonts";
+@use "./utils/variables";
 
 // Импорт макетов
-@import "./layouts/header";
-@import "./layouts/header-news";
-@import "./layouts/hero-section";
-@import "./layouts/news-section";
-@import "./layouts/horizon-banner-section";
-@import "./layouts/news";
-@import "./layouts/related-news";
-@import "./layouts/general-news";
-@import "./layouts/slider-btn";
-@import "./layouts/nav-bar";
-@import "./layouts/search";
-@import "./layouts/news-cards";
-@import "./layouts/news-pagination";
-@import "./layouts/burger-menu";
-@import "./layouts/footer";
+@use "./layouts/header";
+@use "./layouts/header-news";
+@use "./layouts/hero-section";
+@use "./layouts/news-section";
+@use "./layouts/horizon-banner-section";
+@use "./layouts/news";
+@use "./layouts/related-news";
+@use "./layouts/general-news";
+@use "./layouts/slider-btn";
+@use "./layouts/nav-bar";
+@use "./layouts/search";
+@use "./layouts/news-cards";
+@use "./layouts/news-pagination";
+@use "./layouts/burger-menu";
+@use "./layouts/events";
+@use "./layouts/footer";
 
 // Импорт компонентов
-@import "./components/media";
+@use "./components/media";
 
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/v4-shims";
-@import "~@fortawesome/fontawesome-free/scss/brands";
+@use "~@fortawesome/fontawesome-free/scss/fontawesome";
+@use "~@fortawesome/fontawesome-free/scss/regular";
+@use "~@fortawesome/fontawesome-free/scss/solid";
+@use "~@fortawesome/fontawesome-free/scss/v4-shims";
+@use "~@fortawesome/fontawesome-free/scss/brands";
+
+@use "~swiper/scss";
+@use "~swiper/scss/navigation";
+@use "~swiper/scss/pagination";
