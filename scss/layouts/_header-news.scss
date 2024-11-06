@@ -1,3 +1,4 @@
+@use "../utils/variables";
 .header {
   .submenu {
     display: flex;
@@ -9,7 +10,7 @@
       font-weight: 400;
       line-height: 1.2;
       &:hover {
-        color: $color-brand-yellow;
+        color: variables.$color-brand-yellow;
       }
     }
   }

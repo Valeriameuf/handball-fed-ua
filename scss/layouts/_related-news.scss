@@ -1,4 +1,5 @@
-@import "../utils/breakpoint";
+@use "../utils/breakpoint";
+@use "../utils/variables";
 
 .related-news {
   padding-bottom: 60px;
@@ -22,7 +23,7 @@
     display: inline-block;
     padding: 10px 15px;
     border: 1px solid #035ca2;
-    background-color: $color-brand-white;
+    background-color: variables.$color-brand-white;
     color: #000;
     border-radius: 5px;
     text-decoration: none;
@@ -30,11 +31,11 @@
     transition: background-color 0.3s;
   }
   .round-button:hover {
-    background-color: $color-brand-light;
+    background-color: variables.$color-brand-light;
   }
 }
 
-@include laptopxl {
+@include breakpoint.laptopxl {
   .related-news {
     .news-card {
       flex: 0 0 40%;
@@ -45,7 +46,7 @@
   }
 }
 
-@include tablet {
+@include breakpoint.tablet {
   .related-news {
     .news-card {
       flex: 1 0 70%;
@@ -55,7 +56,7 @@
     }
   }
 }
-@include mobilel {
+@include breakpoint.mobilel {
   .news-wrapper {
     position: relative;
     .news-card {
@@ -78,7 +79,7 @@
   }
 }
 
-@include mobilexs {
+@include breakpoint.mobilexs {
   .related-news {
     &__title {
       text-align: center;

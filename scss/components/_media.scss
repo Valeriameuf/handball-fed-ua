@@ -1,23 +1,24 @@
-@import "../utils/breakpoint";
+@use "../utils/breakpoint";
+@use "../utils/variables";
 
-@include desktop {
+@include breakpoint.desktop {
 }
-@include laptopxl {
+@include breakpoint.laptopxl {
 }
-@include laptopl {
+@include breakpoint.laptopl {
   .title {
     font-size: 35px;
   }
 }
-@include tablet {
+@include breakpoint.tablet {
 }
-@include mobilel {
+@include breakpoint.mobilel {
   .title {
     font-size: 30px;
   }
 }
 
-@include mobilexs {
+@include breakpoint.mobilexs {
   .title {
     font-size: 23px;
   }
