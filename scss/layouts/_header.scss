@@ -9,35 +9,39 @@
     align-items: center;
   }
   .submenu-real {
+    position: relative;
+    &__wrapper {
+      position: absolute;
+      width: 100%;
+      background-color: variables.$color-brand-semidark;
+      box-shadow: 0 20px 20px #0308294d;
+    }
     &__container {
       position: relative;
       z-index: 101;
     }
     &__menu {
-      background: variables.$color-brand-dark;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      border-bottom: variables.$color-brand-white 2px solid;
+      border-top: variables.$color-brand-white 2px solid;
       padding: 15px;
       min-height: 130px;
       display: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
       ul {
         display: inline-block;
         position: relative;
       }
       li {
         padding: 10px 15px;
-        display: flex;
-        justify-content: space-between;
-        i {
-          margin-left: 25px;
-          padding: 0 15px;
-          cursor: pointer;
+        a {
+          display: flex;
+          justify-content: space-between;
+          i {
+            margin-left: 55px;
+          }
         }
       }
-      li[data-opened] {
+      li.active {
         border-right: 2px solid variables.$color-brand-yellow;
       }
       ul ul {
@@ -62,14 +66,21 @@
     margin: 0;
   }
   &__main {
+    &--bg {
+      background-color: variables.$color-brand-light;
+    }
     &--position {
       left: 0;
       position: absolute;
       right: 0;
       z-index: 100;
     }
-    &--bg {
-      background-color: variables.$color-brand-light;
+    &--position-bg {
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: 100;
+      background-color: variables.$color-brand-semidark;
     }
   }
   &__bottom {
@@ -157,9 +168,6 @@
   }
   &__link {
     position: relative;
-    &:hover {
-      color: variables.$color-brand-yellow;
-    }
     &::after {
       content: "";
       position: absolute;
@@ -171,7 +179,16 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
+    &:hover {
+      color: variables.$color-brand-yellow;
+    }
     &:hover::after {
+      opacity: 1;
+    }
+    &--active {
+      color: variables.$color-brand-yellow;
+    }
+    &--active::after {
       opacity: 1;
     }
   }
