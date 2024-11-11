@@ -4,6 +4,8 @@ export default class BottomMenu {
         this.triggerSelector = '.header__link[data-has-children]';
         this.triggerActiveClass = 'header__link--active';
         this.currentEvent;
+        this.headerMain;
+        this.frontPage = false;
 
         this.init();
     }
@@ -13,6 +15,12 @@ export default class BottomMenu {
 
         if (this.container === null) {
             return;
+        }
+
+        this.headerMain = document.querySelector('#header-main');
+
+        if (this.headerMain.classList.contains('header__main--position')) {
+            this.frontPage = true;
         }
 
         this.registerListeners();
@@ -29,15 +37,20 @@ export default class BottomMenu {
 
                 this.closeOpenedTriggers();
 
-                const headerMain = document.querySelector('#header-main');
                 const isOpened = this.isOpenedTrigger(trigger);
 
                 if (isOpened) {
                     trigger.classList.remove(this.triggerActiveClass);
-                    headerMain.classList.replace('header__main--position-bg', 'header__main--position');
+                    this.headerMain.classList.replace(
+                        'header__main--position-bg',
+                        this.frontPage ? 'header__main--position' : 'header__main--bg'
+                    );
                 } else {
                     trigger.classList.add(this.triggerActiveClass);
-                    headerMain.classList.replace('header__main--position', 'header__main--position-bg');
+                    this.headerMain.classList.replace(
+                        this.frontPage ? 'header__main--position' : 'header__main--bg',
+                        'header__main--position-bg'
+                    );
                 }
 
                 const targetNode = document.querySelector(
