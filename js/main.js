@@ -8,12 +8,10 @@ const bottomMenu = new BottomMenu('#main-header-menu');
 const submenu = new Submenu('#submenu-real');
 
 const mobileMenu = new MobileMenu(
+    '#dropdown-menu',
     '#mobile-menu-open',
-    '#mobile-menu-close',
-    '#dropdown-menu'
-)
-
-mobileMenu.init();
+    '#mobile-menu-close'
+);
 
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper(".swiper", {
