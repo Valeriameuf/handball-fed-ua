@@ -2,7 +2,7 @@ import BottomMenu from "@js/classes/BottomMenu";
 import Submenu from "@js/classes/Submenu";
 import MobileMenu from "@js/classes/MobileMenu";
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const bottomMenu = new BottomMenu(
   "li.header__item i",
@@ -26,10 +26,10 @@ const submenu = new Submenu(
 );
 
 const mobileMenu = new MobileMenu(
-    '#mobile-menu-open',
-    '#mobile-menu-close',
-    '#dropdownMenu'
-)
+  "#mobile-menu-open",
+  "#mobile-menu-close",
+  "#dropdownMenu"
+);
 
 bottomMenu.init();
 submenu.init();
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".slider-control--left",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".pagination",
       clickable: true,
     },
     breakpoints: {
@@ -59,5 +59,30 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 3,
       },
     },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mySwiper = new Swiper("#heroSwiper", {
+    modules: [Navigation, Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    effect: "fade",
+    navigation: {
+      nextEl: "#nextSlide",
+      prevEl: "#prevSlide",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      bulletClass: "navigation-section__box",
+      bulletActiveClass: "navigation-section__box--active",
+      renderBullet: (index, className) =>
+        `<div class="box ${className}"></div>`,
+    },
+    autoplay: {
+      delay: 5000,
+    },
+    loop: true,
   });
 });

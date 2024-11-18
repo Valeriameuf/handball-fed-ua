@@ -1,158 +1,187 @@
 <%- include('./partials/header'); %>
-    <main class="main">
-        <section class="hero-section">
-            <div class="hero-section__container container">
-                <div class="hero-section__left">
-                    <div class="hero-section__content content">
-                        <h1 class="hidden-title">Lorem</h1>
-                        <span class="small-title">Новини ФГУ</span>
-                        <a class="large-title" href="#">«Федерація має бути сервісним центром для всього
-                            українського гандболу»</a>
-                        <p>В Україні стартував гандбольний сезон</p>
-                        <div class="hero-section__btn">
-                            <a href="#">Читати далі</a>
+<main class="main">
+    <section class="hero-section">
+        <div class="hero-section__container container">
+            <div class="swiper" id="heroSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero-section__inner">
+                            <div class="hero-section__left">
+                                <div class="hero-section__content content">
+                                    <h1 class="hidden-title">Lorem</h1>
+                                    <span class="small-title">Новини ФГУ</span>
+                                    <a class="large-title" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                    <p>Текст для первого слайда.</p>
+                                    <div class="hero-section__btn">
+                                        <a href="#">Читати далі</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-section__image">
+                                <img src="@img/c30i2464-1536x1024.jpg" alt="player">
+                                <div class="buttons">
+                                    <button class="navigation-button" id="prevSlide">
+                                        <i class="navigation-icon">&lt;</i>
+                                    </button>
+                                    <button class="navigation-button" id="nextSlide">
+                                        <i class="navigation-icon">&gt;</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-section__inner">
+                            <div class="hero-section__left">
+                                <div class="hero-section__content content">
+                                    <h1 class="hidden-title">Lorem</h1>
+                                    <span class="small-title">Новини ФГУ</span>
+                                    <a class="large-title" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Hic pariatur asperiores</a>
+                                    <p>Текст.</p>
+                                    <div class="hero-section__btn">
+                                        <a href="#">Читати далі</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-section__image">
+                                <img src="@img/dsc_5353-scaled.jpg" alt="player">
+                                <div class="buttons">
+                                    <button class="navigation-button" id="prevSlide">
+                                        <i class="navigation-icon">&lt;</i>
+                                    </button>
+                                    <button class="navigation-button" id="nextSlide">
+                                        <i class="navigation-icon">&gt;</i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="navigation-section">
-                    <div class="navigation-section__box box" data-index="0"></div>
-                    <div class="navigation-section__box box" data-index="1"></div>
-                    <div class="navigation-section__box box" data-index="2"></div>
-                    <div class="navigation-section__box navigation-section__box--active box" data-index="3"></div>
-                </div>
-                <div class="image-container">
-                    <img src="@img/c30i2464-1536x1024.jpg" alt="player">
-                    <div class="buttons">
-                        <button class="navigation-button">
-                            <i class="navigation-icon">&lt;</i>
-                        </button>
-                        <button class="navigation-button">
-                            <i class="navigation-icon">&gt;</i>
-                        </button>
-                    </div>
-                </div>
+                <div class="navigation-section swiper-pagination"></div>
                 <div class="hero-section__btn-mobile">
                     <a href="#">Читати далі</a>
                 </div>
             </div>
-        </section>
-        <section class="news-section">
-            <div class="news-section__container container">
-                <div class="news-section__top">
-                    <div class="news-section__title title">
-                        <h2>Останні новини</h2>
-                    </div>
-                    <div class="news-section__btn">
-                        <a href="general-news.html">Дивитись всі новини</a>
-                    </div>
+        </div>
+    </section>
+    <section class="news-section">
+        <div class="news-section__container container">
+            <div class="news-section__top">
+                <div class="news-section__title title">
+                    <h2>Останні новини</h2>
                 </div>
-                <div class="news-section__content">
-                    <div class="news-section__cards cards">
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-section__banner banner">
-                        <a href="#">
-                            <img src="@img/vertbanner-1120x400-1.png" alt="banner">
-                        </a>
-                    </div>
+                <div class="news-section__btn">
+                    <a href="general-news.html">Дивитись всі новини</a>
                 </div>
             </div>
-            <div class="news-section__btn-mobile">
-                <a href="general-news.html">Дивитись всі новини</a>
-            </div>
-        </section>
-        <section class="horizon-banner-section">
-            <div class="container">
-                <div class="horizon-banner-section__banner">
-                    <a href="#" target="_blank">
-                        <img class="horizon-banner-section__img" src="@img/horizbanner-1_1230.png" alt="banner">
-                    </a>
+            <div class="news-section__content">
+                <div class="news-section__cards cards">
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="horizon-banner-section__banner">
-                    <a href="#" target="_blank">
-                        <img class="horizon-banner-section__img" src="@img/horizbanner-2_1230.png" alt="banner">
+                <div class="news-section__banner banner">
+                    <a href="#">
+                        <img src="@img/vertbanner-1120x400-1.png" alt="banner">
                     </a>
                 </div>
             </div>
-        </section>
-    </main>
-    <%- include('./partials/footer'); %>
+        </div>
+        <div class="news-section__btn-mobile">
+            <a href="general-news.html">Дивитись всі новини</a>
+        </div>
+    </section>
+    <section class="horizon-banner-section">
+        <div class="container">
+            <div class="horizon-banner-section__banner">
+                <a href="#" target="_blank">
+                    <img class="horizon-banner-section__img" src="@img/horizbanner-1_1230.png" alt="banner">
+                </a>
+            </div>
+            <div class="horizon-banner-section__banner">
+                <a href="#" target="_blank">
+                    <img class="horizon-banner-section__img" src="@img/horizbanner-2_1230.png" alt="banner">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('./partials/footer'); %>
