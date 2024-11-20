@@ -78,7 +78,7 @@ export default class BottomMenu {
 
     closeOpenedTriggers() {
         for (const trigger of this.getOpenedTriggers()) {
-            if (trigger === this.currentEvent.target) {
+            if (trigger === this.currentEvent.currentTarget) {
                 continue;
             }
             trigger.dispatchEvent(new Event('click'));

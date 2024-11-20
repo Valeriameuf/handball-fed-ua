@@ -22,9 +22,6 @@ module.exports = {
                 'general-news': {
                     import: './views/general-news.ejs'
                 },
-                events: {
-                    import: './views/events.ejs'
-                },
             },
             preprocessor: 'ejs', // use EJS templating engine
             // preprocessorOptions: {...},

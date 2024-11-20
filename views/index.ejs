@@ -1,158 +1,444 @@
 <%- include('./partials/header'); %>
-    <main class="main">
-        <section class="hero-section">
-            <div class="hero-section__container container">
-                <div class="hero-section__left">
-                    <div class="hero-section__content content">
-                        <h1 class="hidden-title">Lorem</h1>
-                        <span class="small-title">Новини ФГУ</span>
-                        <a class="large-title" href="#">«Федерація має бути сервісним центром для всього
-                            українського гандболу»</a>
-                        <p>В Україні стартував гандбольний сезон</p>
-                        <div class="hero-section__btn">
-                            <a href="#">Читати далі</a>
+<main class="main">
+    <section class="hero-section">
+        <div class="hero-section__container container">
+            <div id="hero-swiper" class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero-section__inner">
+                            <div class="hero-section__left">
+                                <div class="hero-section__content content">
+                                    <h1 class="hidden-title">Lorem</h1>
+                                    <span class="small-title">Новини ФГУ</span>
+                                    <a class="large-title" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                                    <p>Текст для первого слайда.</p>
+                                    <div class="hero-section__btn">
+                                        <a href="#">Читати далі</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-section__image">
+                                <a href="#">
+                                    <img src="@img/c30i2464-1536x1024.jpg" alt="player">
+                                </a>
+<!--                                <div class="buttons">-->
+<!--                                    <button id="prev-slide" class="navigation-button">-->
+<!--                                        <i class="navigation-icon">&lt;</i>-->
+<!--                                    </button>-->
+<!--                                    <button id="next-slide" class="navigation-button">-->
+<!--                                        <i class="navigation-icon">&gt;</i>-->
+<!--                                    </button>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero-section__inner">
+                            <div class="hero-section__left">
+                                <div class="hero-section__content content">
+                                    <h1 class="hidden-title">Lorem</h1>
+                                    <span class="small-title">Новини ФГУ</span>
+                                    <a class="large-title" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Hic pariatur asperiores</a>
+                                    <p>Текст.</p>
+                                    <div class="hero-section__btn">
+                                        <a href="#">Читати далі</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-section__image">
+                                <a href="#">
+                                    <img src="@img/dsc_5353-scaled.jpg" alt="player">
+                                </a>
+<!--                                <div class="buttons">-->
+<!--                                    <button class="navigation-button" id="prevSlide">-->
+<!--                                        <i class="navigation-icon">&lt;</i>-->
+<!--                                    </button>-->
+<!--                                    <button class="navigation-button" id="nextSlide">-->
+<!--                                        <i class="navigation-icon">&gt;</i>-->
+<!--                                    </button>-->
+<!--                                </div>-->
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="navigation-section">
-                    <div class="navigation-section__box box" data-index="0"></div>
-                    <div class="navigation-section__box box" data-index="1"></div>
-                    <div class="navigation-section__box box" data-index="2"></div>
-                    <div class="navigation-section__box navigation-section__box--active box" data-index="3"></div>
-                </div>
-                <div class="image-container">
-                    <img src="@img/c30i2464-1536x1024.jpg" alt="player">
-                    <div class="buttons">
-                        <button class="navigation-button">
-                            <i class="navigation-icon">&lt;</i>
-                        </button>
-                        <button class="navigation-button">
-                            <i class="navigation-icon">&gt;</i>
-                        </button>
-                    </div>
-                </div>
+                <div id="hero-swiper-pagination" class="navigation-section swiper-pagination"></div>
                 <div class="hero-section__btn-mobile">
                     <a href="#">Читати далі</a>
                 </div>
             </div>
-        </section>
-        <section class="news-section">
-            <div class="news-section__container container">
-                <div class="news-section__top">
-                    <div class="news-section__title title">
-                        <h2>Останні новини</h2>
-                    </div>
-                    <div class="news-section__btn">
-                        <a href="general-news.html">Дивитись всі новини</a>
-                    </div>
+        </div>
+    </section>
+    <section class="news-section">
+        <div class="news-section__container container">
+            <div class="news-section__top">
+                <div class="news-section__title title">
+                    <h2>Останні новини</h2>
                 </div>
-                <div class="news-section__content">
-                    <div class="news-section__cards cards">
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-card">
-                            <a class="news-card__link" href="#"></a>
-                            <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
-                            <div class="news-card__info">
-                                <span class="news-card__category">Збірні України</span>
-                                <div class="news-card__date">
-                                    <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
-                                    <span>12 вересня 2024</span>
-                                </div>
-                            </div>
-                            <div class="news-card__divider"></div>
-                            <div class="text">
-                                <h3 class="text__title">Заголовок новини</h3>
-                                <p class="text__text">Короткий опис новини, що містить основну інформацію про
-                                    подію.</p>
-                                <div class="text__btn">
-                                    <a class="text__link" href="#">Детальніше</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-section__banner banner">
-                        <a href="#">
-                            <img src="@img/vertbanner-1120x400-1.png" alt="banner">
-                        </a>
-                    </div>
+                <div class="news-section__btn">
+                    <a href="general-news.html">Дивитись всі новини</a>
                 </div>
             </div>
-            <div class="news-section__btn-mobile">
-                <a href="general-news.html">Дивитись всі новини</a>
-            </div>
-        </section>
-        <section class="horizon-banner-section">
-            <div class="container">
-                <div class="horizon-banner-section__banner">
-                    <a href="#" target="_blank">
-                        <img class="horizon-banner-section__img" src="@img/horizbanner-1_1230.png" alt="banner">
-                    </a>
+            <div class="news-section__content">
+                <div class="news-section__cards cards">
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <a class="news-card__link" href="#"></a>
+                        <img class="news-card__image" src="@img/news-photo.webp" alt="новина" />
+                        <div class="news-card__info">
+                            <span class="news-card__category">Збірні України</span>
+                            <div class="news-card__date">
+                                <img src="@img/calendar-news.svg" alt="Календар" class="news-card__icon" />
+                                <span>12 вересня 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-card__divider"></div>
+                        <div class="text">
+                            <h3 class="text__title">Заголовок новини</h3>
+                            <p class="text__text">Короткий опис новини, що містить основну інформацію про
+                                подію.</p>
+                            <div class="text__btn">
+                                <a class="text__link" href="#">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="horizon-banner-section__banner">
-                    <a href="#" target="_blank">
-                        <img class="horizon-banner-section__img" src="@img/horizbanner-2_1230.png" alt="banner">
+                <div class="news-section__banner banner">
+                    <a href="#">
+                        <img src="@img/vertbanner-1120x400-1.png" alt="banner">
                     </a>
                 </div>
             </div>
-        </section>
-    </main>
-    <%- include('./partials/footer'); %>
+        </div>
+        <div class="news-section__btn-mobile">
+            <a href="general-news.html">Дивитись всі новини</a>
+        </div>
+    </section>
+    <section class="calendar-cards">
+        <div class="calendar-cards__container container">
+            <div class="calendar-cards__title title">
+                <h2>Найближчі міжнародні матчі</h2>
+            </div>
+            <div id="calendar-swiper" class="swiper">
+                <div class="swiper-wrapper calendar-cards__inner">
+                    <div class="swiper-slide calendar-card">
+                        <p class="calendar-card__subtitle">Чоловіча збірна України</p>
+                        <div class="calendar-card__titles">
+                            <p class="hidden-title">Завершений</p>
+                            <p><span>Відбір на Євро-2026 Груповий етап 1 тур</span></p>
+                            <p class="calendar-card__date">четвер 7 листопада 2024 о 20:30</p>
+                        </div>
+                        <div class="calendar-card__wrapper">
+                            <div class="calendar-card__left">
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/nl.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Нідерланди</div>
+                                </div>
+                                <div class="calendar-card__score">-</div>
+                            </div>
+                            <div class="calendar-card__right">
+                                <div class="calendar-card__score">-</div>
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/ua.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Україна</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-card__time hidden-title">
+                            <span class="calendar-card__timeScore">14 - 18</span>
+                            <span class="calendar-card__timeText">Половина часу</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="calendar-card__place">
+                            <span>Місце проведення</span>
+                            <div class="calendar-card__item">
+                                <p>Алмере, Нідерланди</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide calendar-card">
+                        <p class="calendar-card__subtitle">Чоловіча збірна України</p>
+                        <div class="calendar-card__titles">
+                            <p class="hidden-title">Завершений</p>
+                            <p><span>Відбір на Євро-2026 Груповий етап 2 тур</span></p>
+                            <p class="calendar-card__date">неділя 10 листопада 2024 о 15:00</p>
+                        </div>
+                        <div class="calendar-card__wrapper">
+                            <div class="calendar-card__left">
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/ua.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Україна</div>
+                                </div>
+                                <div class="calendar-card__score">-</div>
+                            </div>
+                            <div class="calendar-card__right">
+                                <div class="calendar-card__score">-</div>
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/fo.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Фарерські острови</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-card__time hidden-title">
+                            <span class="calendar-card__timeScore">14 - 18</span>
+                            <span class="calendar-card__timeText">Половина часу</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="calendar-card__place">
+                            <span>Місце проведення</span>
+                            <div class="calendar-card__item">
+                                <p>Вільнюс, Литва.Avia Solutions Group Arena</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide calendar-card">
+                        <p class="calendar-card__subtitle">Жіноча збірна України</p>
+                        <div class="calendar-card__titles">
+                            <p class="hidden-title">Завершений</p>
+                            <p><span>Турнір трьох збірних</span></p>
+                            <p class="calendar-card__date">субота 23 листопада 2024</p>
+                        </div>
+                        <div class="calendar-card__wrapper">
+                            <div class="calendar-card__left">
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/sk.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Словаччина</div>
+                                </div>
+                                <div class="calendar-card__score">-</div>
+                            </div>
+                            <div class="calendar-card__right">
+                                <div class="calendar-card__score">-</div>
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/ua.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Україна</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-card__time hidden-title">
+                            <span class="calendar-card__timeScore">14 - 18</span>
+                            <span class="calendar-card__timeText">Половина часу</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="calendar-card__place">
+                            <span>Місце проведення</span>
+                            <div class="calendar-card__item">
+                                <p>Татабанья, Угорщина</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide calendar-card">
+                        <p class="calendar-card__subtitle">Жіноча збірна України</p>
+                        <div class="calendar-card__titles">
+                            <p class="hidden-title">Завершений</p>
+                            <p><span>Євро-2024.Фінальний турнір</span></p>
+                            <p class="calendar-card__date">п'ятниця 29 листопада 2024 о 21:30</p>
+                        </div>
+                        <div class="calendar-card__wrapper">
+                            <div class="calendar-card__left">
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/de.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Німеччина</div>
+                                </div>
+                                <div class="calendar-card__score">-</div>
+                            </div>
+                            <div class="calendar-card__right">
+                                <div class="calendar-card__score">-</div>
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/ua.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Україна</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-card__time hidden-title">
+                            <span class="calendar-card__timeScore">14 - 18</span>
+                            <span class="calendar-card__timeText">Половина часу</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="calendar-card__place">
+                            <span>Місце проведення</span>
+                            <div class="calendar-card__item">
+                                <p>Інсбрук, Австрія.Olyupiaworld Innsbruck</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide calendar-card">
+                        <p class="calendar-card__subtitle">Жіноча збірна України</p>
+                        <div class="calendar-card__titles">
+                            <p class="hidden-title">Завершений</p>
+                            <p><span>Євро-2024.Фінальний турнір</span></p>
+                            <p class="calendar-card__date">неділя 1 грудня 2024 о 21:30</p>
+                        </div>
+                        <div class="calendar-card__wrapper">
+                            <div class="calendar-card__left">
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/is.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Ісландія</div>
+                                </div>
+                                <div class="calendar-card__score">-</div>
+                            </div>
+                            <div class="calendar-card__right">
+                                <div class="calendar-card__score">-</div>
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/ua.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Україна</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-card__time hidden-title">
+                            <span class="calendar-card__timeScore">14 - 18</span>
+                            <span class="calendar-card__timeText">Половина часу</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="calendar-card__place">
+                            <span>Місце проведення</span>
+                            <div class="calendar-card__item">
+                                <p>Інсбрук, Австрія.Olyupiaworld Innsbruck</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide calendar-card">
+                        <p class="calendar-card__subtitle">Жіноча збірна України</p>
+                        <div class="calendar-card__titles">
+                            <p class="hidden-title">Завершений</p>
+                            <p><span>Євро-2024.Фінальний турнір</span></p>
+                            <p class="calendar-card__date"> вівторок 3 грудня 2024 о 19:00</p>
+                        </div>
+                        <div class="calendar-card__wrapper">
+                            <div class="calendar-card__left">
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/ua.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Україна</div>
+                                </div>
+                                <div class="calendar-card__score">-</div>
+                            </div>
+                            <div class="calendar-card__right">
+                                <div class="calendar-card__score">-</div>
+                                <div class="calendar-card__flag">
+                                    <div class="calendar-card__logo">
+                                        <img style="width: 44px; height: 44px;" src="@flags/svg/nl.svg" alt="flag">
+                                    </div>
+                                    <div class="calendar-card__country">Нідерланди</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-card__time hidden-title">
+                            <span class="calendar-card__timeScore">14 - 18</span>
+                            <span class="calendar-card__timeText">Половина часу</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="calendar-card__place">
+                            <span>Місце проведення</span>
+                            <div class="calendar-card__item">
+                                <p>Інсбрук, Австрія.Olyupiaworld Innsbruck</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-cards__btn">
+                    <button id="calendar-cards-control-prev" class="slider-control slider-control--left">
+                        <img class="slider-control__icon" src="@img/left-arrow-news.svg" alt="arrow">
+                    </button>
+                    <button id="calendar-cards-control-next" class="slider-control slider-control--right">
+                        <img class="slider-control__icon" src="@img/right-arrow-news.svg" alt="arrow">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="horizon-banner-section">
+        <div class="container">
+            <div class="horizon-banner-section__banner">
+                <a href="#" target="_blank">
+                    <img class="horizon-banner-section__img" src="@img/horizbanner-1_1230.png" alt="banner">
+                </a>
+            </div>
+            <div class="horizon-banner-section__banner">
+                <a href="#" target="_blank">
+                    <img class="horizon-banner-section__img" src="@img/horizbanner-2_1230.png" alt="banner">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('./partials/footer'); %>

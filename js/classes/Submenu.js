@@ -55,7 +55,7 @@ export default class Submenu {
         }
 
         return Array.from(
-            this.currentEvent.target
+            this.currentEvent.currentTarget
                 .closest('ul')
                 .querySelectorAll(this.triggerSelector)
         );
@@ -67,7 +67,7 @@ export default class Submenu {
 
     closeOpenedTriggers() {
         for (const trigger of this.getOpenedTriggers()) {
-            if (trigger === this.currentEvent.target) {
+            if (trigger === this.currentEvent.currentTarget) {
                 continue;
             }
             trigger.dispatchEvent(new Event('click'));

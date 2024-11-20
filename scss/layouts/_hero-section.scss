@@ -2,20 +2,17 @@
 @use "../utils/variables";
 
 .hero-section {
-  background: url("./img/bg.svg") no-repeat;
-  background-size: cover;
-  background-position: 60%;
-  padding: 90px 0 0;
   position: relative;
   background: url("@img/bg.svg") no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 30% 50%;
   &__container {
     position: relative;
-    display: flex;
-    padding: 40px 20px;
+    padding: 143px 15px 85px;
   }
-
+  &__inner {
+    display: flex;
+  }
   &__content {
     flex: 1;
     display: flex;
@@ -37,6 +34,20 @@
       font-weight: 400;
       line-height: 1.4;
       margin-bottom: 22px;
+    }
+  }
+  &__image {
+    position: relative;
+    box-shadow: 0 12px 20px -4px #030829b3;
+    border-radius: 25px;
+    width: 100%;
+    margin-bottom: 37px;
+    height: 480px;
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 25px;
     }
   }
   &__btn {
@@ -65,6 +76,7 @@
   &__btn-mobile {
     text-align: center;
     display: none;
+    margin-top: 50px;
   }
 }
 
@@ -75,26 +87,11 @@
   font-size: 38px;
   font-weight: 700;
   line-height: 1.2;
-  z-index: 1;
   text-transform: uppercase;
   transition: text-decoration-color 0.3s;
   margin-bottom: 10px;
   width: 118%;
-}
-
-.image-container {
-  position: relative;
-  box-shadow: 0 12px 20px -4px #030829b3;
-  border-radius: 25px;
-  width: 100%;
-  margin-bottom: 37px;
-  img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 792 / 517;
-    object-fit: cover;
-    border-radius: 25px;
-  }
+  z-index: 4;
 }
 
 .buttons {
@@ -102,6 +99,7 @@
   bottom: 0;
   left: 20px;
   transform: translateY(-50%);
+  z-index: 3;
 }
 
 .navigation-button {
@@ -116,8 +114,8 @@
 }
 .navigation-section {
   position: absolute;
-  bottom: 50px;
-  left: 20px;
+  bottom: 0;
+  left: 0;
   display: flex;
   gap: 5px;
   &__box {
@@ -125,10 +123,32 @@
     height: 5px;
     background-color: variables.$color-brand-white;
     border-radius: 5px;
-    transition: width 0.3s, background-color 0.3s;
+    cursor: pointer;
     &--active {
       width: 100px;
-      background-color: variables.$color-brand-yellow;
+      position: relative;
+      &::after {
+        animation-delay: .1s;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        animation-name: animation-active-bullet;
+        animation-timing-function: linear;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        height: 100%;
+        background-color: variables.$color-brand-yellow;
+      }
+    }
+  }
+
+  @keyframes animation-active-bullet {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
     }
   }
 }
@@ -137,31 +157,33 @@
   .hero-section {
     background: url("./img/bg-tablet.svg") no-repeat;
     background-size: cover;
-    // background-position: 60%;
-    padding: 40px 0 0;
     &__container {
+      padding-top: 80px;
+    }
+    &__inner {
       flex-direction: column;
       gap: 20px;
+    }
+    &__image {
+      height: auto;
     }
     .large-title {
       font-size: 30px;
       width: auto;
     }
     &__btn {
-      margin-bottom: 20px;
-    }
-  }
-}
-@include breakpoint.laptopl {
-  .hero-section {
-    &__btn {
       display: none;
     }
     .navigation-section {
-      bottom: 105px;
+      position: static;
     }
-    &__btn-mobile {
-      display: inline-block;
+  }
+}
+
+@include breakpoint.laptopl {
+  .hero-section {
+    &__container {
+      padding-bottom: 60px;
     }
     &__content {
       p {
@@ -173,43 +195,27 @@
       }
     }
   }
-}
-@include breakpoint.tablet {
-  .hero-section {
-    &__btn {
-      a {
-        padding: 15px 0;
-      }
-    }
+  :root {
+    --swiper-pagination-bottom: 105px;
   }
-  @include breakpoint.mobilel {
-    .hero-section {
-      background-image: url("./img/bg-mobile.svg");
-      .large-title {
-        font-size: 23px;
-      }
-      &__btn {
-        a {
-          padding: 10px 20px;
-        }
-      }
+}
+
+@include breakpoint.mobilel {
+  .hero-section {
+    background-image: url("./img/bg-mobile.svg");
+    .large-title {
+      font-size: 23px;
     }
   }
 }
 
 @include breakpoint.mobilexs {
   .hero-section {
-    padding-top: 30px;
     &__container {
-      gap: 10px;
+      padding-bottom: 40px;
     }
     &__content {
       margin-bottom: 5px;
-    }
-    &__btn-mobile {
-      a {
-        padding: 10px 20px;
-      }
     }
   }
 }
