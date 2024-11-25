@@ -57,6 +57,9 @@
       }
     }
   }
+  .submenu-real .submenu-real__link--leaf {
+    display: inline;
+  }
   &__top {
     position: relative;
     z-index: 1;
