@@ -15,8 +15,12 @@
     align-items: center;
     justify-content: center;
     padding: 18px;
-    &:hover {
+    &--regular:hover {
       background-color: variables.$color-brand-yellow;
+    }
+    &--disabled:hover {
+      opacity: .8;
+      cursor: not-allowed;
     }
     img {
       width: 14px;
@@ -40,8 +44,11 @@
     cursor: pointer;
     width: 50px;
     height: 50px;
-    &:hover {
+    &--regular:hover {
       border: 2px solid variables.$color-brand-light;
+    }
+    &--disabled:hover {
+      border: none;
     }
   }
   &__number.active {
