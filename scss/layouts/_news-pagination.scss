@@ -1,4 +1,5 @@
 @use "../utils/variables";
+@use "../utils/breakpoint";
 
 .pagination {
   display: flex;
@@ -54,5 +55,24 @@
   &__number.active {
     background-color: variables.$color-brand-light;
     color: variables.$color-brand-white;
+  }
+}
+.pagination-mobile {
+  display: none;
+}
+
+@include breakpoint.mobilel {
+  .pagination {
+    display: none;
+  }
+  .pagination-mobile {
+    display: flex;
+    flex-direction: column;
+    &__buttons-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
   }
 }
