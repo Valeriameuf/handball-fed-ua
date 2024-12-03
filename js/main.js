@@ -4,13 +4,13 @@ import MobileMenu from "@js/classes/MobileMenu";
 import Swiper from "swiper";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-const bottomMenu = new BottomMenu('#main-header-menu');
-const submenu = new Submenu('#submenu-real');
+const bottomMenu = new BottomMenu("#main-header-menu");
+const submenu = new Submenu("#submenu-real");
 
 const mobileMenu = new MobileMenu(
-    '#dropdown-menu',
-    '#mobile-menu-open',
-    '#mobile-menu-close'
+  "#dropdown-menu",
+  "#mobile-menu-open",
+  "#mobile-menu-close"
 );
 
 const heroSwiper = new Swiper("#hero-swiper", {
@@ -18,17 +18,16 @@ const heroSwiper = new Swiper("#hero-swiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   effect: "fade",
-  // navigation: {
-  //   nextEl: "#next-slide",
-  //   prevEl: "#prev-slide",
-  // },
+  navigation: {
+    nextEl: "#hero-next-slide",
+    prevEl: "#hero-prev-slide",
+  },
   pagination: {
     el: "#hero-swiper-pagination",
     clickable: true,
     bulletClass: "navigation-section__box",
     bulletActiveClass: "navigation-section__box--active",
-    renderBullet: (index, className) =>
-        `<div class="box ${className}"></div>`,
+    renderBullet: (index, className) => `<div class="box ${className}"></div>`,
   },
   autoplay: {
     delay: 5000,
