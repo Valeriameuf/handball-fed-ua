@@ -9,6 +9,7 @@
   &__title {
     margin-bottom: 15px;
   }
+
   &__inner {
     padding: 30px 0;
   }
@@ -28,15 +29,22 @@
     &:last-of-type {
       margin-right: 0;
     }
+    &--completed {
+      background-color: #f0f0f0;
+    }
     &__subtitle {
       font-size: 14px;
       font-weight: 200;
       line-height: 1.8;
       color: #969696;
-      margin-bottom: 18px;
+      margin-bottom: 25px;
     }
     &__titles {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
       margin-bottom: 15px;
       p {
         text-align: center;
@@ -48,11 +56,19 @@
         margin-bottom: 5px;
       }
       span {
+        text-align: center;
         color: #035ca2;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 700;
         line-height: 1.2;
         text-transform: uppercase;
+      }
+    }
+    &__item {
+      &--position {
+        margin-bottom: 0;
+        position: absolute;
+        top: -23px;
       }
     }
     &__wrapper {
