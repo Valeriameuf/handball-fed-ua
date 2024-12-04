@@ -115,6 +115,9 @@
         background-color: variables.$color-brand-light;
         color: variables.$color-brand-white;
       }
+      &--loser {
+        background-color: variables.$color-brand-white;
+      }
     }
     &__country {
       font-size: 14px;
@@ -132,9 +135,9 @@
       margin-bottom: 16px;
     }
     &__timeScore {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
-      line-height: 1.4;
+      line-height: 1.2;
       text-transform: uppercase;
       transition: opacity 0.5s;
       color: #1c1c1c;
@@ -142,7 +145,7 @@
     &__timeText {
       font-size: 14px;
       font-weight: 400;
-      line-height: 1.8;
+      line-height: 1.2;
       text-transform: uppercase;
       color: #8c8c8c;
     }
