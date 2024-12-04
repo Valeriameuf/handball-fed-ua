@@ -120,6 +120,16 @@
       color: #035ca2;
       text-decoration: underline;
     }
+    .wp-caption {
+      max-width: 100%;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    iframe {
+      max-width: 100%;
+    }
   }
   .news-text .bwg_container {
     overflow: hidden;
@@ -247,10 +257,6 @@
     .news-nav {
       .news-text {
         font-size: 16px;
-        img {
-          width: 100%;
-          height: auto;
-        }
       }
     }
   }
