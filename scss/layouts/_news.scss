@@ -121,6 +121,10 @@
       text-decoration: underline;
     }
   }
+  .news-text .bwg_container {
+    overflow: hidden;
+    max-width: 100%;
+  }
   .menu-bar {
     background-color: #f0f0f0;
     border-radius: 15px;
