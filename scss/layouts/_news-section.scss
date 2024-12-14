@@ -40,6 +40,7 @@
     display: flex;
     gap: 30px;
     width: 100%;
+    position: relative;
   }
   &__cards {
     display: grid;
@@ -47,60 +48,61 @@
     gap: 20px 30px;
   }
 }
-.banner {
-  position: relative;
-  max-width: 400px;
-  // border-radius: 15px;
-  // display: flex;
-  // flex-direction: column;
-  // overflow: hidden;
-
-  a {
-    img {
-      display: block;
-      border-radius: 15px;
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      aspect-ratio: 400/1230;
-      object-fit: cover;
-    }
+.hero-banner {
+  &__container {
+    height: 100%;
+    max-width: 400px;
   }
-  .content {
-    max-width: 417px;
-    height: 611px;
+  &__inner {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-position: 10%;
-    background-size: cover;
-    margin: 0 auto;
-    padding: 10px;
-
-    &__title {
-      color: variables.$color-brand-white;
-      text-align: center;
-
-      h2 {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 1.3;
-        text-transform: uppercase;
-      }
-    }
+    height: 100%;
+    flex-grow: 1;
+    max-width: 416px;
   }
-  .logo-container {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    z-index: 20;
-    overflow: visible;
-    .logo {
-      &__img {
-        height: auto;
-        max-width: 103px;
+  .banner-major {
+    border-radius: 15px;
+    overflow: hidden;
+    &__link {
+      width: 100%;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s ease-out;
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+      padding: 30px;
+      background: url("@img/bg-mobile.svg") no-repeat center center;
+      background-size: cover;
+    }
+    &__text {
+      padding: 20px;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      color: variables.$color-brand-white;
+    }
+    &__logo {
+      &--position {
+        position: absolute;
+        bottom: -34px;
+        right: -16px;
       }
+      width: 150px;
+      height: 150px;
+      background-color: variables.$color-brand-white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
     }
   }
 }
