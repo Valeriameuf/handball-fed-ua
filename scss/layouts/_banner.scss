@@ -1,0 +1,57 @@
+@use "../utils/breakpoint";
+@use "../utils/variables";
+
+// .hero-banner {
+//   &__container {
+//     max-width: 416px;
+//     padding-top: 40px;
+//     padding-bottom: 50px;
+//     position: relative;
+//   }
+//   &__inner {
+//     display: flex;
+//     flex-direction: column;
+//     height: 100%;
+//   }
+//   .banner-major {
+//     border-radius: 15px;
+//     overflow: hidden;
+//     &__bottom {
+//       display: flex;
+//       flex-direction: column;
+//       height: 50%;
+//       justify-content: space-between;
+//       padding: 30px;
+//       background: url("@img/bg-mobile.svg") no-repeat center center;
+//       background-size: cover;
+//     }
+//     &__text {
+//       padding: 20px;
+//       font-size: 36px;
+//       font-weight: 700;
+//       line-height: 1.3;
+//       text-transform: uppercase;
+//       color: variables.$color-brand-white;
+//     }
+//     &__logo {
+//       &--position {
+//         position: absolute;
+//         bottom: 16px;
+//         right: -23px;
+//       }
+//       width: 150px;
+//       height: 150px;
+//       background-color: variables.$color-brand-white;
+//       border-radius: 50%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       overflow: hidden;
+//     }
+//     &__img {
+//       height: 100%;
+//       object-fit: cover;
+//       transition: 0.3s ease-out;
+//     }
+//   }
+// }
