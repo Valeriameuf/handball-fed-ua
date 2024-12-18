@@ -127,7 +127,11 @@
   height: 40px;
   cursor: pointer;
   margin: 0 5px;
+  &:hover {
+    border: 3px solid variables.$color-brand-white;
+  }
 }
+
 .navigation-section {
   position: absolute;
   bottom: 0;
