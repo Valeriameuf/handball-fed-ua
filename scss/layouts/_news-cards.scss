@@ -76,10 +76,23 @@
     }
 
     &__text {
+      line-height: 21px;
+      overflow: hidden;
+      position: relative;
+      height: calc(3 * 21px);
       font-size: 18px;
       font-weight: 200;
       color: #353535;
       margin-bottom: 15px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 21px;
+        width: 75%;
+        background: linear-gradient(90deg, transparent, white);
+      }
     }
 
     &__btn {
