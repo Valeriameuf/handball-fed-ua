@@ -263,20 +263,44 @@
     .hero-banner {
       .banner-major {
         &__text {
-          font-size: 30px;
+          font-size: 42px;
         }
       }
     }
   }
 }
 @include breakpoint.laptopl {
+  .news-section {
+    .hero-banner {
+      .banner-major {
+        &__info {
+          padding: 10px 10px 0;
+        }
+        &__text {
+          font-size: 30px;
+        }
+        &__date span,
+        &__category {
+          font-size: 12px;
+        }
+        .description {
+          &__title {
+            font-size: 20px;
+          }
+          &__text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @include breakpoint.mobilel {
   .news-section {
     &__cards {
       grid-row-gap: 30px;
-      grid-column-gap: 10px;
+      grid-column-gap: 0;
       grid-template-areas:
         "c c"
         "a b"
