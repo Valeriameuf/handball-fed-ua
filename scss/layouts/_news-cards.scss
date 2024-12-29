@@ -19,14 +19,13 @@
   &:nth-child(4) {
     grid-area: d;
   }
-  &__link {
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 5;
+  &__link,
+  &__link span {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #084c7f;
+    }
   }
   &__image {
     width: 100%;
@@ -76,6 +75,15 @@
     flex-wrap: wrap;
     height: 100%;
     margin: 20px;
+    &__link {
+      cursor: pointer;
+      transition: color 0.3s ease;
+      h3 {
+        &:hover {
+          color: #5b5b5b;
+        }
+      }
+    }
     &__title {
       font-size: 22px;
       font-weight: 600;
@@ -106,20 +114,22 @@
     &__btn {
       margin-top: auto;
     }
-    &__link {
-      position: relative;
-      display: inline-block;
-      padding: 10px 15px;
-      border: 1px solid #035ca2;
-      background-color: variables.$color-brand-white;
-      color: #000;
-      border-radius: 5px;
-      text-decoration: none;
-      text-align: center;
-      z-index: 6;
-      &:hover {
-        background-color: variables.$color-brand-light;
-        color: variables.$color-brand-white;
+    .btn {
+      &__link {
+        position: relative;
+        display: inline-block;
+        padding: 10px 15px;
+        border: 1px solid #035ca2;
+        background-color: variables.$color-brand-white;
+        color: #000;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        z-index: 6;
+        &:hover {
+          background-color: variables.$color-brand-light;
+          color: variables.$color-brand-white;
+        }
       }
     }
   }
