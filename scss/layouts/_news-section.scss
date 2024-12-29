@@ -36,28 +36,26 @@
   &__btn-mobile {
     display: none;
   }
-  &__content {
-    display: flex;
-    gap: 30px;
-    width: 100%;
-    position: relative;
-  }
   &__cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 30px;
+    grid-column-gap: 2.5%;
+    grid-row-gap: 30px;
+    grid-template-areas:
+      "a b c"
+      "d e c";
+    grid-template-columns: repeat(3, 1fr);
   }
   .hero-banner {
+    position: relative;
+    grid-area: c;
     &__container {
-      max-width: 416px;
-      padding-top: 40px;
-      padding-bottom: 50px;
-      position: relative;
+      height: 100%;
     }
     &__inner {
       display: flex;
       flex-direction: column;
       height: 100%;
+      flex-grow: 1;
     }
     .banner-major {
       border-radius: 15px;
@@ -104,7 +102,6 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        height: 100%;
         margin: 20px;
         &__title {
           font-size: 22px;
@@ -154,10 +151,7 @@
       }
 
       &__bottom {
-        display: flex;
-        flex-direction: column;
-        height: 50%;
-        justify-content: space-between;
+        height: 100%;
         padding: 30px;
         background: url("@img/bg-mobile.svg") no-repeat center center;
         background-size: cover;
@@ -173,7 +167,7 @@
       &__logo {
         &--position {
           position: absolute;
-          bottom: 16px;
+          bottom: -16px;
           right: -23px;
         }
         width: 150px;
@@ -187,6 +181,7 @@
       }
       &__img {
         height: 100%;
+        width: 100%;
         object-fit: cover;
         transition: 0.3s ease-out;
       }
@@ -258,20 +253,37 @@
     &__container {
       padding-top: 60px;
     }
+    &__cards {
+      grid-template-areas:
+        "a c"
+        "b c"
+        "d e";
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-banner {
+      .banner-major {
+        &__text {
+          font-size: 30px;
+        }
+      }
+    }
   }
 }
 @include breakpoint.laptopl {
-  .news-section {
-    &__cards {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px 30px;
-      margin: 0 auto;
-    }
-  }
 }
 
 @include breakpoint.mobilel {
   .news-section {
+    &__cards {
+      grid-row-gap: 30px;
+      grid-column-gap: 10px;
+      grid-template-areas:
+        "c c"
+        "a b"
+        "d e";
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     &__btn {
       display: none;
     }
@@ -284,7 +296,6 @@
     .hero-banner {
       .banner-major {
         width: 100%;
-        max-width: 387px;
         background: #fff;
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
