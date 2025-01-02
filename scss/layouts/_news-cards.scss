@@ -80,7 +80,7 @@
   .text {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     height: 100%;
     margin: 20px;
     &__link {
@@ -135,6 +135,9 @@
 
 @include breakpoint.mobilel {
   .news-card {
+    &__image {
+      margin-bottom: 5px;
+    }
     &__info {
       padding: 5px 5px 0;
       margin-bottom: 5px;

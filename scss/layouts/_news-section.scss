@@ -200,6 +200,7 @@
         transition: transform 0.3s ease;
         &:hover {
           transform: scale(1.1);
+          margin-bottom: 5px;
         }
       }
     }
@@ -258,7 +259,17 @@
     }
   }
 }
-
+@include breakpoint.tablet {
+  .news-section {
+    .hero-banner {
+      .major {
+        &__title {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
 @include breakpoint.mobilel {
   .news-section {
     &__cards {
