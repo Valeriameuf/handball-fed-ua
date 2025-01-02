@@ -167,6 +167,8 @@
       }
       &__text {
         padding: 20px;
+      }
+      &__title {
         font-size: 40px;
         font-weight: 700;
         line-height: 1.3;
@@ -215,7 +217,7 @@
     }
     .hero-banner {
       .major {
-        &__text {
+        &__title {
           font-size: 42px;
         }
       }
@@ -230,8 +232,8 @@
           padding: 10px 10px 0;
           margin-bottom: 5px;
         }
-        &__text {
-          font-size: 30px;
+        &__title {
+          font-size: 40px;
         }
         &__date span,
         &__category {
