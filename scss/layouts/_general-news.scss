@@ -61,6 +61,24 @@
       gap: 39px 20px;
       margin-bottom: 50px;
     }
+    .general-card {
+      &__category,
+      &__date span {
+        font-size: 13px;
+      }
+      &:nth-child(1) {
+        grid-area: auto;
+      }
+      &:nth-child(2) {
+        grid-area: auto;
+      }
+      &:nth-child(3) {
+        grid-area: auto;
+      }
+      &:nth-child(4) {
+        grid-area: auto;
+      }
+    }
   }
 }
 
@@ -77,18 +95,13 @@
     }
   }
 }
-@include breakpoint.tablet {
-}
+
 @include breakpoint.mobilel {
   .general-news {
     &__top {
       a {
         font-size: 12px;
         padding: 11px 15px;
-        //display: none;
-        //&:nth-child(-n + 5) {
-        //  display: inline-block;
-        //}
       }
     }
     &__bar {
@@ -107,6 +120,19 @@
         align-items: center;
         margin-bottom: 35px;
       }
+      .general-card {
+        .general-text {
+          &__text {
+            display: block;
+          }
+          &__title {
+            font-size: 18px;
+          }
+        }
+        .general-btn {
+          display: block;
+        }
+      }
     }
     .pagination {
       &__number {
@@ -118,17 +144,4 @@
       }
     }
   }
-}
-
-@include breakpoint.mobilexs {
-  //.general-news {
-  //  &__top {
-  //    a {
-  //      display: inline-block;
-  //      &:nth-child(n + 3) {
-  //        display: none;
-  //      }
-  //    }
-  //  }
-  //}
 }
