@@ -25,6 +25,9 @@ module.exports = {
         banner: {
           import: "./views/banner.ejs",
         },
+        match: {
+          import: "./views/match.ejs",
+        },
       },
       preprocessor: "ejs", // use EJS templating engine
       // preprocessorOptions: {...},
