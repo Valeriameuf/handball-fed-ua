@@ -2,235 +2,259 @@
 @use "../utils/variables";
 
 .hero-section {
-  position: relative;
-  background: url("@img/bg.svg") no-repeat;
-  background-size: cover;
-  background-position: 30% 50%;
-  &__container {
     position: relative;
-    padding: 143px 15px 85px;
-  }
-  &__inner {
-    display: flex;
-  }
-  &__content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 60px;
+    background: url("@img/bg.svg") no-repeat;
+    background-size: cover;
+    background-position: 30% 50%;
 
-    span {
-      font-size: 18px;
-      font-weight: 200;
-      line-height: 1.6;
-      text-transform: uppercase;
-      color: variables.$color-brand-yellow;
-      margin-bottom: 11px;
+    &__container {
+        position: relative;
+        padding: 143px 15px 85px;
     }
 
-    p {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.4;
-      margin-bottom: 22px;
+    &__inner {
+        display: flex;
     }
-  }
-  &__image {
-    position: relative;
-    box-shadow: 0 12px 20px -4px #030829b3;
-    border-radius: 25px;
-    width: 100%;
-    margin-bottom: 37px;
-    height: 480px;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 25px;
-      z-index: 1;
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 60px;
+
+        span {
+            font-size: 18px;
+            font-weight: 200;
+            line-height: 1.6;
+            text-transform: uppercase;
+            color: variables.$color-brand-yellow;
+            margin-bottom: 11px;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 22px;
+        }
     }
-    img {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
-      border-radius: 25px;
+
+    &__image {
+        position: relative;
+        box-shadow: 0 12px 20px -4px #030829b3;
+        border-radius: 25px;
+        width: 100%;
+        margin-bottom: 37px;
+        height: 480px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 25px;
+            z-index: 1;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 25px;
+        }
     }
-  }
-  &__btn {
-    margin-bottom: 50px;
-  }
-  &__btn,
-  &__btn-mobile {
-    a {
-      display: inline-block;
-      background-color: variables.$color-brand-yellow;
-      color: #000;
-      border-radius: 5px;
-      font-size: 18px;
-      font-weight: 600;
-      text-align: center;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      padding: 17px 30px;
-      &:hover {
-        background-color: variables.$color-brand-light;
-        color: variables.$color-brand-white;
-        border: 2px solid variables.$color-brand-white;
-      }
+
+    &__btn {
+        margin-bottom: 50px;
     }
-  }
-  &__btn-mobile {
-    text-align: center;
-    display: none;
-    margin-top: 50px;
-  }
+
+    &__btn,
+    &__btn-mobile {
+        a {
+            display: inline-block;
+            background-color: variables.$color-brand-yellow;
+            color: #000;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            padding: 17px 30px;
+
+            &:hover {
+                background-color: variables.$color-brand-light;
+                color: variables.$color-brand-white;
+                border: 2px solid variables.$color-brand-white;
+            }
+        }
+    }
+
+    &__btn-mobile {
+        text-align: center;
+        display: none;
+        margin-top: 50px;
+    }
 }
 
 .large-title {
-  display: block;
-  position: relative;
-  max-width: 675px;
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
-  transition: text-decoration-color 0.3s;
-  margin-bottom: 10px;
-  width: 118%;
-  z-index: 4;
+    display: block;
+    position: relative;
+    max-width: 675px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: text-decoration-color 0.3s;
+    margin-bottom: 10px;
+    width: 118%;
+    z-index: 4;
 }
 
 .buttons {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  transform: translateY(-50%);
-  z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 3;
 }
 
 .navigation-button {
-  background-color: transparent;
-  color: variables.$color-brand-white;
-  border: 1px solid variables.$color-brand-white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  margin: 0 5px;
-  &:hover {
-    border: 3px solid variables.$color-brand-white;
-  }
+    background-color: transparent;
+    color: variables.$color-brand-white;
+    border: 1px solid variables.$color-brand-white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0 5px;
+
+    &:hover {
+        border: 3px solid variables.$color-brand-white;
+    }
 }
 
 .navigation-section {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  gap: 5px;
-  &__box {
-    width: 20px;
-    height: 5px;
-    background-color: variables.$color-brand-white;
-    border-radius: 5px;
-    cursor: pointer;
-    &--active {
-      width: 100px;
-      position: relative;
-      &::after {
-        animation-delay: 0.1s;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
-        animation-name: animation-active-bullet;
-        animation-timing-function: linear;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
-        height: 100%;
-        background-color: variables.$color-brand-yellow;
-      }
-    }
-  }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    gap: 5px;
 
-  @keyframes animation-active-bullet {
-    0% {
-      width: 0;
+    &__box {
+        width: 20px;
+        height: 5px;
+        background-color: variables.$color-brand-white;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &--active {
+            width: 100px;
+            position: relative;
+
+            &::after {
+                animation-delay: 0.1s;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+                animation-name: animation-active-bullet;
+                animation-timing-function: linear;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                height: 100%;
+                background-color: variables.$color-brand-yellow;
+            }
+        }
     }
-    100% {
-      width: 100%;
+
+    @keyframes animation-active-bullet {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
     }
-  }
 }
 
 @include breakpoint.laptopxl {
-  .hero-section {
-    background: url("./img/bg-tablet.svg") no-repeat;
-    background-size: cover;
-    &__container {
-      padding-top: 80px;
+    .hero-section {
+        background: url("./img/bg-tablet.svg") no-repeat;
+        background-size: cover;
+
+        &__container {
+            padding-top: 80px;
+        }
+
+        &__inner {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__image {
+            height: auto;
+        }
+
+        .large-title {
+            font-size: 30px;
+            width: auto;
+        }
+
+        &__btn {
+            display: none;
+        }
+
+        .navigation-section {
+            position: static;
+        }
     }
-    &__inner {
-      flex-direction: column;
-      gap: 20px;
-    }
-    &__image {
-      height: auto;
-    }
-    .large-title {
-      font-size: 30px;
-      width: auto;
-    }
-    &__btn {
-      display: none;
-    }
-    .navigation-section {
-      position: static;
-    }
-  }
 }
 
 @include breakpoint.laptopl {
-  .hero-section {
-    &__container {
-      padding-bottom: 60px;
+    .hero-section {
+        &__container {
+            padding-bottom: 60px;
+        }
+
+        &__content {
+            p {
+                margin-bottom: 10px;
+            }
+
+            p,
+            span {
+                font-size: 16px;
+            }
+        }
     }
-    &__content {
-      p {
-        margin-bottom: 10px;
-      }
-      p,
-      span {
-        font-size: 16px;
-      }
+    :root {
+        --swiper-pagination-bottom: 105px;
     }
-  }
-  :root {
-    --swiper-pagination-bottom: 105px;
-  }
 }
 
 @include breakpoint.mobilel {
-  .hero-section {
-    background-image: url("./img/bg-mobile.svg");
-    .large-title {
-      font-size: 23px;
+    .hero-section {
+        background-image: url("./img/bg-mobile.svg");
+
+        .large-title {
+            font-size: 23px;
+        }
     }
-  }
 }
 
 @include breakpoint.mobilexs {
-  .hero-section {
-    &__container {
-      padding-bottom: 40px;
+    .hero-section {
+        &__container {
+            padding-bottom: 40px;
+        }
+
+        &__content {
+            margin-bottom: 5px;
+        }
     }
-    &__content {
-      margin-bottom: 5px;
-    }
-  }
 }
