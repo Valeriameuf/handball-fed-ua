@@ -1,0 +1,432 @@
+@use "../utils/breakpoint";
+@use "../utils/variables";
+
+.match-report {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  &__inner {
+    color: #035ca2;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+    &--highlight {
+      background-color: #fff;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 15px;
+    }
+  }
+  &__team,
+  &__round,
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__separator {
+    display: block;
+  }
+  &__teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0 30px 0;
+  }
+
+  .team {
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      flex-grow: 1;
+      width: calc(50% - 48px);
+
+      &--fonts {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #035ca2;
+      }
+    }
+    &__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      max-width: 140px;
+      max-height: 180px;
+      aspect-ratio: 140 / 180;
+      overflow: hidden;
+      transition: transform 0.3s;
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        margin-left: auto;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    &__origin {
+      font-weight: 400;
+      font-size: 16px;
+      color: #555;
+    }
+  }
+
+  .score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &--fonts {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 1;
+      color: #7d7d7d;
+    }
+
+    &__half {
+      font-weight: 400;
+      font-size: 25px;
+      color: #1c1c1c;
+    }
+
+    &__link {
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .match-stat {
+    display: flex;
+    justify-content: space-between;
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      width: calc(50% - 15px);
+      padding-top: 6px;
+      border-top: 1px solid #eee;
+      &--mobil {
+        display: none;
+      }
+    }
+    &__item {
+      text-align: center;
+      width: 20%;
+      flex-shrink: 0;
+      &--fonts {
+        font-size: 14px;
+        font-weight: 200;
+        line-height: 1.2;
+        color: #8c8c8c;
+      }
+    }
+    &__value {
+      color: #353535;
+    }
+    &__lebel,
+    &__value {
+      text-align: center;
+      display: block;
+    }
+  }
+  .links-block {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    &--markup {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &__item {
+      padding: 10px;
+      a {
+        color: variables.$color-brand-light;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      a i {
+        margin-right: 8px;
+        font-size: 20px;
+      }
+    }
+  }
+  .tabs {
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 40px;
+    &__button {
+      background: none;
+      flex: 1;
+      flex-basis: auto;
+      cursor: pointer;
+      padding: 11px;
+      margin-right: 100px;
+      &--fonts {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: variables.$color-brand-light;
+      }
+      .active {
+        border-bottom: 2px solid #007bff;
+        font-weight: bold;
+      }
+    }
+  }
+  .table {
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      table {
+        width: 48%;
+      }
+    }
+    &__general,
+    &__goalkeeper {
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 25px;
+    }
+    &__player-stat {
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #353535;
+      color: #353535;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+    th {
+      background-color: variables.$color-brand-light;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    tr {
+      &:nth-child(even) {
+        background-color: #f7f7f7;
+      }
+      &:hover {
+        background-color: variables.$color-brand-yellow;
+      }
+    }
+  }
+}
+@include breakpoint.laptopxl {
+  .match-report {
+    &__inner {
+      font-size: 20px;
+    }
+  }
+}
+@include breakpoint.laptopl {
+  .match-report {
+    .tabs {
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: none;
+      &__button {
+        position: relative;
+        margin-right: 0;
+        padding: 5px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2px;
+          height: 100%;
+          background-color: rgb(211, 211, 211);
+          transition: background-color 0.3s;
+        }
+        &.active::before {
+          background-color: rgb(0, 123, 255);
+        }
+
+        &:hover::before {
+          background-color: rgba(0, 123, 255, 0.5);
+        }
+      }
+    }
+    .table {
+      &__container {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@include breakpoint.tablet {
+  .match-report {
+    &__inner {
+      font-size: 18px;
+    }
+    &__info {
+      gap: 20px;
+    }
+    &__team,
+    &__round,
+    &__group {
+      gap: 15px;
+    }
+    .match-stat {
+      border-top: 1px solid #eee;
+      &__list {
+        flex-direction: column;
+        padding-top: 10px;
+        width: 100px;
+        border-top: none;
+        &--mobil {
+          text-align: center;
+          display: block;
+        }
+      }
+      &__item {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 2px;
+        }
+      }
+      &__label {
+        display: none;
+      }
+    }
+    .score {
+      &--fonts {
+        font-size: 25px;
+      }
+      &__half {
+        font-size: 20px;
+      }
+    }
+    .links-block {
+      padding: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      &--markup {
+        flex-direction: column;
+      }
+      &--fonts {
+        font-size: 15px;
+      }
+      &__item {
+        padding: 5px;
+      }
+    }
+  }
+}
+@include breakpoint.mobilel {
+  .match-report {
+    padding-bottom: 30px;
+    &__inner {
+      font-size: 12px;
+    }
+    &__info {
+      gap: 6px;
+    }
+    &__team,
+    &__round,
+    &__group {
+      gap: 10px;
+    }
+    .score {
+      &--fonts {
+        font-size: 20px;
+      }
+      &__half {
+        font-size: 18px;
+      }
+    }
+    .table {
+      &__title {
+        font-size: 20px;
+      }
+      th,
+      td {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+@include breakpoint.mobilexs {
+  .match-report {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &__inner {
+      font-size: 8px;
+    }
+    &__team,
+    &__round,
+    &__group {
+      gap: 5px;
+    }
+    &__teams {
+      padding: 20px 0 25px 0;
+    }
+    .score {
+      &--fonts {
+        font-size: 15px;
+      }
+      &__half {
+        font-size: 10px;
+      }
+    }
+    .team {
+      &__img {
+        max-width: 80px;
+      }
+      &__info--fonts {
+        font-size: 15px;
+      }
+      &__origin {
+        font-size: 12px;
+      }
+    }
+    .table {
+      &__title {
+        font-size: 15px;
+      }
+      th,
+      td {
+        font-size: 10px;
+        padding: 5px;
+      }
+    }
+  }
+}
