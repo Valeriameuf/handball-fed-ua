@@ -1,0 +1,101 @@
+<%- include('./partials/header'); %>
+<main class="main">
+    <section class="calendar">
+        <div class="calendar__container container">
+            <div class="calendar__tours tour">
+                <div class="tour__inner">
+                    <div class="tour__subtitle  subtitle">
+                        <h3>Тур 1</h3>
+                    </div>
+                    <div class="tour__buttons">
+                        <button class="tour__btn active">Матчі за турами</button>
+                        <button class="tour__btn">Матчі за датами</button>
+                    </div>
+                </div>
+                <div class=" tour__table table">
+                    <div class=" tour__header row header">
+                        <div class="cell cell--header">Дата</div>
+                        <div class="cell cell--header">Час</div>
+                        <div class="cell cell--header">Матч</div>
+                        <div class="cell cell--header">Рахунок</div>
+                        <div class="cell cell--header"></div>
+                    </div>
+                    <div class="row row--color">
+                        <div class="cell">
+                            <div class="cell__content">2025-02-20</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">18:00</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">
+                                <img class="cell__img" src="@img/motor.png" alt="Клуб 1" />
+                                Клуб 1 vs
+                                <img class="cell__img" src="@img/motor.png" alt="Клуб 2" />
+                                Клуб 2
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">1:0
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <a class="cell__link" href="#" target="_blank">
+                                <img src="@img/youtube-color.svg" alt="youtube icon" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row row--color">
+                        <div class="cell">
+                            <div class="cell__content">2025-02-21</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">20:00</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">
+                                <img class="cell__img" src="@img/motor.png" alt="Клуб 3" />
+                                Клуб 3 vs
+                                <img class="cell__img" src="@img/motor.png" alt="Клуб 4" />
+                                Клуб 4
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">2:1</div>
+                        </div>
+                        <div class="cell">
+                            <a class="cell__link" href="#" target="_blank">
+                                <img src="@img/youtube-color.svg" alt="youtube icon" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row row--color">
+                        <div class="cell">
+                            <div class="cell__content">2025-02-22</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">19:30</div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">
+                                <img class="cell__img" src="@img/motor.png" alt="Клуб 5" />
+                                Клуб 5 vs
+                                <img class="cell__img" src="@img/motor.png" alt="Клуб 6" />
+                                Клуб 6
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="cell__content">0:0</div>
+                        </div>
+                        <div class="cell">
+                            <a class="cell__link" href="#" target="_blank">
+                                <img src="@img/youtube-color.svg" alt="youtube icon" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('./partials/footer'); %>
