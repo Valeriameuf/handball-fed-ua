@@ -98,16 +98,20 @@
             background: rgba(147, 147, 147, 1);
         }
     }
+    &__table {
+        width: 100%;
+        min-width: 1200px;
+        margin-bottom: 30px;
+    }
 }
 .table {
-    width: 100%;
-    min-width: 1200px;
-    margin-bottom: 30px;
     .row {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        min-height: 50px;
+        &--flex {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            min-height: 50px;
+        }
         &--color {
             border-radius: 10px;
             margin-bottom: 5px;

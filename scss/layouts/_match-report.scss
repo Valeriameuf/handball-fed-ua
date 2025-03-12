@@ -4,13 +4,12 @@
 .match-report {
     padding-top: 30px;
     padding-bottom: 50px;
-
-    &__sticky {
-        position: sticky;
-        top: 0;
-        background-color: white;
-        z-index: 1000;
-    }
+    // &__sticky {
+    //     position: sticky;
+    //     top: 0;
+    //     background-color: white;
+    //     z-index: 1000;
+    // }
     &__inner {
         font-size: 25px;
         font-weight: 700;
@@ -233,54 +232,89 @@
         }
     }
     .table {
-        &__container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            table {
-                width: 48%;
-            }
-        }
-        &__general,
-        &__goalkeeper {
-            margin-bottom: 30px;
-        }
+        width: 100%;
+        border: none;
+        border-collapse: collapse;
         &__title {
+            margin-bottom: 25px;
+        }
+        &__club-title {
+            align-items: center;
+            gap: 10px;
             font-size: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: underline;
+            line-height: 1.5;
+            color: variables.$color-brand-light;
+            display: none;
         }
-        &__player-stat {
-            margin-bottom: 30px;
+        &__layout {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            border-radius: 8px;
+        &__inner {
+            flex: 1 1 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            min-width: 300px;
         }
-        th,
-        td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #353535;
-            color: #353535;
-            font-size: 18px;
-            transition: background-color 0.3s;
+        &__header {
+            background: linear-gradient(90deg, #035ca2, #044f8b);
+            th {
+                text-transform: uppercase;
+                text-align: left;
+                letter-spacing: 1px;
+                color: #ffffff;
+            }
         }
+        thead tr th:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+        thead tr th:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+        tbody tr td:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+        tbody tr td:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+        .row {
+            &--color {
+                color: #1c1c1c;
+                font-size: 16px;
+                &:nth-child(odd) {
+                    background-color: #ebebeb;
+                }
+                &:nth-child(even) {
+                    background-color: #8fb4d8;
+                }
+                &:hover {
+                    background-color: #fff59d;
+                }
+            }
+        }
+        .cell {
+            &--left {
+                text-align: left;
+            }
+            &--center {
+                text-align: center;
+            }
+        }
+        td,
         th {
-            background-color: variables.$color-brand-light;
-            color: #ffffff;
-            font-weight: bold;
-        }
-        tr {
-            &:nth-child(even) {
-                background-color: #f7f7f7;
-            }
-            &:hover {
-                background-color: variables.$color-brand-yellow;
-            }
+            padding: 12px;
+            border-bottom: 5px solid white;
         }
     }
 }
+
 @include breakpoint.laptopxl {
     .match-report {
         &__inner {
@@ -323,8 +357,11 @@
             }
         }
         .table {
-            &__container {
+            &__layout {
                 flex-direction: column;
+            }
+            &__club-title {
+                display: flex;
             }
         }
     }
@@ -401,13 +438,8 @@
             }
         }
         .table {
-            &__title {
-                font-size: 20px;
-            }
-            th,
-            td {
-                font-size: 14px;
-                padding: 8px;
+            &__club-title {
+                font-size: 18px;
             }
         }
     }
@@ -435,12 +467,12 @@
         }
         .table {
             &__title {
-                font-size: 15px;
+                font-size: 20px;
             }
             th,
             td {
-                font-size: 12px;
-                padding: 5px;
+                font-size: 18px;
+                padding: 24px 4px;
             }
         }
     }
