@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
     output: {
@@ -42,6 +43,16 @@ module.exports = {
             },
             css: {
                 filename: 'style.[contenthash:8].css', // CSS output filename
+            },
+        }),
+        new WebpackManifestPlugin({
+            fileName: 'manifest.json',
+            filter: (file) => file.path.endsWith('.js') || file.path.endsWith('.css'),
+            map: (file) => {
+                if (file.name.startsWith('__bundler-plugin-entry__')) {
+                    file.name = file.name.replace('__bundler-plugin-entry__', '');
+                }
+                return file;
             },
         }),
     ],
