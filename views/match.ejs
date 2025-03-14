@@ -1,7 +1,467 @@
 <%- include('./partials/header'); %>
-<main>
-    <section class="">
-
+<main class="main">
+    <section class="match-report">
+        <div class="match-report__container container">
+            <div class="match-report__sticky">
+                <div class="match-report__relative">
+                    <div class="match-report__inner">
+                        <div class="match-report__info">
+                            <p class="match-report__team">Жіноча Суперліга<span class="match-report__separator">/</span>
+                            </p>
+                            <p class="match-report__group">Група A<span class="match-report__separator">/</span></p>
+                            <p class="match-report__round">9 Тур</p>
+                        </div>
+                    </div>
+                    <div class="match-report__teams team">
+                        <div class="team__date">
+                            <p>15 квітня 2025, 18:00</p>
+                        </div>
+                        <div class="team__inner">
+                            <div class="team__info team__info--fonts">
+                                <div class="team__img">
+                                    <a href="#">
+                                        <img height="180" src="@img/galichanka.jpg" alt="team`s logo">
+                                    </a>
+                                </div>
+                                <div class="team__name">
+                                    <a href="#">«Галичанка»</a>
+                                </div>
+                                <div class="team__origin">Львів</div>
+                            </div>
+                            <div class="match-report__score score score--fonts">
+                                <div class="score__main">41 : 25</div>
+                                <div class="score__half">22 : 10</div>
+                                <a class="score__link" href="#">
+                                    <img src="@img/youtube-color.svg" alt="youtube">
+                                </a>
+                            </div>
+                            <div class="team__info team__info--fonts">
+                                <div class="team__img">
+                                    <a href="#">
+                                        <img height="180" src="@img/karpati.jpg" alt="team`s logo">
+                                    </a>
+                                </div>
+                                <div class="team__name">
+                                    <a href="#">«Карпати»</a>
+                                </div>
+                                <div class="team__origin">Ужгород</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-report__stat match-stat match-stat--hidden">
+                        <ul class="match-stat__list">
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Голи/Удари</span>
+                                <span class="match-stat__value">21/57</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Штрафні удари</span>
+                                <span class="match-stat__value">1/1</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Жовті картки</span>
+                                <span class="match-stat__value">2</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Червоні картки</span>
+                                <span class="match-stat__value">1</span>
+                            </li>
+                        </ul>
+                        <ul class="match-stat__list match-stat__list--mobil">
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__mobil-label">Голи/Удари</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__mobil-label">Штрафні удари</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__mobil-label">Жовті картки</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__mobil-label">Червоні картки</span>
+                            </li>
+                        </ul>
+                        <ul class="match-stat__list">
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Голи/Удари</span>
+                                <span class="match-stat__value">21/57</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Штрафні удари</span>
+                                <span class="match-stat__value">1/1</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Жовті картки</span>
+                                <span class="match-stat__value">2</span>
+                            </li>
+                            <li class="match-stat__item match-stat__item--fonts">
+                                <span class="match-stat__label">Червоні картки</span>
+                                <span class="match-stat__value">1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="links-block links-block--markup links-block--fonts">
+                    <div class="links-block__item">
+                        <a href="#">
+                            <i class="fas fa-play"></i>
+                            Хід гри
+                        </a>
+                    </div>
+                    <div class="links-block__item">
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            Статистичні звіти
+                        </a>
+                    </div>
+                    <div class="links-block__item">
+                        <a href="#">
+                            <i class="fas fa-file-alt"></i>
+                            Звіт про матч
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs-inner">
+                <div class="tabs" role="tablist">
+                    <button class="tabs__button tabs__button--fonts active" id="tab-players" role="tab"
+                            data-tab-name="tab-player">Статистика гравців
+                    </button>
+                    <button class="tabs__button tabs__button--fonts" id="tab-matches" role="tab"
+                            data-tab-name="tab-match"> Статистика матчів
+                    </button>
+                    <button class="tabs__button tabs__button--fonts" id="tab-tv" role="tab" data-tab-name="tab-tv">TV
+                        Schedule
+                    </button>
+                </div>
+                <div class="tabs-content">
+                    <div class="content table active tab-player" id="players-stat" role="tabpanel"
+                         aria-labelledby="tab-players">
+                        <div class="table__player-stat">
+                            <div class="table__title title">
+                                <h1>Статистика гравців</h1>
+                            </div>
+                            <div class="table__layout">
+                                <div class="table__inner">
+                                    <div class="table__club-title">
+                                        <a href="#"><img width="50" src="@img/galichanka.jpg" alt="club logo"></a>
+                                        <a href="#">
+                                            <h3>Галичанка</h3>
+                                        </a>
+                                    </div>
+                                    <table class="table table--spacing ">
+                                        <thead>
+                                        <tr class="row table__header">
+                                            <th class="cell--center">#</th>
+                                            <th class="cell--left">Гравець</th>
+                                            <th class="cell--center">ЖК</th>
+                                            <th class="cell--center">2ХВ</th>
+                                            <th class="cell--center">ЧК</th>
+                                            <th class="cell--center">С</th>
+                                            <th class="cell--center">Г</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт,Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт,Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт,Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт,Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table--spacing table--fivecol">
+                                        <thead>
+                                        <tr class="row table__header">
+                                            <th class="cell--center">#</th>
+                                            <th class="cell--left">Воротар</th>
+                                            <th class="cell--center">СВ</th>
+                                            <th class="cell--center">У</th>
+                                            <th class="cell--center">СВ%</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">16</a></td>
+                                            <td class="cell--left"><a href="#">Войнович, Майя</a></td>
+                                            <td class="cell--center">9</td>
+                                            <td class="cell--center">27</td>
+                                            <td class="cell--center">33.33</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">16</a></td>
+                                            <td class="cell--left"><a href="#">Войнович, Майя</a></td>
+                                            <td class="cell--center">9</td>
+                                            <td class="cell--center">27</td>
+                                            <td class="cell--center">33.33</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">16</a></td>
+                                            <td class="cell--left"><a href="#">Войнович, Майя</a></td>
+                                            <td class="cell--center">9</td>
+                                            <td class="cell--center">27</td>
+                                            <td class="cell--center">33.33</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">16</a></td>
+                                            <td class="cell--left"><a href="#">Войнович, Майя</a></td>
+                                            <td class="cell--center">9</td>
+                                            <td class="cell--center">27</td>
+                                            <td class="cell--center">33.33</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table--spacing ">
+                                        <thead>
+                                        <tr class="table__header">
+                                            <th class="cell--center">#</th>
+                                            <th class="cell--left">Офіційні особи</th>
+                                            <th class="cell--center">ЖК</th>
+                                            <th class="cell--center">2ХВ</th>
+                                            <th class="cell--center">ЧК</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table__inner">
+                                    <div class="table__club-title">
+                                        <a href="#"><img width="50" src="@img/karpati.jpg" alt="club logo"></a>
+                                        <a href="#">
+                                            <h3>Карпати</h3>
+                                        </a>
+                                    </div>
+                                    <table class="table table--spacing">
+                                        <thead>
+                                        <tr class="row table__header">
+                                            <th class="cell--center">#</th>
+                                            <th class="cell--left">Гравець</th>
+                                            <th class="cell--center">ЖК</th>
+                                            <th class="cell--center">2ХВ</th>
+                                            <th class="cell--center">ЧК</th>
+                                            <th class="cell--center">С</th>
+                                            <th class="cell--center">Г</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт, Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт, Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт, Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт, Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">7</a></td>
+                                            <td class="cell--left"><a href="#">Шмідт, Табеа</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">8</td>
+                                            <td class="cell--center">5</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table--spacing ">
+                                        <thead>
+                                        <tr class="row table__header">
+                                            <th class="cell--center">#</th>
+                                            <th class="cell--left">Воротар</th>
+                                            <th class="cell--center">СВ</th>
+                                            <th class="cell--center">У</th>
+                                            <th class="cell--center">СВ%</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table table--spacing ">
+                                        <thead>
+                                        <tr class="row table__header">
+                                            <th class="cell--center">#</th>
+                                            <th class="cell--left">Офіційні особи</th>
+                                            <th class="cell--center">ЖК</th>
+                                            <th class="cell--center">2ХВ</th>
+                                            <th class="cell--center">ЧК</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        <tr class="row row--color">
+                                            <td class="cell--center"><a href="#">A</a></td>
+                                            <td class="cell--left"><a href="#">Келлер, Вероніка</a></td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                            <td class="cell--center">0</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content table tab-match" id="matches-stat" role="tabpanel"
+                             aria-labelledby="tab-players">
+                            <div class="table__player-stat">
+                                <div class="title">
+                                    <h2>Статистика матчів</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content table tab-tv" id="tv-schedule" role="tabpanel"
+                             aria-labelledby="tab-matches">
+                            <div class="table__player-stat">
+                                <div class="title">
+                                    <h2>TV Schedule</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 <%- include('./partials/footer'); %>

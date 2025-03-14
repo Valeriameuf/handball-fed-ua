@@ -28,6 +28,12 @@ module.exports = {
                 match: {
                     import: './views/match.ejs',
                 },
+                standings: {
+                    import: './views/standings.ejs',
+                },
+                calendar: {
+                    import: './views/calendar.ejs',
+                },
             },
             preprocessor: 'ejs', // use EJS templating engine
             // preprocessorOptions: {...},
