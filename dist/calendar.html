@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.b6a3d2f5.css">
+    <link rel="stylesheet" href="style.ccc57ae9.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-max.png">
     <title>Document</title>
 </head>
@@ -353,91 +353,114 @@
                     <div class="tour__subtitle  subtitle">
                         <h3>Тур 1</h3>
                     </div>
-                    <div class="tour__buttons">
-                        <button class="tour__btn active">Матчі за турами</button>
-                        <button class="tour__btn">Матчі за датами</button>
+                    <div class="custom-select custom-select--pos">
+                        <div class="custom-select__inner">
+                            <div class="custom-select__value" id="seasonSelected">Тур</div>
+                            <div class="options-container">
+                                <div class="options-container__option" data-value="tour 1">Тур 1</div>
+                                <div class="options-container__option" data-value="tour 2">Тур 2</div>
+                                <div class="options-container__option" data-value="tour 3">Тур 3</div>
+                            </div>
+                        </div>
+                        <span class="custom-select__arrow custom-select__arrow--loc">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
                     </div>
                 </div>
                 <div class=" tour__table table">
-                    <div class=" tour__header row header">
-                        <div class="cell cell--header">Дата</div>
-                        <div class="cell cell--header">Час</div>
-                        <div class="cell cell--header">Матч</div>
-                        <div class="cell cell--header">Рахунок</div>
-                        <div class="cell cell--header"></div>
-                    </div>
-                    <div class="row row--color">
-                        <div class="cell">
-                            <div class="cell__content">2025-02-20</div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">18:00</div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">
-                                <img class="cell__img" src="img/motor.png" alt="Клуб 1" />
-                                Клуб 1 vs
-                                <img class="cell__img" src="img/motor.png" alt="Клуб 2" />
-                                Клуб 2
-                            </div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">1:0
-                            </div>
-                        </div>
-                        <div class="cell">
-                            <a class="cell__link" href="#" target="_blank">
-                                <img src="img/youtube-color.svg" alt="youtube icon" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row row--color">
-                        <div class="cell">
-                            <div class="cell__content">2025-02-21</div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">20:00</div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">
-                                <img class="cell__img" src="img/motor.png" alt="Клуб 3" />
-                                Клуб 3 vs
-                                <img class="cell__img" src="img/motor.png" alt="Клуб 4" />
-                                Клуб 4
-                            </div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">2:1</div>
-                        </div>
-                        <div class="cell">
-                            <a class="cell__link" href="#" target="_blank">
-                                <img src="img/youtube-color.svg" alt="youtube icon" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row row--color">
-                        <div class="cell">
-                            <div class="cell__content">2025-02-22</div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">19:30</div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">
-                                <img class="cell__img" src="img/motor.png" alt="Клуб 5" />
-                                Клуб 5 vs
-                                <img class="cell__img" src="img/motor.png" alt="Клуб 6" />
-                                Клуб 6
-                            </div>
-                        </div>
-                        <div class="cell">
-                            <div class="cell__content">0:0</div>
-                        </div>
-                        <div class="cell">
-                            <a class="cell__link" href="#" target="_blank">
-                                <img src="img/youtube-color.svg" alt="youtube icon" />
-                            </a>
-                        </div>
+                    <div class="table__respons">
+                        <table class="table table--spacing">
+                            <thead>
+                                <tr class="row table__header">
+                                    <th class="cell--center">Дата</th>
+                                    <th class="cell--center">Час</th>
+                                    <th class="cell--center">Матч</th>
+                                    <th class="cell--center">Рахунок</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row row--color">
+                                    <td class="cell--center">12.03.2025</td>
+                                    <td class="cell--center">18:00</td>
+                                    <td class="cell--center cell--team">
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/karpati.jpg" alt="club img">
+                                            <span class="team__name">Команда E</span>
+                                        </div>
+                                        /
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/motor.png" alt="club img">
+                                            <span class="team__name">Команда F</span>
+                                        </div>
+                                    </td>
+                                    <td class="cell--center">1:0</td>
+                                </tr>
+                                <tr class="row row--color">
+                                    <td class="cell--center">13.03.2025</td>
+                                    <td class="cell--center">20:00</td>
+                                    <td class="cell--center cell--team">
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/karpati.jpg" alt="club img">
+                                            <span class="team__name">Команда E</span>
+                                        </div>
+                                        /
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/motor.png" alt="club img">
+                                            <span class="team__name">Команда F</span>
+                                        </div>
+                                    </td>
+                                    <td class="cell--center">2:1</td>
+                                </tr>
+                                <tr class="row row--color">
+                                    <td class="cell--center">14.03.2025</td>
+                                    <td class="cell--center">19:30</td>
+                                    <td class="cell--center cell--team">
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/karpati.jpg" alt="club img">
+                                            <span class="team__name">Команда E</span>
+                                        </div>
+                                        /
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/motor.png" alt="club img">
+                                            <span class="team__name">Команда F</span>
+                                        </div>
+                                    </td>
+                                    <td class="cell--center">0:3</td>
+                                </tr>
+                                <tr class="row row--color">
+                                    <td class="cell--center">15.03.2025</td>
+                                    <td class="cell--center">17:45</td>
+                                    <td class="cell--center cell--team">
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/karpati.jpg" alt="club img">
+                                            <span class="team__name">Команда E</span>
+                                        </div>
+                                        /
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/motor.png" alt="club img">
+                                            <span class="team__name">Команда F</span>
+                                        </div>
+                                    </td>
+                                    <td class="cell--center">2:2</td>
+                                </tr>
+                                <tr class="row row--color">
+                                    <td class="cell--center">16.03.2025</td>
+                                    <td class="cell--center">16:00</td>
+                                    <td class="cell--center cell--team">
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/karpati.jpg" alt="club img">
+                                            <span class="team__name">Команда E</span>
+                                        </div>
+                                        /
+                                        <div class="team">
+                                            <img class="team__logo" width="25" src="img/motor.png" alt="club img">
+                                            <span class="team__name">Команда F</span>
+                                        </div>
+                                    </td>
+                                    <td class="cell--center">3:1</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
