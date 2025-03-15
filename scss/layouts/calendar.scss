@@ -2,37 +2,84 @@
 @use "../utils/variables";
 
 .calendar {
-    .tour {
-        &__inner {
+    &__container {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .custom-select {
+        width: 100%;
+        max-width: 250px;
+        &__value {
+            text-transform: uppercase;
+        }
+        &--pos {
+            position: relative;
+        }
+        &__arrow {
+            &--loc {
+                top: 45%;
+                right: 10px;
+                color: #035ca2;
+            }
+        }
+    }
+    .table {
+        &__respons {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        thead {
+            // position: sticky;
+            // top: 0;
+            // background-color: white;
+            // z-index: 5;
+        }
+        tbody tr td:first-child {
+            width: 80px;
+        }
+    }
+    .cell {
+        &--team {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 10px;
+            gap: 15px;
         }
-        &__buttons {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 20px;
+    }
+    .team {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+    }
+}
+.tour {
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+@include breakpoint.laptopxl {
+    .table {
+        .cell {
+            padding: 5px;
         }
-        &__btn {
-            font-weight: 600;
-            border-radius: 8px;
-            background-color: variables.$color-brand-yellow;
-            color: #383838;
-            padding-inline: 40px;
-            padding-block: 16px;
-            letter-spacing: 0.5px;
-            border: 2px solid transparent;
-            &:hover {
-                background-color: darken(variables.$color-brand-yellow, 10%);
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            }
-            &.active {
-                background-color: transparent;
-                border: 2px solid variables.$color-brand-yellow;
-            }
+    }
+}
+@include breakpoint.laptopl {
+}
+@include breakpoint.tablet {
+}
+@include breakpoint.mobilel {
+}
+
+@include breakpoint.mobilexs {
+    .tour {
+        &__subtitle {
+            margin-bottom: 20px;
         }
     }
 }
