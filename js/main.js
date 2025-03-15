@@ -104,7 +104,7 @@ options.forEach((option) => {
 });
 
 document.addEventListener('click', (e) => {
-    if (!customSelect.contains(e.target)) {
+    if (customSelect && !customSelect.contains(e.target)) {
         customSelect.classList.remove('open');
     }
 });
