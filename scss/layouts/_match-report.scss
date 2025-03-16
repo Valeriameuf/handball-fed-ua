@@ -296,6 +296,7 @@
     &__respons {
         overflow-x: auto;
         overflow-y: hidden;
+
         &::-webkit-scrollbar {
             width: 8px;
         }
@@ -314,6 +315,7 @@
             background: rgba(147, 147, 147, 1);
         }
     }
+
     &__inner {
         flex: 1 1 30%;
         display: flex;
@@ -379,6 +381,7 @@
         &--center {
             text-align: center;
         }
+
         &--nowrap {
             white-space: nowrap;
         }
@@ -395,10 +398,12 @@
         &__inner {
             font-size: 20px;
         }
+
         .table {
             &__layout {
                 flex-direction: column;
             }
+
             &__club-title {
                 display: flex;
             }
@@ -540,6 +545,7 @@
             &__club-title {
                 font-size: 18px;
             }
+
             &--spacing {
                 margin-bottom: 25px;
             }
@@ -576,9 +582,11 @@
             &__title {
                 font-size: 20px;
             }
+
             &__header {
                 font-size: 16px;
             }
+
             &--spacing {
                 margin-bottom: 15px;
             }
@@ -587,6 +595,7 @@
             td {
                 padding: 24px 4px;
             }
+
             .row {
                 &--font {
                     font-size: 14px;
