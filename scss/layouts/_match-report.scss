@@ -440,6 +440,9 @@
             &__club-title {
                 font-size: 18px;
             }
+            &--spacing {
+                margin-bottom: 25px;
+            }
         }
     }
 }
@@ -470,6 +473,9 @@
             }
             &__header {
                 font-size: 16px;
+            }
+            &--spacing {
+                margin-bottom: 15px;
             }
             th,
             td {
