@@ -88,8 +88,6 @@
     &__respons {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        margin: 20px 0;
-
         &::-webkit-scrollbar {
             width: 8px;
         }
@@ -126,6 +124,7 @@
     tbody {
         .row {
             &--color {
+                color: #353535;
                 &:nth-child(odd) {
                     background-color: #8fb4d8;
                 }
@@ -138,14 +137,13 @@
     }
 
     .cell {
-        flex: 1;
+        // flex: 1;
         min-width: 100px;
         height: 100%;
         font-size: 18px;
         font-weight: 400;
         line-height: 1.2;
         text-align: center;
-        color: #353535;
         padding: 10px 15px;
 
         &__img {
@@ -156,10 +154,11 @@
         &__link {
             cursor: pointer;
             display: inline-block;
-            transition: transform 0.3s;
-
-            &:hover {
-                transform: scale(1.1);
+            &--scale {
+                transition: transform 0.3s;
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
         &--display {
