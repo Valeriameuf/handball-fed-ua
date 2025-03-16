@@ -125,13 +125,6 @@
         .row {
             &--color {
                 color: #353535;
-                &:nth-child(odd) {
-                    background-color: #8fb4d8;
-                }
-
-                &:nth-child(even) {
-                    background-color: #ebebeb;
-                }
             }
         }
     }
