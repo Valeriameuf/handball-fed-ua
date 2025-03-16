@@ -468,10 +468,17 @@
             &__title {
                 font-size: 20px;
             }
+            &__header {
+                font-size: 16px;
+            }
             th,
             td {
-                font-size: 18px;
                 padding: 24px 4px;
+            }
+            .row {
+                &--font {
+                    font-size: 14px;
+                }
             }
         }
     }
