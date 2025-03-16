@@ -288,16 +288,38 @@
 
     &__layout {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
         gap: 20px;
     }
 
+    &__respons {
+        overflow-x: auto;
+        overflow-y: hidden;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgba(240, 240, 240, 0.5);
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba(202, 201, 201, 0.8);
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba(147, 147, 147, 1);
+        }
+    }
     &__inner {
         flex: 1 1 30%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-wrap: nowrap;
         gap: 20px;
         min-width: 300px;
     }
@@ -357,8 +379,7 @@
         &--center {
             text-align: center;
         }
-
-        &--no-wrap {
+        &--nowrap {
             white-space: nowrap;
         }
     }
@@ -373,6 +394,14 @@
     .match-report {
         &__inner {
             font-size: 20px;
+        }
+        .table {
+            &__layout {
+                flex-direction: column;
+            }
+            &__club-title {
+                display: flex;
+            }
         }
     }
 }
@@ -413,16 +442,6 @@
             .active {
                 background-color: transparent;
                 border-bottom: none;
-            }
-        }
-
-        .table {
-            &__layout {
-                flex-direction: column;
-            }
-
-            &__club-title {
-                display: flex;
             }
         }
     }
@@ -521,6 +540,9 @@
             &__club-title {
                 font-size: 18px;
             }
+            &--spacing {
+                margin-bottom: 25px;
+            }
         }
     }
 }
@@ -554,11 +576,21 @@
             &__title {
                 font-size: 20px;
             }
+            &__header {
+                font-size: 16px;
+            }
+            &--spacing {
+                margin-bottom: 15px;
+            }
 
             th,
             td {
-                font-size: 18px;
                 padding: 24px 4px;
+            }
+            .row {
+                &--font {
+                    font-size: 14px;
+                }
             }
         }
     }
