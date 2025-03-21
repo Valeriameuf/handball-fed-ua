@@ -63,7 +63,7 @@
         }
 
         .cell {
-            text-align: center;
+            // text-align: center;
             font-weight: 700;
             padding: 12px;
         }
@@ -79,13 +79,15 @@
 
     .cell {
         // flex: 1;
-        min-width: 100px;
-        height: 100%;
         font-size: 18px;
         font-weight: 400;
         line-height: 1.2;
-        text-align: center;
         padding: 10px 15px;
+
+        &--dimensions {
+            min-width: 100px;
+            height: 100%;
+        }
 
         &__img {
             width: 25px;
@@ -105,7 +107,7 @@
             }
         }
 
-        &--display {
+        &__display {
             display: flex;
             align-items: center;
             justify-content: center;
