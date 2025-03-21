@@ -324,6 +324,17 @@
         }
     }
     .cell {
+        &__link {
+            &--highlight {
+                font-weight: 700;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #e0e0e0;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
         &--left {
             text-align: left;
         }
