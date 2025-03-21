@@ -1,8 +1,11 @@
+import 'choices.js';
+
 import BottomMenu from '@js/classes/BottomMenu';
 import Submenu from '@js/classes/Submenu';
 import MobileMenu from '@js/classes/MobileMenu';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import Choices from 'choices.js';
 
 const bottomMenu = new BottomMenu('#main-header-menu');
 const submenu = new Submenu('#submenu-real');
@@ -58,6 +61,17 @@ const calendarSwiper = new Swiper('#calendar-swiper', {
         },
     },
 });
+
+document
+    .querySelectorAll('select')
+    .forEach(el => new Choices(el, {
+        itemSelectText: '',
+        noResultsText: '',
+        classNames: {
+            itemSelectable: ['choices__item--selectable-custom'],
+        }
+    }));
+
 let tab = function () {
     let tabBtn = document.querySelectorAll('.tabs__button');
     let tabContent = document.querySelectorAll('.content');
@@ -82,29 +96,3 @@ let tab = function () {
     }
 };
 tab();
-
-const customSelect = document.querySelector('.custom-select__inner');
-const selectedValue = document.getElementById('seasonSelected');
-const optionsContainer = document.querySelector('.options-container');
-const options = document.querySelectorAll('.options-container__option');
-
-if (customSelect !== null) {
-    customSelect.addEventListener('click', (e) => {
-        e.stopPropagation();
-        customSelect.classList.toggle('open');
-    });
-}
-
-options.forEach((option) => {
-    option.addEventListener('click', (e) => {
-        selectedValue.textContent = option.textContent;
-        customSelect.classList.remove('open');
-        e.stopPropagation();
-    });
-});
-
-document.addEventListener('click', (e) => {
-    if (customSelect && !customSelect.contains(e.target)) {
-        customSelect.classList.remove('open');
-    }
-});

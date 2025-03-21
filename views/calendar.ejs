@@ -4,121 +4,137 @@
         <div class="calendar__container container">
             <div class="calendar__tours tour">
                 <div class="tour__inner">
-                    <div class="tour__subtitle  subtitle">
-                        <h3>Тур 1</h3>
+                    <div class="tour__subtitle subtitle">
+                        <h3>Суперліга (Чоловіки) / Тур 3</h3>
                     </div>
-                    <div class="custom-select custom-select--pos">
-                        <div class="custom-select__inner">
-                            <div class="custom-select__value" id="seasonSelected">Тур</div>
-                            <div class="options-container">
-                                <div class="options-container__option" data-value="tour 1">Тур 1</div>
-                                <div class="options-container__option" data-value="tour 2">Тур 2</div>
-                                <div class="options-container__option" data-value="tour 3">Тур 3</div>
-                            </div>
+                    <form class="form-filters" method="get">
+                        <div class="custom-select">
+                            <select name="tour" id="tour">
+                                <option value="3">Тур 3</option>
+                                <option value="2">Тур 2</option>
+                                <option value="1">Тур 1</option>
+                            </select>
                         </div>
-                        <span class="custom-select__arrow custom-select__arrow--loc">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
+                        <div class="custom-select">
+                            <select name="season" id="season">
+                                <option value="2024/2025">Сезон 2024/2025</option>
+                                <option value="2025/2026">Сезон 2025/2026</option>
+                                <option value="2026/2027">Сезон 2026/2027</option>
+                                <option value="2027/2028">Сезон 2027/2028</option>
+                                <option value="2028/2029">Сезон 2028/2029</option>
+                                <option value="2029/2030">Сезон 2029/2030</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
                 <div class=" tour__table table">
                     <div class="table__respons">
                         <table class="table table--spacing">
                             <thead>
-                                <tr class="row table__header">
-                                    <th class="cell cell--center cell--nowrap">Дата</th>
-                                    <th class="cell cell--center cell--nowrap">Час</th>
-                                    <th class="cell cell--center cell--nowrap">Матч</th>
-                                    <th class="cell cell--center cell--nowrap">Рахунок</th>
-                                    <th class="cell cell--center cell--nowrap"></th>
-                                </tr>
+                            <tr class="row table__header">
+                                <th class="cell cell--center cell--nowrap">Дата</th>
+                                <th class="cell cell--center cell--nowrap">Час</th>
+                                <th class="cell cell--center cell--nowrap">Матч</th>
+                                <th class="cell cell--center cell--nowrap">Рахунок</th>
+                                <th class="cell cell--center cell--nowrap"></th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">12.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">18:00</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
-                                            <span class="team__name">«Карпати»</span>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
-                                            <span class="team__name">«Мотор»</span>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="@img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">13.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">20:00</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/dush.jpg" alt="club img">
-                                            <span class="team__name">«ХНУ - ДЮСШ 1»</span>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
-                                            <span class="team__name">«СКА-ШВСМ»</span>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="@img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">14.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">19:30</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
-                                            <span class="team__name">Команда E</span>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
-                                            <span class="team__name">Команда F</span>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="@img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">15.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">17:45</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
-                                            <span class="team__name">Команда E</span>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
-                                            <span class="team__name">Команда F</span>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="@img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">16.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">16:00</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
-                                            <span class="team__name">Команда E</span>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
-                                            <span class="team__name">Команда F</span>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="@img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">12.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">18:00</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
+                                        <span class="team__name">«Карпати»</span>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
+                                        <span class="team__name">«Мотор»</span>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">13.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">20:00</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/dush.jpg" alt="club img">
+                                        <span class="team__name">«ХНУ - ДЮСШ 1»</span>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        <span class="team__name">«СКА-ШВСМ»</span>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">14.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">19:30</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
+                                        <span class="team__name">Команда E</span>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
+                                        <span class="team__name">Команда F</span>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">15.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">17:45</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
+                                        <span class="team__name">Команда E</span>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
+                                        <span class="team__name">Команда F</span>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">16.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">16:00</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
+                                        <span class="team__name">Команда E</span>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
+                                        <span class="team__name">Команда F</span>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -127,4 +143,4 @@
         </div>
     </section>
 </main>
-<%- include('./partials/footer'); %>
+<%- include('./partials/footer', {scripts: ['@js/calendar.js']}); %>

@@ -12,7 +12,6 @@ module.exports = {
         new HtmlBundlerPlugin({
             entry: {
                 index: {
-                    // output dist/index.html
                     import: './views/index.ejs',
                     data: {
                         isFrontPage: true,
@@ -37,13 +36,13 @@ module.exports = {
                     import: './views/calendar.ejs',
                 },
             },
-            preprocessor: 'ejs', // use EJS templating engine
+            preprocessor: 'ejs',
             // preprocessorOptions: {...},
             js: {
-                filename: 'main.[contenthash:8].js', // JS output filename
+                filename: '[name].[contenthash:8].js',
             },
             css: {
-                filename: 'style.[contenthash:8].css', // CSS output filename
+                filename: 'style.[contenthash:8].css',
             },
         }),
         new WebpackManifestPlugin({
@@ -57,6 +56,19 @@ module.exports = {
             },
         }),
     ],
+
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                defaultVendors: {
+                    test: /[\\/]node_modules[\\/].+\.(js|ts)$/,
+                    name: 'vendors',
+                    chunks: 'all',
+                    priority: -10,
+                },
+            },
+        },
+    },
 
     module: {
         rules: [
@@ -74,9 +86,6 @@ module.exports = {
             {
                 test: /\.(ico|png|jp?g|svg|webp)/,
                 type: 'asset/resource',
-                // generator: {
-                //     filename: 'img/[name].[hash:8][ext][query]',
-                // },
                 generator: {
                     // keep original directory structure
                     filename: ({ filename }) => {

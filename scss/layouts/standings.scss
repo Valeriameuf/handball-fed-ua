@@ -4,9 +4,11 @@
 .standings {
     padding-top: 30px;
     padding-bottom: 50px;
+
     &__title {
         margin-bottom: 15px;
     }
+
     &__inner {
         display: flex;
         align-items: center;
@@ -14,10 +16,9 @@
         flex-wrap: wrap;
         margin-bottom: 20px;
     }
+
     &__date {
         margin: 15px 0 20px;
-    }
-    &__select {
     }
 
     &__subtitle {
@@ -25,69 +26,16 @@
         margin-bottom: 15px;
     }
 }
-.custom-select {
-    position: relative;
-    display: inline-block;
-    width: 280px;
-    min-width: 230px;
-    &__inner {
-        position: relative;
-        width: 100%;
-        background-color: variables.$color-light-grey;
-        border-radius: 5px;
-        border: 1px solid variables.$color-light-grey;
-        cursor: pointer;
-        &.open .options-container {
-            display: block;
-            &.arrow i {
-                transform: rotate(180deg);
-            }
-        }
-    }
-    &__value {
-        padding: 10px;
-        font-size: 16px;
-        color: variables.$color-brand-light;
-        font-weight: bold;
-        background-color: variables.$color-light-grey;
-    }
-    &__arrow {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        color: variables.$color-brand-light;
-        transform: translateY(-50%);
-        pointer-events: none;
-        transition: transform 0.3s ease;
-    }
-    .options-container {
-        display: none;
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        background-color: variables.$color-light-grey;
-        border-radius: 5px;
-        border: 1px solid variables.$color-light-grey;
-        z-index: 10;
-        &__option {
-            padding: 10px;
-            font-size: 16px;
-            color: variables.$color-brand-light;
-            cursor: pointer;
-            &:hover {
-                background-color: variables.$color-brand-light;
-                color: variables.$color-brand-yellow;
-            }
-        }
-    }
-}
+
 .table {
     width: 100%;
     margin-bottom: 30px;
     border-collapse: collapse;
+
     &__respons {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+
         &::-webkit-scrollbar {
             width: 8px;
         }
@@ -147,18 +95,22 @@
         &__link {
             cursor: pointer;
             display: inline-block;
+
             &--scale {
                 transition: transform 0.3s;
+
                 &:hover {
                     transform: scale(1.1);
                 }
             }
         }
+
         &--display {
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         &--header {
             text-align: center;
             font-size: 20px;
@@ -177,30 +129,18 @@
         }
     }
 }
+
 @include breakpoint.laptopl {
     .subtitle {
         font-size: 24px;
     }
 }
+
 @include breakpoint.tablet {
 }
+
 @include breakpoint.mobilel {
     .subtitle {
         font-size: 20px;
-    }
-    .custom-select {
-        .options-container {
-            left: 0;
-        }
-    }
-}
-
-@include breakpoint.mobilexs {
-    .custom-select {
-        &__inner {
-            width: 100%;
-            max-width: 100%;
-            padding: 5px;
-        }
     }
 }

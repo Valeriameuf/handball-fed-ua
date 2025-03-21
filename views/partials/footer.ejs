@@ -6,10 +6,14 @@
         <div class="footer__section logo-section">
             <div class="partners-container">
                 <div class="partners-container">
-                    <a href="https://www.ihf.info/ "><img src="@img/partners/ihf.png" alt="partner" class="sponsor-logo"></a>
-                    <a href="https://www.eurohandball.com/"><img src="@img/partners/ehf.png" alt="partner" class="sponsor-logo"></a>
-                    <a href="https://mms.gov.ua/"><img src="@img/partners/min-mol-sport.png" alt="patrner" class="sponsor-logo"></a>
-                    <a href="https://noc-ukr.org/"><img src="@img/partners/comitet.png" alt="partner" class="sponsor-logo"></a>
+                    <a href="https://www.ihf.info/ "><img src="@img/partners/ihf.png" alt="partner"
+                                                          class="sponsor-logo"></a>
+                    <a href="https://www.eurohandball.com/"><img src="@img/partners/ehf.png" alt="partner"
+                                                                 class="sponsor-logo"></a>
+                    <a href="https://mms.gov.ua/"><img src="@img/partners/min-mol-sport.png" alt="patrner"
+                                                       class="sponsor-logo"></a>
+                    <a href="https://noc-ukr.org/"><img src="@img/partners/comitet.png" alt="partner"
+                                                        class="sponsor-logo"></a>
                     <a href="https://joma.ua/"><img src="@img/partners/joma.png" alt="partner" class="sponsor-logo"></a>
                 </div>
             </div>
@@ -22,7 +26,8 @@
                     </h4>
                     <div class="nav-container">
                         <ul class="nav-container__nav navigation">
-                            <li class="nav-container__item"><a class="nav-container__link" href="#">Шкільна ліга</a></li>
+                            <li class="nav-container__item"><a class="nav-container__link" href="#">Шкільна ліга</a>
+                            </li>
                             <li class="nav-container__item"><a class="nav-container__link" href="#">Навчання</a></li>
                             <li class="nav-container__item"><a class="nav-container__link" href="#">Партнери</a></li>
                         </ul>
@@ -33,8 +38,10 @@
                         </ul>
                         <ul class="nav-container__nav navigation">
                             <li class="nav-container__item"><a class="nav-container__link" href="#">ФГУ</a></li>
-                            <li class="nav-container__item"><a class="nav-container__link" href="#">Судді та делегати</a></li>
-                            <li class="nav-container__item"><a class="nav-container__link" href="general-news.html">Новини</a></li>
+                            <li class="nav-container__item"><a class="nav-container__link" href="#">Судді та
+                                    делегати</a></li>
+                            <li class="nav-container__item"><a class="nav-container__link" href="general-news.html">Новини</a>
+                            </li>
                             <li class="nav-container__item"><a class="nav-container__link" href="#">Досягнення</a></li>
                             <li class="nav-container__item"><a class="nav-container__link" href="#">Змагання</a></li>
                             <li class="nav-container__item"><a class="nav-container__link" href="#">Збірні</a></li>
@@ -97,6 +104,10 @@
 </footer>
 </div>
 <script src="@js/main.js"></script>
+<% if (typeof scripts !== 'undefined' && scripts.length > 0) { %>
+    <% scripts.forEach(script => { %>
+        <script src="<%= script %>"></script>
+    <% }); %>
+<% } %>
 </body>
-
 </html>

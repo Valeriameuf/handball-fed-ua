@@ -1,0 +1,13 @@
+@use "../utils/breakpoint";
+
+.form-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@include breakpoint.mobilexs {
+    .form-filters {
+        width: 100%;
+    }
+}

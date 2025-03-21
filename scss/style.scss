@@ -24,9 +24,11 @@
 @use "./layouts/standings";
 @use "./layouts/calendar";
 @use "./layouts/footer";
+@use "./layouts/form-filters";
 
 // Импорт компонентов
 @use "./components/media";
+@use "./components/custom-select";
 
 @use "~@fortawesome/fontawesome-free/scss/fontawesome";
 @use "~@fortawesome/fontawesome-free/scss/regular";

@@ -11,337 +11,349 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div style="background: #fff; color: #000; text-align: center; padding: 15px 0; font-size: 24px;">
-                Сайт перебуває у розробці
+<div class="wrapper">
+    <header class="header">
+        <div style="background: #fff; color: #000; text-align: center; padding: 15px 0; font-size: 24px;">
+            Сайт перебуває у розробці
+        </div>
+        <div class="header__top top">
+            <div class="header__container container">
+                <nav class="top__menu">
+                    <ul class="top__list">
+                        <li class="top__item">
+                            <a href="#" class="menu-link">ФГУ</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Навчання</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Партнери</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Шкільна ліга</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">XPS</a>
+                        </li>
+                        <li class="top__item">
+                            <a href="#" class="menu-link">Документи</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="top__socials social">
+                    <a href="#" class="social__icon">
+                        <img src="@img/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="social__icon">
+                        <img src="@img/instagram.svg" alt="instagram">
+                    </a>
+                    <a href="#" class="social__icon">
+                        <img src="@img/youtube.svg" alt="youtube">
+                    </a>
+                    <a href="#" class="social__icon">
+                        <img src="@img/telegram.svg" alt="telegram">
+                    </a>
+                </div>
             </div>
-            <div class="header__top top">
+        </div>
+        <div id="header-main"
+             class="header__main header__main--<% if (typeof isFrontPage === "boolean") { %>position<% } else { %>bg<% } %>">
+            <div class="header__bottom">
                 <div class="header__container container">
-                    <nav class="top__menu">
-                        <ul class="top__list">
-                            <li class="top__item">
-                                <a href="#" class="menu-link">ФГУ</a>
+                    <div class="header__logo header__logo--indent">
+                        <a class="logo-link" href="index.html">
+                            <img src="@img/logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <nav id="main-header-menu" class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#" data-target-node-id="#submenu-zmaganya"
+                                   data-has-children>
+                                    Змагання
+                                </a>
                             </li>
-                            <li class="top__item">
-                                <a href="#" class="menu-link">Навчання</a>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#" data-target-node-id="#submenu-news"
+                                   data-has-children>
+                                    Новини
+                                </a>
                             </li>
-                            <li class="top__item">
-                                <a href="#" class="menu-link">Партнери</a>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Досягнення</a>
                             </li>
-                            <li class="top__item">
-                                <a href="#" class="menu-link">Шкільна ліга</a>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Збірні</a>
                             </li>
-                            <li class="top__item">
-                                <a href="#" class="menu-link">XPS</a>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Команди</a>
                             </li>
-                            <li class="top__item">
-                                <a href="#" class="menu-link">Документи</a>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Судді та делегати</a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link link-style" href="#">Мультимедія</a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="top__socials social">
-                        <a href="#" class="social__icon">
-                            <img src="@img/facebook.svg" alt="facebook">
-                        </a>
-                        <a href="#" class="social__icon">
-                            <img src="@img/instagram.svg" alt="instagram">
-                        </a>
-                        <a href="#" class="social__icon">
-                            <img src="@img/youtube.svg" alt="youtube">
-                        </a>
-                        <a href="#" class="social__icon">
-                            <img src="@img/telegram.svg" alt="telegram">
-                        </a>
+                    <div class="header__buttons">
+                        <div id="mobile-menu-open" class="burger burger--decor">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!--                            <button class="search-button" id="searchButton">-->
+                        <!--                                <img id="searchIcon" src="@img/search.svg" alt="search">-->
+                        <!--                            </button>-->
                     </div>
                 </div>
-            </div>
-            <div id="header-main" class="header__main header__main--<% if (typeof isFrontPage === "boolean") { %>position<% } else { %>bg<% } %>">
-                <div class="header__bottom">
-                    <div class="header__container container">
-                        <div class="header__logo header__logo--indent">
-                            <a class="logo-link" href="index.html">
-                                <img src="@img/logo.png" alt="logo">
-                            </a>
-                        </div>
-                        <nav id="main-header-menu" class="header__nav">
-                            <ul class="header__list">
-                                <li class="header__item">
-                                    <a class="header__link link-style" href="#" data-target-node-id="#submenu-zmaganya" data-has-children>
-                                        Змагання
-                                    </a>
-                                </li>
-                                <li class="header__item">
-                                    <a class="header__link link-style" href="#" data-target-node-id="#submenu-news" data-has-children>
-                                        Новини
-                                    </a>
-                                </li>
-                                <li class="header__item">
-                                    <a class="header__link link-style" href="#">Досягнення</a>
-                                </li>
-                                <li class="header__item">
-                                    <a class="header__link link-style" href="#">Збірні</a>
-                                </li>
-                                <li class="header__item">
-                                    <a class="header__link link-style" href="#">Команди</a>
-                                </li>
-                                <li class="header__item">
-                                    <a class="header__link link-style" href="#">Судді та делегати</a>
-                                </li>
-                                <li class="header__item">
-                                    <a class="header__link link-style" href="#">Мультимедія</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="header__buttons">
-                            <div id="mobile-menu-open" class="burger burger--decor">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <!--                            <button class="search-button" id="searchButton">-->
-                            <!--                                <img id="searchIcon" src="@img/search.svg" alt="search">-->
-                            <!--                            </button>-->
-                        </div>
-                    </div>
-                    <div id="submenu-real" class="submenu-real">
-                        <div class="submenu-real__wrapper">
-                            <div class="submenu-real__container container">
-                                <div id="submenu-zmaganya" class="submenu-real__menu">
-                                    <ul>
-                                        <li>
-                                            <a class="header__link link-style" href="#" data-has-children>
-                                                Суперліга <i class="fa-solid fa-arrow-right"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a class="header__link link-style" href="#" data-has-children>
-                                                        Жінки <i class="fa-solid fa-arrow-right"></i>
-                                                    </a>
-                                                    <ul>
-                                                        <li>
-                                                            <a class="header__link link-style submenu-real__link--leaf" href="#">XXX</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="header__link link-style submenu-real__link--leaf" href="#">YYY</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a class="header__link link-style" href="#" data-has-children>
-                                                        Чоловіки <i class="fa-solid fa-arrow-right"></i>
-                                                    </a>
-                                                    <ul>
-                                                        <li>
-                                                            <a class="header__link link-style submenu-real__link--leaf" href="#">XXX 2</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="header__link link-style submenu-real__link--leaf" href="#">YYY 2</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a class="header__link link-style" href="#" data-has-children>
-                                                Вища ліга
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Жінки 2</a>
-                                                </li>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Чоловіки 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a class="header__link link-style" href="#" data-has-children>
-                                                Перша ліга
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Жінки 3</a>
-                                                </li>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Чоловіки 3</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a class="header__link link-style" href="#" data-has-children>
-                                                Кубок України
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Жінки</a>
-                                                </li>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Чоловіки</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a class="header__link link-style" href="#" data-has-children>
-                                                2008-2009 р.н.
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Дівчата</a>
-                                                </li>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Юнаки</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a class="header__link link-style submenu-real__link--leaf" href="#" data-has-children>
-                                                2010-2011 р.н.
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </a>
-                                            <ul>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Дівчата</a>
-                                                </li>
-                                                <li>
-                                                    <a class="header__link link-style submenu-real__link--leaf" href="#">Юнаки</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
+                <div id="submenu-real" class="submenu-real">
+                    <div class="submenu-real__wrapper">
+                        <div class="submenu-real__container container">
+                            <div id="submenu-zmaganya" class="submenu-real__menu">
+                                <ul>
+                                    <li>
+                                        <a class="header__link link-style" href="#" data-has-children>
+                                            Суперліга <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style" href="#" data-has-children>
+                                                    Жінки <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <a class="header__link link-style submenu-real__link--leaf"
+                                                           href="#">XXX</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="header__link link-style submenu-real__link--leaf"
+                                                           href="#">YYY</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style" href="#" data-has-children>
+                                                    Чоловіки <i class="fa-solid fa-arrow-right"></i>
+                                                </a>
+                                                <ul>
+                                                    <li>
+                                                        <a class="header__link link-style submenu-real__link--leaf"
+                                                           href="#">XXX 2</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="header__link link-style submenu-real__link--leaf"
+                                                           href="#">YYY 2</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="header__link link-style" href="#" data-has-children>
+                                            Вища ліга
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Жінки
+                                                    2</a>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Чоловіки
+                                                    2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="header__link link-style" href="#" data-has-children>
+                                            Перша ліга
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Жінки
+                                                    3</a>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Чоловіки
+                                                    3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="header__link link-style" href="#" data-has-children>
+                                            Кубок України
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Жінки</a>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Чоловіки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="header__link link-style" href="#" data-has-children>
+                                            2008-2009 р.н.
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Дівчата</a>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Юнаки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="header__link link-style submenu-real__link--leaf" href="#"
+                                           data-has-children>
+                                            2010-2011 р.н.
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Дівчата</a>
+                                            </li>
+                                            <li>
+                                                <a class="header__link link-style submenu-real__link--leaf" href="#">Юнаки</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="dropdown-menu" id="dropdown-menu">
-                <div class="header__mobile mobile-nav">
-                    <div class="mobile-nav__top">
-                        <img src="@img/logo.png" alt="logo">
-                        <button id="mobile-menu-close" class="mobile-nav__close" aria-label="close menu">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <ul class="menu-social">
-                        <li>
-                            <a href="#" class="menu-social__link">
-                                <img src="@img/facebook-color.svg" alt="facebook">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-social__link">
-                                <img src="@img/instagram-color.svg" alt="instagram">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-social__link">
-                                <img src="@img/youtube-color.svg" alt="youtube">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="menu-social__link">
-                                <img src="@img/telegram-color.svg" alt="telegram">
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="mobile-nav__list">
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Новини</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#" data-has-children>
-                                Змагання
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
-                            </a>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Суперліга / Жінки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Суперліга / Чоловіки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Вища ліга / Жінки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Вища ліга / Чоловіки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Перша ліга / Жінки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Перша ліга / Чоловіки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Кубок України / Жінки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Кубок України / Чоловіки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">2008-2009 р.н. / Дівчата</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">2008-2009 р.н. / Юнаки</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">2010-2011 р.н. / Дівчата</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">2010-2011 р.н. / Юнаки</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Досягнення</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#" data-has-children>
-                                Збірні
-                                <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
-                            </a>
-                            <ul class="mobile-nav__sublist">
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Жіноча збірна України</a>
-                                </li>
-                                <li class="mobile-nav__subitem">
-                                    <a class="mobile-nav__sublink" href="#">Чоловіча збірна України</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Команди</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Судді та делегати</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">ФГУ</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Навчання</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Партнери</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Шкільна ліга</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">XPS</a>
-                        </li>
-                        <li class="mobile-nav__item">
-                            <a class="mobile-nav__link link-style" href="#">Документи</a>
-                        </li>
-                    </ul>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <div class="header__mobile mobile-nav">
+                <div class="mobile-nav__top">
+                    <img src="@img/logo.png" alt="logo">
+                    <button id="mobile-menu-close" class="mobile-nav__close" aria-label="close menu">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
+                <ul class="menu-social">
+                    <li>
+                        <a href="#" class="menu-social__link">
+                            <img src="@img/facebook-color.svg" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-social__link">
+                            <img src="@img/instagram-color.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-social__link">
+                            <img src="@img/youtube-color.svg" alt="youtube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-social__link">
+                            <img src="@img/telegram-color.svg" alt="telegram">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Новини</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#" data-has-children>
+                            Змагання
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </a>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Суперліга / Жінки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Суперліга / Чоловіки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Вища ліга / Жінки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Вища ліга / Чоловіки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Перша ліга / Жінки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Перша ліга / Чоловіки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Кубок України / Жінки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Кубок України / Чоловіки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">2008-2009 р.н. / Дівчата</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">2008-2009 р.н. / Юнаки</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">2010-2011 р.н. / Дівчата</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">2010-2011 р.н. / Юнаки</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Досягнення</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#" data-has-children>
+                            Збірні
+                            <i class="fas fa-chevron-down arrow mobile-nav__arrow"></i>
+                        </a>
+                        <ul class="mobile-nav__sublist">
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Жіноча збірна України</a>
+                            </li>
+                            <li class="mobile-nav__subitem">
+                                <a class="mobile-nav__sublink" href="#">Чоловіча збірна України</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Команди</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Судді та делегати</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Мультимедія</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">ФГУ</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Навчання</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Партнери</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Шкільна ліга</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">XPS</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link link-style" href="#">Документи</a>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </header>

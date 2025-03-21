@@ -1,0 +1,27 @@
+@use "../utils/variables";
+@use "../utils/breakpoint";
+
+@use "choices.js/src/styles/choices" with (
+    $choices-text-color: variables.$color-brand-light,
+    $choices-bg-color: #f0f0f0,
+    $choices-keyline-color: #f0f0f0,
+    $choices-bg-color-dropdown: #f0f0f0
+);
+
+.custom-select {
+    color: variables.$color-brand-light;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 250px;
+}
+
+.choices__item--selectable-custom.is-highlighted {
+    background-color: variables.$color-brand-light;
+    color: variables.$color-brand-yellow;
+}
+
+@include breakpoint.mobilexs {
+    .custom-select {
+        width: 100%;
+    }
+}

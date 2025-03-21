@@ -6,38 +6,25 @@
         margin-top: 40px;
         margin-bottom: 50px;
     }
-    .custom-select {
-        width: 100%;
-        max-width: 250px;
-        &__value {
-            text-transform: uppercase;
-        }
-        &--pos {
-            position: relative;
-        }
-        &__arrow {
-            &--loc {
-                top: 45%;
-                right: 10px;
-                color: #035ca2;
-            }
-        }
-    }
+
     .table {
         &__respons {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
         }
+
         thead {
             // position: sticky;
             // top: 0;
             // background-color: white;
             // z-index: 5;
         }
+
         tbody tr td:first-child {
             width: 80px;
         }
     }
+
     .cell {
         &--team {
             display: flex;
@@ -46,6 +33,7 @@
             gap: 20px;
         }
     }
+
     .team {
         display: flex;
         align-items: center;
@@ -53,6 +41,7 @@
         gap: 7px;
     }
 }
+
 .tour {
     &__inner {
         display: flex;
@@ -62,6 +51,7 @@
         margin-bottom: 20px;
     }
 }
+
 @include breakpoint.laptopxl {
     .table {
         .cell {
@@ -69,10 +59,13 @@
         }
     }
 }
+
 @include breakpoint.laptopl {
 }
+
 @include breakpoint.tablet {
 }
+
 @include breakpoint.mobilel {
 }
 
