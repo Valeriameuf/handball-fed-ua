@@ -227,42 +227,6 @@
             }
         }
     }
-
-    .tabs {
-        width: 100%;
-        display: flex;
-        margin-bottom: 40px;
-
-        &__button {
-            background: none;
-            flex: 1;
-            flex-basis: auto;
-            cursor: pointer;
-            padding: 11px;
-            border-bottom: 2px solid #ccc;
-
-            &--fonts {
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 1.2;
-                color: variables.$color-brand-light;
-            }
-        }
-
-        .active {
-            background-color: #fff59d;
-            border-bottom: 2px solid #007bff;
-            font-weight: bold;
-        }
-    }
-
-    .content {
-        display: none;
-
-        &.active {
-            display: block;
-        }
-    }
 }
 
 .table {
@@ -385,6 +349,7 @@
                 line-height: 40px;
             }
         }
+
         &--left {
             text-align: left;
         }
@@ -417,47 +382,6 @@
 
             &__club-title {
                 display: flex;
-            }
-        }
-    }
-}
-
-@include breakpoint.laptopl {
-    .match-report {
-        .tabs {
-            flex-direction: column;
-            align-items: flex-start;
-
-            &__button {
-                position: relative;
-                margin-right: 0;
-                padding: 5px;
-                border-bottom: none;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 2px;
-                    height: 100%;
-                    background-color: rgb(211, 211, 211);
-                    transition: background-color 0.3s;
-                }
-
-                &.active::before {
-                    background-color: rgb(0, 123, 255);
-                }
-
-                &:hover::before {
-                    background-color: rgba(0, 123, 255, 0.5);
-                }
-            }
-
-            .active {
-                background-color: transparent;
-                border-bottom: none;
             }
         }
     }

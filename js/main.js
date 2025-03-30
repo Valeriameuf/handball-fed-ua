@@ -76,6 +76,7 @@ let tab = function () {
     let tabBtn = document.querySelectorAll('.tabs__button');
     let tabContent = document.querySelectorAll('.content');
     let tabName;
+
     tabBtn.forEach((item) => {
         item.addEventListener('click', selectTabNav);
     });
