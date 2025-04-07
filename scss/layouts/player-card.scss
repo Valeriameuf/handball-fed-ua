@@ -1,0 +1,101 @@
+@use "../utils/breakpoint";
+@use "../utils/variables";
+
+.player-card {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    &__container {
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        background: #fff;
+        padding: 10px;
+        max-width: 800px;
+        margin: auto;
+    }
+    &__buttons {
+        display: flex;
+        gap: 0;
+        margin-bottom: 10px;
+    }
+    &__profile {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 10px 30px rgba(137, 137, 137, 0.25);
+        display: flex;
+        padding: 8px;
+    }
+}
+.button-container {
+    &__button {
+        background: #fff;
+        border: 1px solid #dedede;
+        border-radius: 0;
+        padding: 5px 10px;
+        cursor: pointer;
+        &--font {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+            text-align: center;
+            color: variables.$color-brand-light;
+            &:hover {
+                background-color: variables.$color-brand-yellow;
+                color: #222;
+            }
+        }
+
+        &:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        &:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+    }
+}
+.profile {
+    &__info {
+        flex: 1;
+        color: #333;
+        padding: 10px;
+    }
+    &__photo {
+        height: auto;
+        margin-right: 20px;
+    }
+    &__details {
+        margin-top: 10px;
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #353535;
+        margin-bottom: 15px;
+    }
+    .details {
+        &__container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.2;
+            dt {
+                color: #5e5e5e;
+            }
+            dd {
+                color: #035ca2;
+            }
+        }
+        &__container:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &__link {
+            cursor: pointer;
+            &:hover {
+                color: #5e5e5e;
+                opacity: 0.6;
+            }
+        }
+    }
+}
