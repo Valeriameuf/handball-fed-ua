@@ -7,11 +7,17 @@ body {
     font-weight: 400;
     color: variables.$color-brand-white;
     line-height: 1.2;
+
+    & strong, b {
+        font-weight: bold !important;
+    }
 }
+
 .main {
     overflow-x: clip;
     flex: 1 1 auto;
 }
+
 .wrapper {
     min-height: 100%;
     display: flex;
@@ -19,11 +25,13 @@ body {
     // overflow: auto;
     position: relative;
 }
+
 .container {
     max-width: 1230px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .title {
     font-size: 45px;
     font-weight: 600;
@@ -31,6 +39,7 @@ body {
     text-transform: uppercase;
     color: variables.$color-brand-light;
 }
+
 .subtitle {
     font-size: 30px;
     font-weight: 200;
@@ -38,6 +47,7 @@ body {
     color: #353535;
     text-transform: uppercase;
 }
+
 .hidden-title {
     position: absolute;
     width: 1px;
@@ -48,6 +58,7 @@ body {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
 .link-style {
     display: inline-block;
     cursor: pointer;
