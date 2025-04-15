@@ -2,6 +2,7 @@
 @use "./base";
 @use "./utils/fonts";
 @use "./utils/variables";
+@use "./utils/mixins";
 
 // Импорт макетов
 @use "./layouts/header";
