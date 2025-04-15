@@ -363,47 +363,57 @@
             <h1 class="hidden-title">Lorem</h1>
             <nav class="player-card__buttons button-container">
                 <button class="button-container__button button-container__button--font">Основні данні</button>
-                <button class="button-container__button button-container__button--font">Матчі</button>
+                <button class="button-container__button button-container__button--font">Ігри</button>
                 <button class="button-container__button button-container__button--font">Кар’єра</button>
             </nav>
-            <div class="player-card__profile profile">
-                <div class="profile__photo">
-                    <img src="img/player-photo.png" alt="player photo">
-                </div>
-                <div class="profile__info">
-                    <h2 class="profile__title">Петрук Дмитро Володимирович</h2>
-                    <div class="profile__details">
-                        <dl class="details">
-                            <div class="details__container">
-                                <dt><strong>Команда:</strong></dt>
-                                <dd><a class="details__link" href="#">«Одеса»</a></dd>
-                            </div>
-                            <div class="details__container">
-                                <dt><strong>Країна:</strong></dt>
-                                <dd>Украина</dd>
-                            </div>
-                            <div class="details__container">
-                                <dt><strong>Дата народження:</strong></dt>
-                                <dd>Дата</dd>
-                            </div>
-                            <div class="details__container">
-                                <dt><strong>Амплуа:</strong></dt>
-                                <dd>Лівий Півсередній</dd>
-                            </div>
-                            <div class="details__container">
-                                <dt><strong>Зріст:</strong></dt>
-                                <dd>187 см</dd>
-                            </div>
-                            <div class="details__container">
-                                <dt><strong>Вага:</strong></dt>
-                                <dd>88 кг</dd>
-                            </div>
-                            <div class="details__container">
-                                <dt><strong>Голи:</strong></dt>
-                                <dd>66</dd>
-                            </div>
-                        </dl>
+            <div class="tab-content">
+                <div class="player-card__profile profile" id="info">
+                    <div class="profile__photo">
+                        <img src="img/player-photo.png" alt="player photo">
                     </div>
+                    <div class="profile__info">
+                        <h2 class="profile__title">Петрук Дмитро Володимирович</h2>
+                        <div class="profile__details">
+                            <dl class="details">
+                                <div class="details__container">
+                                    <dt><strong>Команда:</strong></dt>
+                                    <dd><a class="details__link" href="#">«Одеса»</a></dd>
+                                </div>
+                                <div class="details__container">
+                                    <dt><strong>Країна:</strong></dt>
+                                    <dd>Украина</dd>
+                                </div>
+                                <div class="details__container">
+                                    <dt><strong>Дата народження:</strong></dt>
+                                    <dd>Дата</dd>
+                                </div>
+                                <div class="details__container">
+                                    <dt><strong>Амплуа:</strong></dt>
+                                    <dd>Лівий Півсередній</dd>
+                                </div>
+                                <div class="details__container">
+                                    <dt><strong>Зріст:</strong></dt>
+                                    <dd>187 см</dd>
+                                </div>
+                                <div class="details__container">
+                                    <dt><strong>Вага:</strong></dt>
+                                    <dd>88 кг</dd>
+                                </div>
+                                <div class="details__container">
+                                    <dt><strong>Голи:</strong></dt>
+                                    <dd>66</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div id="matches" class="tab-pane" style="display:none;">
+                    <h3>Матчі</h3>
+                    <p>Информация о матчах игрока.</p>
+                </div>
+                <div id="career" class="tab-pane" style="display:none;">
+                    <h3>Кар’єра</h3>
+                    <p>Информация о карьере игрока.</p>
                 </div>
             </div>
         </div>
