@@ -1,4 +1,4 @@
-export default class Submenu {
+export default class MobileMenu {
     constructor(
         containerSelector,
         openBtnSelector,
@@ -41,30 +41,26 @@ export default class Submenu {
 
                 this.currentEvent.preventDefault();
 
-                this.closeOpenedTriggers();
-
-                const dropDown = trigger
-                    .closest('.mobile-nav__item')
-                    .querySelector('.mobile-nav__sublist');
+                const dropDown = trigger.parentElement.querySelector('.mobile-nav__sublist');
 
                 const isOpened = this.isOpenedTrigger(trigger);
 
                 if (isOpened) {
                     trigger.removeAttribute(this.openTriggerAttribute);
                     trigger
-                        .querySelector('i')
+                        .querySelector('.mobile-nav__caret')
                         .classList
-                        .replace('fa-chevron-up', 'fa-chevron-down');
+                        .replace('fa-caret-down', 'fa-caret-right');
 
-                    dropDown.classList.remove('mobile-nav__sublist--open');
+                    dropDown.classList.replace('mobile-nav__sublist--visible', 'mobile-nav__sublist--hidden');
                 } else {
                     trigger.setAttribute(this.openTriggerAttribute, '');
                     trigger
-                        .querySelector('i')
+                        .querySelector('.mobile-nav__caret')
                         .classList
-                        .replace('fa-chevron-down', 'fa-chevron-up');
+                        .replace('fa-caret-right', 'fa-caret-down');
 
-                    dropDown.classList.add('mobile-nav__sublist--open');
+                    dropDown.classList.replace('mobile-nav__sublist--hidden', 'mobile-nav__sublist--visible');
                 }
             });
         }
@@ -76,18 +72,5 @@ export default class Submenu {
 
     getTriggers() {
         return Array.from(this.container.querySelectorAll(this.triggerSelector));
-    }
-
-    getOpenedTriggers() {
-        return this.getTriggers().filter(trigger => this.isOpenedTrigger(trigger));
-    }
-
-    closeOpenedTriggers() {
-        for (const trigger of this.getOpenedTriggers()) {
-            if (trigger === this.currentEvent.currentTarget) {
-                continue;
-            }
-            trigger.dispatchEvent(new Event('click'));
-        }
     }
 }
