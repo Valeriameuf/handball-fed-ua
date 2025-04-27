@@ -73,6 +73,14 @@ body {
   overflow: hidden;
 }
 
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
 @include breakpoint.laptopl {
   .title {
     font-size: 35px;

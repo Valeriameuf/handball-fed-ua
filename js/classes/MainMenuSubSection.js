@@ -1,8 +1,8 @@
-export default class Submenu {
-    constructor(containerSelector) {
-        this.containerSelector = containerSelector;
-        this.triggerSelector = '.header__link[data-has-children]';
-        this.triggerActiveClass = 'header__link--active';
+export default class MainMenuSubSection {
+    constructor() {
+        this.containerSelector = '#main-menu-sub';
+        this.triggerSelector = '.main-menu-link[data-has-children]';
+        this.triggerActiveClass = 'main-menu-link--active';
         this.currentEvent;
 
         this.init();
@@ -33,13 +33,13 @@ export default class Submenu {
 
                 if (isOpened) {
                     trigger.classList.remove(this.triggerActiveClass);
-                    trigger.closest('li').classList.remove('active');
+                    trigger.closest('.main-menu-sub__item').classList.remove('main-menu-sub__item--active');
                 } else {
                     trigger.classList.add(this.triggerActiveClass);
-                    trigger.closest('li').classList.add('active');
+                    trigger.closest('.main-menu-sub__item').classList.add('main-menu-sub__item--active');
                 }
 
-                const innerMenu = trigger.parentNode.querySelector('ul');
+                const innerMenu = trigger.parentNode.querySelector('.main-menu-sub__sublist');
                 innerMenu.classList.toggle('d-inline-block');
             });
         }

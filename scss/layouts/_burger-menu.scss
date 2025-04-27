@@ -59,14 +59,7 @@
     &__sublist {
       background: #e5e5e5;
       padding-left: 15px;
-
-      &--visible {
-        display: block;
-      }
-
-      &--hidden {
-        display: none;
-      }
+      display: none;
     }
   }
 }

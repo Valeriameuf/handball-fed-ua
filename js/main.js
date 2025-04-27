@@ -1,24 +1,15 @@
 import 'choices.js';
 
-import BottomMenu from '@js/classes/BottomMenu';
-import Submenu from '@js/classes/Submenu';
+import MainMenu from '@js/classes/MainMenu';
+import MainManuSubSection from '@js/classes/MainMenuSubSection';
 import MobileMenu from '@js/classes/MobileMenu';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Choices from 'choices.js';
 
-const bottomMenu = new BottomMenu(
-    '#main-header-menu',
-    '#submenu-real',
-    '#submenu-real-close-menu-btn'
-);
-const submenu = new Submenu('#submenu-real');
-
-const mobileMenu = new MobileMenu(
-    '#dropdown-menu',
-    '#mobile-menu-open',
-    '#mobile-menu-close'
-);
+const mainMenu = new MainMenu();
+const mainManuSubSection = new MainManuSubSection();
+const mobileMenu = new MobileMenu();
 
 const heroSwiper = new Swiper('#hero-swiper', {
     modules: [Navigation, Pagination, Autoplay],

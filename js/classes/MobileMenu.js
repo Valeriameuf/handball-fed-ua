@@ -1,12 +1,8 @@
 export default class MobileMenu {
-    constructor(
-        containerSelector,
-        openBtnSelector,
-        closeBtnSelector
-    ) {
-        this.containerSelector = containerSelector;
-        this.openBtnSelector = openBtnSelector;
-        this.closeBtnSelector = closeBtnSelector;
+    constructor() {
+        this.containerSelector = '#dropdown-menu';
+        this.openBtnSelector = '#mobile-menu-open';
+        this.closeBtnSelector = '#mobile-menu-close';
         this.triggerSelector = '.mobile-nav__link[data-has-children]';
         this.openTriggerAttribute = 'data-open-trigger';
         this.currentEvent;
@@ -52,7 +48,7 @@ export default class MobileMenu {
                         .classList
                         .replace('fa-caret-down', 'fa-caret-right');
 
-                    dropDown.classList.replace('mobile-nav__sublist--visible', 'mobile-nav__sublist--hidden');
+                    dropDown.classList.remove('d-block');
                 } else {
                     trigger.setAttribute(this.openTriggerAttribute, '');
                     trigger
@@ -60,7 +56,7 @@ export default class MobileMenu {
                         .classList
                         .replace('fa-caret-right', 'fa-caret-down');
 
-                    dropDown.classList.replace('mobile-nav__sublist--hidden', 'mobile-nav__sublist--visible');
+                    dropDown.classList.add('d-block');
                 }
             });
         }

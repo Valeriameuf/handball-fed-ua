@@ -1,10 +1,10 @@
-export default class BottomMenu {
-    constructor(containerSelector, submenuRealSelector, closeMenuBtnSelector) {
-        this.containerSelector = containerSelector;
-        this.submenuRealSelector = submenuRealSelector;
-        this.closeMenuBtnSelector = closeMenuBtnSelector;
-        this.triggerSelector = '.header__link[data-has-children]';
-        this.triggerActiveClass = 'header__link--active';
+export default class MainMenu {
+    constructor() {
+        this.containerSelector = '#main-menu';
+        this.submenuRealSelector = '#main-menu-sub';
+        this.closeMenuBtnSelector = '#main-menu-sub-close-menu-btn';
+        this.triggerSelector = '.main-menu-link[data-has-children]';
+        this.triggerActiveClass = 'main-menu-link--active';
         this.currentEvent;
         this.headerMain;
         this.frontPage = false;
