@@ -30,8 +30,8 @@ export default class MobileMenu {
     }
 
     registerListeners() {
-        this.openBtn.addEventListener('click', () => this.container.classList.add('active'));
-        this.closeBtn.addEventListener('click', () => this.container.classList.remove('active'));
+        this.openBtn.addEventListener('click', () => this.toggleMobileMenu());
+        this.closeBtn.addEventListener('click', () => this.toggleMobileMenu());
 
         const triggers = this.getTriggers();
 
@@ -72,5 +72,10 @@ export default class MobileMenu {
 
     getTriggers() {
         return Array.from(this.container.querySelectorAll(this.triggerSelector));
+    }
+
+    toggleMobileMenu() {
+        document.body.classList.toggle('overflow-hidden')
+        this.container.classList.toggle('active');
     }
 }
