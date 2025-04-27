@@ -7,7 +7,11 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Choices from 'choices.js';
 
-const bottomMenu = new BottomMenu('#main-header-menu');
+const bottomMenu = new BottomMenu(
+    '#main-header-menu',
+    '#submenu-real',
+    '#submenu-real-close-menu-btn'
+);
 const submenu = new Submenu('#submenu-real');
 
 const mobileMenu = new MobileMenu(

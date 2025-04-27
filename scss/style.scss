@@ -3,9 +3,7 @@
 @use "./utils/fonts";
 @use "./utils/variables";
 
-// Импорт макетов
 @use "./layouts/header";
-@use "./layouts/header-news";
 @use "./layouts/hero-section";
 @use "./layouts/news-section";
 @use "./layouts/horizon-banner-section";
@@ -25,9 +23,8 @@
 @use "./layouts/calendar";
 @use "./layouts/footer";
 @use "./layouts/form-filters";
+@use "./layouts/submenu-real";
 
-// Импорт компонентов
-@use "./components/media";
 @use "./components/custom-select";
 @use "./components/tabs";
 

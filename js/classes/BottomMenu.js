@@ -1,6 +1,8 @@
 export default class BottomMenu {
-    constructor(containerSelector) {
+    constructor(containerSelector, submenuRealSelector, closeMenuBtnSelector) {
         this.containerSelector = containerSelector;
+        this.submenuRealSelector = submenuRealSelector;
+        this.closeMenuBtnSelector = closeMenuBtnSelector;
         this.triggerSelector = '.header__link[data-has-children]';
         this.triggerActiveClass = 'header__link--active';
         this.currentEvent;
@@ -17,6 +19,10 @@ export default class BottomMenu {
             return;
         }
 
+        this.submenuReal = document.querySelector(this.submenuRealSelector);
+
+        this.closeMenuBtn = document.querySelector(this.closeMenuBtnSelector);
+
         this.headerMain = document.querySelector('#header-main');
 
         if (this.headerMain.classList.contains('header__main--position')) {
@@ -27,6 +33,18 @@ export default class BottomMenu {
     }
 
     registerListeners() {
+        document.addEventListener('click', event => {
+            if (!this.submenuReal.classList.contains('d-block')) {
+                return;
+            }
+
+            if (!this.headerMain.contains(event.target)) {
+                this.closeOpenedTriggers();
+            }
+        });
+
+        this.closeMenuBtn.addEventListener('click', () => this.closeOpenedTriggers());
+
         const triggers = this.getTriggers();
 
         for (const trigger of triggers) {
@@ -58,6 +76,7 @@ export default class BottomMenu {
                 );
 
                 if (targetNode !== null) {
+                    this.submenuReal.classList.toggle('d-block');
                     targetNode.classList.toggle('d-block');
                 }
             });

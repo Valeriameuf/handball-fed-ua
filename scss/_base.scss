@@ -1,4 +1,5 @@
 @use "./utils/variables";
+@use "./utils/breakpoint";
 
 body {
   height: 100%;
@@ -70,4 +71,22 @@ body {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+@include breakpoint.laptopl {
+  .title {
+    font-size: 35px;
+  }
+}
+
+@include breakpoint.mobilel {
+  .title {
+    font-size: 30px;
+  }
+}
+
+@include breakpoint.mobilexs {
+  .title {
+    font-size: 23px;
+  }
 }

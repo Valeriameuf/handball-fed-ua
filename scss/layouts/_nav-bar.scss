@@ -1,5 +1,6 @@
 @use "../utils/breakpoint";
 @use "../utils/variables";
+
 // Styles in this file are used only on single-news page
 .navigation-buttons {
   display: flex;
@@ -12,6 +13,7 @@
   border-radius: 5px;
   margin-bottom: 23px;
 }
+
 .button {
   display: flex;
   align-items: center;
@@ -19,9 +21,11 @@
   cursor: pointer;
   font-size: 16px;
   color: #000;
+
   &:hover {
     color: variables.$color-brand-yellow;
   }
+
   img {
     display: flex;
     justify-content: center;
@@ -32,11 +36,13 @@
     color: #000;
     padding: 18px;
     transition: background 0.3s;
+
     &:hover {
       background: rgba(255, 255, 0, 1);
     }
   }
 }
+
 .divider-up {
   width: 1px;
   height: 20px;
@@ -48,9 +54,11 @@
     gap: 0 5px;
     width: 100%;
     margin-bottom: 15px;
+
     .button {
       gap: 5px;
       font-size: 11px;
+
       img {
         padding: 12px;
       }
