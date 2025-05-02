@@ -43,7 +43,10 @@ export default class MainMenu {
             }
         });
 
-        this.closeMenuBtn.addEventListener('click', () => this.closeOpenedTriggers());
+        this.closeMenuBtn.addEventListener('click', event => {
+            event.preventDefault();
+            this.closeOpenedTriggers();
+        });
 
         const triggers = this.getTriggers();
 
