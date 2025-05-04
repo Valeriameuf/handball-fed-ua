@@ -1,0 +1,23 @@
+{
+  "compilerOptions" : {
+    "target" : "ES2022",
+    "module" : "ES2022",
+    "moduleResolution" : "Node",
+    "sourceMap" : true,
+    "noImplicitThis" : true,
+    "experimentalDecorators" : true,
+    "strict" : false,
+    "paths" : {
+      "@js/*" : [
+        "./js/*"
+      ]
+    },
+    "baseUrl" : "."
+  },
+  "include" : [
+    "./**/*"
+  ],
+  "exclude" : [
+    "node_modules"
+  ]
+}

@@ -14,25 +14,6 @@
       }
     }
 
-    &__close {
-      background-color: #f8f8f8;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      font-size: 24px;
-      color: variables.$color-brand-light;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: rgba(145, 143, 143, 0.8);
-      }
-    }
-
     &__item {
       border-bottom: 1px solid #e5e5e5;
     }
@@ -118,12 +99,14 @@
 
 @include breakpoint.laptopl {
   .burger {
-    cursor: pointer;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
+    margin-left: auto;
+    cursor: pointer;
 
     div {
       background: #000000;

@@ -21,28 +21,11 @@
 }
 
 .main-menu-sub {
-  position: relative;
   display: none;
-
-  &__wrapper {
-    position: absolute;
-    width: 100%;
-    background-color: variables.$color-brand-light;
-    box-shadow: 0 20px 20px #0308294d;
-  }
-
-  &__container {
-    position: relative;
-    z-index: 101;
-  }
+  position: relative;
 
   &__menu {
-    border-top: variables.$color-brand-white 2px solid;
-    padding: 15px;
-    min-height: 130px;
     display: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
 
   &__list {

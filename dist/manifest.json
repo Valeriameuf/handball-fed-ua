@@ -1,6 +1,7 @@
 {
-  "index.css": "style.e9eb4ec7.css",
-  "main.js": "main.11b46748.js",
-  "standing.js": "standing.80998ad0.js",
-  "calendar.js": "calendar.feba526b.js"
+  "index.css": "auto/style.1245c7a3.css",
+  "main.js": "auto/main.90b03b3c.js",
+  "calendar.js": "auto/calendar.feba526b.js",
+  "standing.js": "auto/standing.80998ad0.js",
+  "vendors.js": "auto/vendors.fa10aed9.js"
 }

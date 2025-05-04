@@ -3,6 +3,7 @@ export default class MainMenuSubSection {
         this.containerSelector = '#main-menu-sub';
         this.triggerSelector = '.main-menu-link[data-has-children]';
         this.triggerActiveClass = 'main-menu-link--active';
+        this.closeMenuBtnSelector = '#main-menu-sub-close-menu-btn';
         this.currentEvent;
 
         this.init();
@@ -14,6 +15,13 @@ export default class MainMenuSubSection {
         if (this.container === null) {
             return;
         }
+
+        this.closeMenuBtn = document.querySelector(this.closeMenuBtnSelector);
+        this.closeMenuBtn.addEventListener('click', event => {
+            event.preventDefault();
+            // TODO: Fix this shit
+            window.mainMenu.closeOpenedTriggers();
+        });
 
         this.registerListeners();
     }

@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     output: {
@@ -9,6 +11,7 @@ module.exports = {
     },
 
     plugins: [
+        new VueLoaderPlugin(),
         new HtmlBundlerPlugin({
             entry: {
                 index: {
@@ -73,6 +76,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.ts$/,
+                loader: 'ts-loader',
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
+                },
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
+            {
                 test: /\.s?css$/,
                 use: ['css-loader', 'sass-loader'],
             },
@@ -106,10 +120,18 @@ module.exports = {
 
     resolve: {
         alias: {
+            'vue$': 'vue/dist/vue.esm.js',
             '@scss': path.join(__dirname, '/scss/'),
             '@js': path.join(__dirname, '/js/'),
             '@img': path.join(__dirname, '/img/'),
             '@flags': path.join(__dirname, '/node_modules/svg-country-flags/'),
         },
+        extensions: [
+            '.ts',
+            '.js',
+        ],
+        plugins: [
+            new TsconfigPathsPlugin()
+        ]
     },
 };

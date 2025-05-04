@@ -24,9 +24,13 @@
 @use "./layouts/footer";
 @use "./layouts/form-filters";
 @use "./layouts/main-menu";
+@use "./layouts/under-main-menu-space";
+@use "./layouts/mobile-fullscreen-overlay";
+@use "./layouts/search-page";
 
 @use "./components/custom-select";
 @use "./components/tabs";
+@use "./components/close-button";
 
 @use "~@fortawesome/fontawesome-free/scss/fontawesome";
 @use "~@fortawesome/fontawesome-free/scss/regular";

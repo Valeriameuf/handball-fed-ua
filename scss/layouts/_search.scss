@@ -1,16 +1,42 @@
 @use "../utils/variables";
 @use "../utils/breakpoint";
 
+#mobile-search-button {
+  display: none;
+}
+
+.search-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: variables.$color-brand-yellow;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 0 0 2px #fff;
+  }
+
+  &__icon {
+    font-size: 20px;
+  }
+}
+
 .search {
   position: relative;
 
   &__input {
     font-size: 16px;
-    border: 2px solid white;
+    border: 2px solid variables.$color-brand-white;
     border-radius: 50px;
     padding: 14px 28px;
     flex-grow: 1;
-    margin-right: 10px;
     color: variables.$color-brand-white;
     background: rgb(85 125 201 / 50%);
 
@@ -22,19 +48,32 @@
     }
   }
 
-  &__icon {
+  &__search-button {
     position: absolute;
-    right: 24px;
-    top: 50%;
-    background-color: variables.$color-brand-yellow;
-    border-radius: 50%;
-    padding: 12px;
-    transform: translateY(-50%);
-    border: none;
-    cursor: pointer;
+    right: 6px;
+    top: 4px;
+    width: 43px;
+    height: 43px;
+  }
+}
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
+.mobile-search {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  &__search {
+    flex-grow: 1
+  }
+}
+
+@include breakpoint.laptopl {
+  #desktop-search-button {
+    display: none;
+  }
+  #mobile-search-button {
+    display: flex;
   }
 }

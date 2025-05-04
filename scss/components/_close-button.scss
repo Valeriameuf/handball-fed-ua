@@ -1,0 +1,20 @@
+@use "../utils/variables";
+
+.close-button {
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: variables.$color-brand-light;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(145, 143, 143, 0.8);
+  }
+}
