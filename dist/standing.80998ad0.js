@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector(".form-filters");[document.getElementById("season")].forEach((n=>{n.addEventListener("change",(function(){e.submit()}))}))}));
