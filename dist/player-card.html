@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.29b40a5f.css">
+    <link rel="stylesheet" href="style.deaefef5.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-max.png">
     <title>Document</title>
 </head>
@@ -367,7 +367,7 @@
                 <button class="button-container__button button-container__button--font">Кар’єра</button>
             </nav>
             <div class="tab-content">
-                <div class="player-card__profile profile" id="info">
+                <div class="player-card__profile player-card__bg profile" id="info">
                     <div class="profile__photo">
                         <img src="img/player-photo.png" alt="player photo">
                     </div>
@@ -375,9 +375,9 @@
                         <h2 class="profile__title">Петрук Дмитро Володимирович</h2>
                         <div class="profile__details">
                             <dl class="details">
-                                <div class="details__container">
-                                    <dt><strong>Команда:</strong></dt>
-                                    <dd><a class="details__link" href="#">«Одеса»</a></dd>
+                                <div class="details__container details__container--highlight">
+                                    <dt class="player-highlight"><strong>Команда:</strong></dt>
+                                    <dd><a class="player-link details__link" href="#">«Одеса»</a></dd>
                                 </div>
                                 <div class="details__container">
                                     <dt><strong>Країна:</strong></dt>
@@ -407,15 +407,69 @@
                         </div>
                     </div>
                 </div>
-                <div id="matches" class="tab-pane" style="display:none;">
-                    <h3>Матчі</h3>
-                    <p>Информация о матчах игрока.</p>
+                <div class="player-card__bg" id="matches">
+                    <h2 class="profile__title">Петрук Дмитро Володимирович</h2>
+                    <p class="player-card__team">
+                        <span class="player-highlight"><strong>Команда:</strong></span>
+                        <span class="player-link">«Одеса»</span>
+                    </p>
+                    <div class="game">
+                        <p class="game__title player-title-small">Кубок України</p>
+                        <table class="match-table">
+                            <tbody>
+                                <tr>
+                                    <td class="match-table__date">02.05.2025</td>
+                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«СКА-Львів»</a></td>
+                                    <td class="match-table__result">43 : 22</td>
+                                    <td class="match-table__achievement">5</td>
+                                </tr>
+                                <tr>
+                                    <td class="match-table__date">01.05.2025</td>
+                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Шахтар»</a></td>
+                                    <td class="match-table__result">30 : 15</td>
+                                    <td class="match-table__achievement">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="match-table__date">30.04.2025</td>
+                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Ворскла»</a></td>
+                                    <td class="match-table__result">25 : 10</td>
+                                    <td class="match-table__achievement">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="game">
+                        <p class="game__title player-title-small">Кубок України</p>
+                        <table class="match-table">
+                            <tbody>
+                                <tr>
+                                    <td class="match-table__date">02.05.2025</td>
+                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«СКА-Львів»</a></td>
+                                    <td class="match-table__result">43 : 22</td>
+                                    <td class="match-table__achievement">5</td>
+                                </tr>
+                                <tr>
+                                    <td class="match-table__date">01.05.2025</td>
+                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Шахтар»</a></td>
+                                    <td class="match-table__result">30 : 15</td>
+                                    <td class="match-table__achievement">3</td>
+                                </tr>
+                                <tr>
+                                    <td class="match-table__date">30.04.2025</td>
+                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Ворскла»</a></td>
+                                    <td class="match-table__result">25 : 10</td>
+                                    <td class="match-table__achievement">2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div id="career" class="tab-pane" style="display:none;">
+                <div class="tab-pane player-card__bg" id="career" style="display: none;">
                     <h3>Кар’єра</h3>
-                    <p>Информация о карьере игрока.</p>
+                    <p></p>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 </main>
