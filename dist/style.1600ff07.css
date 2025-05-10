@@ -1989,6 +1989,9 @@ body strong, body b {
   display: block;
   margin: 0 20px;
 }
+.match-report__officials {
+  margin-top: 30px;
+}
 .match-report .team {
   padding: 20px 0 30px 0;
 }
@@ -2134,6 +2137,25 @@ body strong, body b {
 .match-report .links-block__item a i {
   margin-right: 8px;
   font-size: 20px;
+}
+
+.match-officials {
+  color: #353535;
+}
+.match-officials__header {
+  font-size: 20px;
+  font-weight: bold;
+}
+.match-officials__list {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+.match-officials__item {
+  font-size: 18px;
+}
+.match-officials__icon {
+  color: #035ca2;
 }
 
 .table {
