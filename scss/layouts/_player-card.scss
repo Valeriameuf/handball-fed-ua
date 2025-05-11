@@ -1,0 +1,262 @@
+@use "../utils/breakpoint";
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.player-card {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  &__container {
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    background: #fff;
+    max-width: 800px;
+    padding: 25px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__profile {
+    display: flex;
+  }
+
+  &__bg {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(137, 137, 137, 0.25);
+    padding: 25px;
+  }
+
+  &__team {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+  }
+}
+
+.button-container {
+  &__button {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #dedede;
+    padding: 15px 20px;
+    cursor: pointer;
+
+    &--font {
+      @include mixins.fontBtn;
+      text-align: center;
+      transition: text-shadow 0.3s;
+
+      &:hover {
+        text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+        background-color: variables.$color-brand-yellow;
+        color: #222;
+      }
+    }
+
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}
+
+.profile {
+  &__info {
+    flex: 1;
+    color: variables.$color-brand-black;
+    padding: 10px;
+  }
+
+  &__details {
+    margin-top: 10px;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: variables.$color-brand-black;
+    margin-bottom: 15px;
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 280 / 380;
+    border-radius: 15px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+
+  .details {
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    &__container:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.player-highlight {
+  color: #898787;
+}
+
+.player-link {
+  cursor: pointer;
+  color: #035ca2;
+
+  &:hover {
+    color: #898787;
+  }
+}
+
+.game {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: variables.$color-brand-black;
+    margin-bottom: 25px;
+  }
+}
+
+.match-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    text-align: center;
+    color: variables.$color-brand-black;
+    padding: 15px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+  }
+
+  &__achievement {
+    font-weight: 700;
+  }
+}
+
+@include breakpoint.mobilel {
+  .player-card {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    &__profile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .profile {
+    &__title {
+      font-size: 25px;
+      text-align: center;
+    }
+
+    &__photo {
+      margin-right: 0;
+    }
+  }
+  .match-table {
+    &__result {
+      display: none;
+    }
+
+    td {
+      font-size: 18px;
+    }
+  }
+}
+
+@include breakpoint.mobilexs {
+  .player-card {
+    &__container {
+      border: none;
+      padding: 15px;
+    }
+
+    &__team {
+      font-size: 18px;
+    }
+  }
+  .button-container {
+    &__button {
+      padding: 10px 15px;
+
+      &--font {
+        font-size: 14px;
+      }
+    }
+  }
+  .profile {
+    &__title {
+      font-size: 22px;
+    }
+
+    .details {
+      &__container {
+        font-size: 14px;
+
+        &--highlight {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .match-table {
+    td {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+  .game {
+    &__title {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@include breakpoint.mobilessmall {
+  .player-card {
+    &__bg {
+      padding: 15px;
+    }
+  }
+  .game {
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+}
