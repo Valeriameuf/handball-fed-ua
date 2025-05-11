@@ -57,7 +57,8 @@ body {
   color: #fff;
   line-height: 1.2;
 }
-body strong, body b {
+body strong,
+body b {
   font-weight: bold !important;
 }
 
@@ -2539,6 +2540,210 @@ body strong, body b {
 @media (max-width: 480px) {
   .tour__subtitle {
     margin-bottom: 20px;
+  }
+}
+.player-card {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.player-card__container {
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  background: #fff;
+  max-width: 800px;
+  padding: 25px;
+}
+.player-card__buttons {
+  display: flex;
+  margin-bottom: 10px;
+}
+.player-card__profile {
+  display: flex;
+}
+.player-card__bg {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(137, 137, 137, 0.25);
+  padding: 25px;
+}
+.player-card__team {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.button-container__button {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #dedede;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.button-container__button--font {
+  font-size: 16px;
+  font-weight: 400;
+  color: #035ca2;
+  text-align: center;
+  transition: text-shadow 0.3s;
+}
+.button-container__button--font:hover {
+  text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+  background-color: #f9e725;
+  color: #222;
+}
+.button-container__button:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.button-container__button:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.profile__info {
+  flex: 1;
+  color: #353535;
+  padding: 10px;
+}
+.profile__details {
+  margin-top: 10px;
+}
+.profile__title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #353535;
+  margin-bottom: 15px;
+}
+.profile__photo {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 280/380;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+.profile__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.profile .details__container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.profile .details__container:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.player-highlight {
+  color: #898787;
+}
+
+.player-link {
+  cursor: pointer;
+  color: #035ca2;
+}
+.player-link:hover {
+  color: #898787;
+}
+
+.game {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.game__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #353535;
+  margin-bottom: 25px;
+}
+
+.match-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.match-table td {
+  text-align: center;
+  color: #353535;
+  padding: 15px;
+}
+.match-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+.match-table tr:nth-child(odd) {
+  background-color: #ffffff;
+  transition: background-color 0.3s;
+}
+.match-table__achievement {
+  font-weight: 700;
+}
+
+@media (max-width: 680px) {
+  .player-card {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .player-card__profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile__title {
+    font-size: 25px;
+    text-align: center;
+  }
+  .profile__photo {
+    margin-right: 0;
+  }
+  .match-table__result {
+    display: none;
+  }
+  .match-table td {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .player-card__container {
+    border: none;
+    padding: 15px;
+  }
+  .player-card__team {
+    font-size: 18px;
+  }
+  .button-container__button {
+    padding: 10px 15px;
+  }
+  .button-container__button--font {
+    font-size: 14px;
+  }
+  .profile__title {
+    font-size: 22px;
+  }
+  .profile .details__container {
+    font-size: 14px;
+  }
+  .profile .details__container--highlight {
+    font-size: 18px;
+  }
+  .match-table td {
+    font-size: 14px;
+    padding: 12px;
+  }
+  .game__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .player-card__bg {
+    padding: 15px;
+  }
+  .game__title {
+    margin-bottom: 15px;
   }
 }
 .footer {
