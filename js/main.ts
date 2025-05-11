@@ -1,20 +1,25 @@
 import 'choices.js';
 
-import BottomMenu from '@js/classes/BottomMenu';
-import Submenu from '@js/classes/Submenu';
+import MainMenu from '@js/classes/MainMenu';
 import MobileMenu from '@js/classes/MobileMenu';
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import {Navigation, Pagination, Autoplay} from 'swiper/modules';
 import Choices from 'choices.js';
+import tab from "@js/functions/tab";
+import Vue from "vue";
+import UnderMainMenuSpace from "@js/components/UnderMainMenuSpace.vue";
+import MobileSearch from "@js/components/MobileSearch.vue";
+import DesktopSearchButton from "@js/components/DesktopSearchButton.vue";
+import MobileSearchButton from "@js/components/MobileSearchButton.vue";
 
-const bottomMenu = new BottomMenu('#main-header-menu');
-const submenu = new Submenu('#submenu-real');
+Vue.component('under-main-menu-space', UnderMainMenuSpace);
+Vue.component('desktop-search-button', DesktopSearchButton);
+Vue.component('mobile-search-button', MobileSearchButton);
+Vue.component('mobile-search', MobileSearch);
 
-const mobileMenu = new MobileMenu(
-    '#dropdown-menu',
-    '#mobile-menu-open',
-    '#mobile-menu-close'
-);
+// TODO: Remove mainMenu from window after refactoring
+window.mainMenu = new MainMenu();
+const mobileMenu = new MobileMenu();
 
 const heroSwiper = new Swiper('#hero-swiper', {
     modules: [Navigation, Pagination, Autoplay],
@@ -69,30 +74,11 @@ document
         noResultsText: '',
         classNames: {
             itemSelectable: ['choices__item--selectable-custom'],
-        }
+        } as any
     }));
-
-let tab = function () {
-    let tabBtn = document.querySelectorAll('.tabs__button');
-    let tabContent = document.querySelectorAll('.content');
-    let tabName;
-    tabBtn.forEach((item) => {
-        item.addEventListener('click', selectTabNav);
-    });
-
-    function selectTabNav() {
-        tabBtn.forEach((item) => {
-            item.classList.remove('active');
-        });
-        this.classList.add('active');
-        tabName = this.getAttribute('data-tab-name');
-        selectTabContent(tabName);
-    }
-
-    function selectTabContent(tabName) {
-        tabContent.forEach((item) => {
-            item.classList.contains(tabName) ? item.classList.add('active') : item.classList.remove('active');
-        });
-    }
-};
 tab();
+
+const $vueContentElems = document.querySelectorAll('.vue-content');
+$vueContentElems.forEach($elem => {
+    new Vue({el: $elem})
+})

@@ -1,0 +1,17 @@
+@use "../utils/breakpoint";
+@use "../utils/variables";
+
+.mobile-fullscreen-overlay {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  background-color: variables.$color-brand-light;
+  color: variables.$color-brand-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px 0;
+  z-index: 1000;
+}

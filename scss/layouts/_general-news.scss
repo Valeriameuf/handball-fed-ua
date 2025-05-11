@@ -2,99 +2,92 @@
 @use "../utils/variables";
 
 .general-news {
-    padding-top: 33px;
+  padding-top: 33px;
 
-    &__title {
-        margin-bottom: 14px;
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__bar {
+    background-color: variables.$color-brand-light;
+    border-radius: 15px;
+    padding: 20px;
+    color: variables.$color-brand-white;
+    margin-bottom: 33px;
+  }
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 10px;
+
+    a {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+      border: 2px solid variables.$color-brand-white;
+      border-radius: 15px;
+      padding: 14px 17px;
+      text-decoration: none;
+      color: variables.$color-brand-white;
+      background: rgb(85 125 201 / 50%);
+
+      &.active,
+      &:hover {
+        background-color: variables.$color-brand-yellow;
+        color: #000;
+      }
+    }
+  }
+
+  .buttons-bar {
+    margin-bottom: 10px;
+    display: none;
+
+    &__btn {
+      cursor: pointer;
+    }
+  }
+
+  &__divider {
+    height: 2px;
+    background-color: rgb(85 125 201 / 50%);
+    margin: 10px 0;
+  }
+
+  .general-news-section {
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 39px 20px;
+      margin-bottom: 50px;
     }
 
-    &__bar {
-        background-color: variables.$color-brand-light;
-        border-radius: 15px;
-        padding: 20px;
-        color: variables.$color-brand-white;
-        margin-bottom: 33px;
+    .general-card {
+      &__category,
+      &__date span {
+        font-size: 13px;
+      }
+
+      &:nth-child(1) {
+        grid-area: auto;
+      }
+
+      &:nth-child(2) {
+        grid-area: auto;
+      }
+
+      &:nth-child(3) {
+        grid-area: auto;
+      }
+
+      &:nth-child(4) {
+        grid-area: auto;
+      }
     }
-
-    &__top {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 7px;
-        margin-bottom: 10px;
-
-        a {
-            display: inline-block;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.6;
-            border: 2px solid variables.$color-brand-white;
-            border-radius: 15px;
-            padding: 14px 17px;
-            text-decoration: none;
-            color: variables.$color-brand-white;
-            background: rgb(85 125 201 / 50%);
-
-            &.active,
-            &:hover {
-                background-color: variables.$color-brand-yellow;
-                color: #000;
-            }
-        }
-    }
-
-    .buttons-bar {
-        margin-bottom: 10px;
-        display: none;
-
-        &__btn {
-            cursor: pointer;
-        }
-    }
-
-    &__divider {
-        height: 2px;
-        background-color: rgb(85 125 201 / 50%);
-        margin: 10px 0;
-    }
-
-    &__search {
-        display: flex;
-        align-items: center;
-        border-radius: 15px;
-        padding: 10px;
-    }
-
-    .general-news-section {
-        &__cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 39px 20px;
-            margin-bottom: 50px;
-        }
-
-        .general-card {
-            &__category,
-            &__date span {
-                font-size: 13px;
-            }
-
-            &:nth-child(1) {
-                grid-area: auto;
-            }
-
-            &:nth-child(2) {
-                grid-area: auto;
-            }
-
-            &:nth-child(3) {
-                grid-area: auto;
-            }
-
-            &:nth-child(4) {
-                grid-area: auto;
-            }
-        }
-    }
+  }
 }
 
 @include breakpoint.desktop {
@@ -104,70 +97,70 @@
 }
 
 @include breakpoint.laptopl {
-    .general-news {
-        .general-news-section {
-            &__cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+  .general-news {
+    .general-news-section {
+      &__cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
+  }
 }
 
 @include breakpoint.mobilel {
-    .general-news {
-        &__top {
-            a {
-                font-size: 12px;
-                padding: 11px 15px;
-            }
-        }
-
-        &__bar {
-            padding: 15px;
-        }
-
-        .buttons-bar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .general-news-section {
-            &__cards {
-                grid-template-columns: repeat(1, 1fr);
-                justify-items: center;
-                align-items: center;
-                margin-bottom: 35px;
-            }
-
-            .general-card {
-                .general-text {
-                    &__text {
-                        display: block;
-                        font-size: 16px;
-                    }
-
-                    &__title {
-                        font-size: 18px;
-                    }
-                }
-
-                .general-btn {
-                    display: block;
-                }
-            }
-        }
-
-        .pagination {
-            &__number {
-                width: 40px;
-                height: 40px;
-            }
-
-            &__button {
-                padding: 14px;
-            }
-        }
+  .general-news {
+    &__top {
+      a {
+        font-size: 12px;
+        padding: 11px 15px;
+      }
     }
+
+    &__bar {
+      padding: 15px;
+    }
+
+    .buttons-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .general-news-section {
+      &__cards {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 35px;
+      }
+
+      .general-card {
+        .general-text {
+          &__text {
+            display: block;
+            font-size: 16px;
+          }
+
+          &__title {
+            font-size: 18px;
+          }
+        }
+
+        .general-btn {
+          display: block;
+        }
+      }
+    }
+
+    .pagination {
+      &__number {
+        width: 40px;
+        height: 40px;
+      }
+
+      &__button {
+        padding: 14px;
+      }
+    }
+  }
 }

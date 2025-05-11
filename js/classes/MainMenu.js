@@ -1,11 +1,12 @@
-export default class BottomMenu {
-    constructor(containerSelector) {
-        this.containerSelector = containerSelector;
-        this.triggerSelector = '.header__link[data-has-children]';
-        this.triggerActiveClass = 'header__link--active';
+import { globalEventBus } from '@js/components/globalEventBus';
+
+export default class MainMenu {
+    constructor() {
+        this.containerSelector = '#main-menu';
+        this.triggerSelector = '.main-menu-link[data-has-children]';
+        this.triggerActiveClass = 'main-menu-link--active';
         this.currentEvent;
         this.headerMain;
-        this.frontPage = false;
 
         this.init();
     }
@@ -18,10 +19,6 @@ export default class BottomMenu {
         }
 
         this.headerMain = document.querySelector('#header-main');
-
-        if (this.headerMain.classList.contains('header__main--position')) {
-            this.frontPage = true;
-        }
 
         this.registerListeners();
     }
@@ -41,16 +38,8 @@ export default class BottomMenu {
 
                 if (isOpened) {
                     trigger.classList.remove(this.triggerActiveClass);
-                    this.headerMain.classList.replace(
-                        'header__main--position-bg',
-                        this.frontPage ? 'header__main--position' : 'header__main--bg'
-                    );
                 } else {
                     trigger.classList.add(this.triggerActiveClass);
-                    this.headerMain.classList.replace(
-                        this.frontPage ? 'header__main--position' : 'header__main--bg',
-                        'header__main--position-bg'
-                    );
                 }
 
                 const targetNode = document.querySelector(
@@ -58,7 +47,7 @@ export default class BottomMenu {
                 );
 
                 if (targetNode !== null) {
-                    targetNode.classList.toggle('d-block');
+                    globalEventBus.$emit('toggle-main-menu', targetNode);
                 }
             });
         }

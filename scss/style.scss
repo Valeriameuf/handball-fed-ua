@@ -4,9 +4,7 @@
 @use "./utils/variables";
 @use "./utils/mixins";
 
-// Импорт макетов
 @use "./layouts/header";
-@use "./layouts/header-news";
 @use "./layouts/hero-section";
 @use "./layouts/news-section";
 @use "./layouts/horizon-banner-section";
@@ -27,10 +25,14 @@
 @use "./layouts/player-card";
 @use "./layouts/footer";
 @use "./layouts/form-filters";
+@use "./layouts/main-menu";
+@use "./layouts/under-main-menu-space";
+@use "./layouts/mobile-fullscreen-overlay";
+@use "./layouts/search-page";
 
-// Импорт компонентов
-@use "./components/media";
 @use "./components/custom-select";
+@use "./components/tabs";
+@use "./components/close-button";
 
 @use "~@fortawesome/fontawesome-free/scss/fontawesome";
 @use "~@fortawesome/fontawesome-free/scss/regular";

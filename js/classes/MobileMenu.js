@@ -1,12 +1,8 @@
-export default class Submenu {
-    constructor(
-        containerSelector,
-        openBtnSelector,
-        closeBtnSelector
-    ) {
-        this.containerSelector = containerSelector;
-        this.openBtnSelector = openBtnSelector;
-        this.closeBtnSelector = closeBtnSelector;
+export default class MobileMenu {
+    constructor() {
+        this.containerSelector = '#dropdown-menu';
+        this.openBtnSelector = '#mobile-menu-open';
+        this.closeBtnSelector = '#mobile-menu-close';
         this.triggerSelector = '.mobile-nav__link[data-has-children]';
         this.openTriggerAttribute = 'data-open-trigger';
         this.currentEvent;
@@ -30,8 +26,8 @@ export default class Submenu {
     }
 
     registerListeners() {
-        this.openBtn.addEventListener('click', () => this.container.classList.add('active'));
-        this.closeBtn.addEventListener('click', () => this.container.classList.remove('active'));
+        this.openBtn.addEventListener('click', () => this.toggleMobileMenu());
+        this.closeBtn.addEventListener('click', () => this.toggleMobileMenu());
 
         const triggers = this.getTriggers();
 
@@ -41,30 +37,26 @@ export default class Submenu {
 
                 this.currentEvent.preventDefault();
 
-                this.closeOpenedTriggers();
-
-                const dropDown = trigger
-                    .closest('.mobile-nav__item')
-                    .querySelector('.mobile-nav__sublist');
+                const dropDown = trigger.parentElement.querySelector('.mobile-nav__sublist');
 
                 const isOpened = this.isOpenedTrigger(trigger);
 
                 if (isOpened) {
                     trigger.removeAttribute(this.openTriggerAttribute);
                     trigger
-                        .querySelector('i')
+                        .querySelector('.mobile-nav__caret')
                         .classList
-                        .replace('fa-chevron-up', 'fa-chevron-down');
+                        .replace('fa-caret-down', 'fa-caret-right');
 
-                    dropDown.classList.remove('mobile-nav__sublist--open');
+                    dropDown.classList.remove('d-block');
                 } else {
                     trigger.setAttribute(this.openTriggerAttribute, '');
                     trigger
-                        .querySelector('i')
+                        .querySelector('.mobile-nav__caret')
                         .classList
-                        .replace('fa-chevron-down', 'fa-chevron-up');
+                        .replace('fa-caret-right', 'fa-caret-down');
 
-                    dropDown.classList.add('mobile-nav__sublist--open');
+                    dropDown.classList.add('d-block');
                 }
             });
         }
@@ -78,16 +70,8 @@ export default class Submenu {
         return Array.from(this.container.querySelectorAll(this.triggerSelector));
     }
 
-    getOpenedTriggers() {
-        return this.getTriggers().filter(trigger => this.isOpenedTrigger(trigger));
-    }
-
-    closeOpenedTriggers() {
-        for (const trigger of this.getOpenedTriggers()) {
-            if (trigger === this.currentEvent.currentTarget) {
-                continue;
-            }
-            trigger.dispatchEvent(new Event('click'));
-        }
+    toggleMobileMenu() {
+        document.body.classList.toggle('overflow-hidden')
+        this.container.classList.toggle('active');
     }
 }

@@ -32,8 +32,8 @@ ij_css_space_after_colon = true
 ij_css_space_before_opening_brace = true
 ij_css_value_alignment = 0
 
-[*.sсss]
-indent_size = 3
+[*.scss]
+indent_size = 2
 ij_sass_align_closing_brace_with_properties = false
 ij_sass_blank_lines_around_nested_selector = 1
 ij_sass_blank_lines_between_blocks = 1

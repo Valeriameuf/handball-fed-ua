@@ -1,0 +1,120 @@
+@use "../utils/variables";
+@use "../utils/breakpoint";
+
+.main-menu {
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 15px;
+    padding: 15px 0;
+    position: relative;
+  }
+}
+
+.main-menu-sub {
+  display: none;
+  position: relative;
+
+  &__menu {
+    display: none;
+  }
+
+  &__list {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__sublist {
+    margin-left: calc(100%);
+    padding-left: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  &__item {
+    padding: 10px 15px;
+
+    &--active {
+      box-shadow: 2px 0 0 0 variables.$color-brand-yellow;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+
+    &--leaf {
+      display: inline;
+    }
+  }
+
+  &__link-icon {
+    margin-left: 55px;
+  }
+
+  &__close-menu-btn {
+    position: absolute !important;
+    top: 15px;
+    right: 30px;
+    font-size: 17px;
+  }
+
+  &__close-menu-btn-icon {
+    margin-left: 7px;
+  }
+}
+
+.main-menu-link {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: variables.$color-brand-yellow;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    color: variables.$color-brand-yellow;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &--active {
+    color: variables.$color-brand-yellow;
+  }
+
+  &--active::after {
+    opacity: 1;
+  }
+}
+
+@include breakpoint.laptopl {
+  .main-menu {
+    &__list {
+      display: none;
+    }
+  }
+
+  .main-menu-sub__container {
+    display: none;
+  }
+}

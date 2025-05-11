@@ -1,58 +1,101 @@
 @use "./utils/variables";
+@use "./utils/breakpoint";
 
 body {
-    height: 100%;
-    font-family: "Oswald", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: variables.$color-brand-white;
-    line-height: 1.2;
+  height: 100%;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: variables.$color-brand-white;
+  line-height: 1.2;
+
+  & strong,
+  b {
+    font-weight: bold !important;
+  }
 }
+
 .main {
-    overflow-x: clip;
-    flex: 1 1 auto;
+  overflow-x: clip;
+  flex: 1 1 auto;
 }
+
 .wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    // overflow: auto;
-    position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
+
 .container {
-    max-width: 1230px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
+
 .title {
-    font-size: 45px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: variables.$color-brand-light;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: variables.$color-brand-light;
 }
+
 .subtitle {
-    font-size: 30px;
-    font-weight: 200;
-    line-height: 1.2;
-    color: #353535;
-    text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #353535;
+  text-transform: uppercase;
 }
+
 .hidden-title {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
+
 .link-style {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    color: variables.$color-brand-white;
-    white-space: nowrap;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: variables.$color-brand-white;
+  transition: color 0.3s, text-decoration 0.3s;
+  white-space: nowrap;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+@include breakpoint.laptopl {
+  .title {
+    font-size: 35px;
+  }
+}
+
+@include breakpoint.mobilel {
+  .title {
+    font-size: 30px;
+  }
+}
+
+@include breakpoint.mobilexs {
+  .title {
+    font-size: 23px;
+  }
 }

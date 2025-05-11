@@ -1,0 +1,23 @@
+@use "../utils/variables";
+
+.under-main-menu-space {
+  margin-top: 20px;
+
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    background-color: variables.$color-brand-light;
+    box-shadow: 0 20px 20px #0308294d;
+  }
+
+  &__content {
+    border-top: variables.$color-brand-white 2px solid;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    min-height: 130px;
+  }
+
+  &__search {
+    margin-top: 30px;
+  }
+}

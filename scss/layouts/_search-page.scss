@@ -1,0 +1,55 @@
+@use "../utils/variables";
+
+.search-page {
+  &__results-header {
+    color: variables.$color-brand-black;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+  &__search-term {
+    color: variables.$color-brand-light;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  &__results {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-top: 1px solid #efefef;
+  }
+
+  &__entry {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  &__link {
+    transition: color 0.3s ease;
+
+    h3 {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: variables.$color-brand-light;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 21px;
+    overflow: hidden;
+    height: 100%;
+    color: variables.$color-brand-black;
+    margin-bottom: 15px;
+  }
+}
