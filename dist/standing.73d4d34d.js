@@ -9,13 +9,13 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./js/calendar.js":
+/***/ "./js/standing.js":
 /*!************************!*\
-  !*** ./js/calendar.js ***!
+  !*** ./js/standing.js ***!
   \************************/
 /***/ (() => {
 
-eval("document.addEventListener('DOMContentLoaded', function () {\r\n    const form = document.querySelector('.form-filters');\r\n    const tourSelect = document.getElementById('tour');\r\n    const seasonSelect = document.getElementById('season');\r\n\r\n    [tourSelect, seasonSelect].forEach(select => {\r\n        select.addEventListener('change', function () {\r\n            form.submit();\r\n        })\r\n    })\r\n});\r\n\n\n//# sourceURL=webpack://handball-fed-ua/./js/calendar.js?");
+eval("document.addEventListener('DOMContentLoaded', function () {\n    const form = document.querySelector('.form-filters');\n    const seasonSelect = document.getElementById('season');\n\n    [seasonSelect].forEach(select => {\n        select.addEventListener('change', function () {\n            form.submit();\n        })\n    })\n});\n\n\n//# sourceURL=webpack://handball-fed-ua/./js/standing.js?");
 
 /***/ })
 
@@ -26,7 +26,7 @@ eval("document.addEventListener('DOMContentLoaded', function () {\r\n    const f
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./js/calendar.js"]();
+/******/ 	__webpack_modules__["./js/standing.js"]();
 /******/ 	
 /******/ })()
 ;
