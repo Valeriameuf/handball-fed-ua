@@ -1,0 +1,185 @@
+<%- include('./partials/header'); %>
+<main class="main">
+    <section class="calendar">
+        <div class="calendar__container container">
+            <div class="calendar__cup cup">
+                <div class="calendar__title title">
+                    <h1>Кубок України (Жінки)</h1>
+                </div>
+                <div class="cup__inner">
+                    <form class="form-filters" method="get">
+                        <div class="custom-select">
+                            <select name="season" id="season">
+                                <option value="2024/2025">Сезон 2024/2025</option>
+                                <option value="2025/2026">Сезон 2025/2026</option>
+                                <option value="2026/2027">Сезон 2026/2027</option>
+                                <option value="2027/2028">Сезон 2027/2028</option>
+                                <option value="2028/2029">Сезон 2028/2029</option>
+                                <option value="2029/2030">Сезон 2029/2030</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="cup__table table">
+                    <div class="table__respons">
+                        <table class="table table--spacing">
+                            <thead>
+                            <tr class="row table__header">
+                                <th class="cell cell--center cell--nowrap">Дата</th>
+                                <th class="cell cell--center cell--nowrap">Час</th>
+                                <th class="cell cell--center cell--nowrap">Етап</th>
+                                <th class="cell cell--center cell--nowrap">Матч</th>
+                                <th class="cell cell--center cell--nowrap">Рахунок</th>
+                                <th class="cell cell--center cell--nowrap"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">12.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">18:00</td>
+                                <td class="cell cell--center cell--nowrap">1/8 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/karpati.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«Карпати»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/motor.png" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«Мотор»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">13.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">20:00</td>
+                                <td class="cell cell--center cell--nowrap">1/8 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/dush.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«ХНУ - ДЮСШ 1»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">14.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">19:30</td>
+                                <td class="cell cell--center cell--nowrap">1/4 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">15.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">17:45</td>
+                                <td class="cell cell--center cell--nowrap">1/4 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">16.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">16:00</td>
+                                <td class="cell cell--center cell--nowrap">Фінал</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="@img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="@img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('./partials/footer', {scripts: ['@js/cup.js']}); %>

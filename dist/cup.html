@@ -359,181 +359,183 @@
         </div>
     </header>
 <main class="main">
-    <section class="general-news">
-        <div class="general-news__container container">
-            <h1 class="general-news__title title">Новини</h1>
-            <div class="general-news__bar">
-                <div class="general-news__top">
-                    <a href="#">Чемпіонат України</a>
-                    <a href="#">Перша ліга</a>
-                    <a href="#">Новини ФГУ</a>
-                    <a href="#">Новини</a>
-                    <a href="#">Кубок України</a>
-                    <a href="#">Збірні України</a>
-                    <a href="#">Жіноча Суперліга</a>
-                    <a href="#">Єврокубки</a>
-                    <a href="#">Дитячо-юнацький гандбол</a>
-                    <a href="#">Вища ліга</a>
+    <section class="calendar">
+        <div class="calendar__container container">
+            <div class="calendar__cup cup">
+                <div class="calendar__title title">
+                    <h1>Кубок України (Жінки)</h1>
                 </div>
-                <div class="general-news__buttons buttons-bar">
-                    <a class="buttons-bar__btn button">
-                        <img src="img/left-arrow-news.svg" alt="arrow">
-                    </a>
-                    <a class="buttons-bar__btn button">
-                        <img src="img/right-arrow-news.svg" alt="arrow">
-                    </a>
+                <div class="cup__inner">
+                    <form class="form-filters" method="get">
+                        <div class="custom-select">
+                            <select name="season" id="season">
+                                <option value="2024/2025">Сезон 2024/2025</option>
+                                <option value="2025/2026">Сезон 2025/2026</option>
+                                <option value="2026/2027">Сезон 2026/2027</option>
+                                <option value="2027/2028">Сезон 2027/2028</option>
+                                <option value="2028/2029">Сезон 2028/2029</option>
+                                <option value="2029/2030">Сезон 2029/2030</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
-                <div class="general-news__divider"></div>
-                <div class="general-news__search search">
-                    <input type="text" class="search__input" placeholder="Пошук...">
-                    <button class="search__search-button search-button">
-                        <i class="fa-solid fa-magnifying-glass search-button__icon"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="general-news-section">
-                <div class="general-news-section__cards">
-                    <div class="news-card general-card">
-                        <a class="news-card__link" href="#"></a>
-                        <img class="news-card__image" src="img/news-photo.webp" alt="new"/>
-                        <div class="news-card__info">
-                            <span class="news-card__category general-card__category">Збірні України</span>
-                            <div class="news-card__date general-card__date">
-                                <img class="news-card__icon" src="img/calendar-news.svg" alt="calendar"/>
-                                <span>12 вересня 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-card__divider"></div>
-                        <div class="text general-text">
-                            <h3 class="text__title general-text__title">Заголовок новини</h3>
-                            <p class="text__text general-text__text">Короткий опис новини, що містить основну інформацію
-                                про
-                                подію.</p>
-                            <div class="text__btn btn general-btn">
-                                <a class="btn__link general-btn__link" href="#">Детальніше</a>
-                            </div>
-                        </div>
+                <div class="cup__table table">
+                    <div class="table__respons">
+                        <table class="table table--spacing">
+                            <thead>
+                            <tr class="row table__header">
+                                <th class="cell cell--center cell--nowrap">Дата</th>
+                                <th class="cell cell--center cell--nowrap">Час</th>
+                                <th class="cell cell--center cell--nowrap">Етап</th>
+                                <th class="cell cell--center cell--nowrap">Матч</th>
+                                <th class="cell cell--center cell--nowrap">Рахунок</th>
+                                <th class="cell cell--center cell--nowrap"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">12.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">18:00</td>
+                                <td class="cell cell--center cell--nowrap">1/8 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/karpati.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«Карпати»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/motor.png" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«Мотор»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">13.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">20:00</td>
+                                <td class="cell cell--center cell--nowrap">1/8 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/dush.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«ХНУ - ДЮСШ 1»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">14.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">19:30</td>
+                                <td class="cell cell--center cell--nowrap">1/4 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">15.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">17:45</td>
+                                <td class="cell cell--center cell--nowrap">1/4 фіналу</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            <tr class="row row--color">
+                                <td class="cell cell--center cell--nowrap">16.03.2025</td>
+                                <td class="cell cell--center cell--nowrap">16:00</td>
+                                <td class="cell cell--center cell--nowrap">Фінал</td>
+                                <td class="cell cell--center cell--nowrap cell--team">
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                    /
+                                    <div class="team">
+                                        <a class="cell__link--scale" href="#">
+                                            <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
+                                        </a>
+                                        <a class="cell__link" href="#">
+                                            <span class="team__name">«СКА-ШВСМ»</span>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
+                                <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale"
+                                                                              href="#"><img src="img/youtube-color.svg"
+                                                                                            alt="youtube"></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="news-card general-card">
-                        <a class="news-card__link" href="#"></a>
-                        <img class="news-card__image" src="img/news-photo.webp" alt="new"/>
-                        <div class="news-card__info">
-                            <span class="news-card__category general-card__category">Збірні України</span>
-                            <div class="news-card__date general-card__date">
-                                <img class="news-card__icon" src="img/calendar-news.svg" alt="calendar"/>
-                                <span>12 вересня 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-card__divider"></div>
-                        <div class="text general-text">
-                            <h3 class="text__title general-text__title">Заголовок новини</h3>
-                            <p class="text__text general-text__text">Короткий опис новини, що містить основну інформацію
-                                про
-                                подію.</p>
-                            <div class="text__btn btn general-btn">
-                                <a class="btn__link general-btn__link" href="#">Детальніше</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-card general-card">
-                        <a class="news-card__link" href="#"></a>
-                        <img class="news-card__image" src="img/news-photo.webp" alt="new"/>
-                        <div class="news-card__info">
-                            <span class="news-card__category general-card__category">Збірні України</span>
-                            <div class="news-card__date general-card__date">
-                                <img class="news-card__icon" src="img/calendar-news.svg" alt="calendar"/>
-                                <span>12 вересня 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-card__divider"></div>
-                        <div class="text general-text">
-                            <h3 class="text__title general-text__title">Заголовок новини</h3>
-                            <p class="text__text general-text__text">Короткий опис новини, що містить основну інформацію
-                                про
-                                подію.</p>
-                            <div class="text__btn btn general-btn">
-                                <a class="btn__link general-btn__link" href="#">Детальніше</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-card general-card">
-                        <a class="news-card__link" href="#"></a>
-                        <img class="news-card__image" src="img/news-photo.webp" alt="new"/>
-                        <div class="news-card__info">
-                            <span class="news-card__category general-card__category">Збірні України</span>
-                            <div class="news-card__date general-card__date">
-                                <img class="news-card__icon" src="img/calendar-news.svg" alt="calendar"/>
-                                <span>12 вересня 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-card__divider"></div>
-                        <div class="text general-text">
-                            <h3 class="text__title general-text__title">Заголовок новини</h3>
-                            <p class="text__text general-text__text">Короткий опис новини, що містить основну інформацію
-                                про
-                                подію.</p>
-                            <div class="text__btn btn general-btn">
-                                <a class="btn__link general-btn__link" href="#">Детальніше</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-card general-card">
-                        <a class="news-card__link" href="#"></a>
-                        <img class="news-card__image" src="img/news-photo.webp" alt="новина"/>
-                        <div class="news-card__info">
-                            <span class="news-card__category general-card__category">Збірні України</span>
-                            <div class="news-card__date general-card__date">
-                                <img class="news-card__icon" src="img/calendar-news.svg" alt="calendar"/>
-                                <span>12 вересня 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-card__divider"></div>
-                        <div class="text general-text">
-                            <h3 class="text__title general-text__title">Заголовок новини</h3>
-                            <p class="text__text general-text__text">Короткий опис новини, що містить основну інформацію
-                                про
-                                подію.</p>
-                            <div class="text__btn btn general-btn">
-                                <a class="btn__link general-btn__link" href="#">Детальніше</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news-card general-card">
-                        <a class="news-card__link" href="#"></a>
-                        <img class="news-card__image" src="img/news-photo.webp" alt="new"/>
-                        <div class="news-card__info">
-                            <span class="news-card__category general-card__category">Збірні України</span>
-                            <div class="news-card__date general-card__date">
-                                <img class="news-card__icon" src="img/calendar-news.svg" alt="calendar"/>
-                                <span>12 вересня 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-card__divider"></div>
-                        <div class="text general-text">
-                            <h3 class="text__title general-text__title">Заголовок новини</h3>
-                            <p class="text__text general-text__text">Короткий опис новини, що містить основну інформацію
-                                про
-                                подію.</p>
-                            <div class="text__btn btn general-btn">
-                                <a class="btn__link general-btn__link" href="#">Детальніше</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pagination">
-                    <span class="pagination__button pagination__button--disabled">
-                        <img src="img/left-arrow-news.svg" alt="arrow"/>
-                    </span>
-                    <div class="pagination__numbers">
-                        <a href="#" class="pagination__number pagination__number--regular active">1</a>
-                        <a href="#" class="pagination__number pagination__number--regular">2</a>
-                        <a href="#" class="pagination__number pagination__number--regular">3</a>
-                        <span class="pagination__number pagination__number--disabled">...</span>
-                        <a href="#" class="pagination__number pagination__number--regular">10</a>
-                    </div>
-                    <a href="#" class="pagination__button pagination__button--regular">
-                        <img src="img/right-arrow-news.svg" alt="arrow"/>
-                    </a>
                 </div>
             </div>
         </div>
@@ -646,6 +648,10 @@
 </div>
 <script src="vendors.d209b72a.js"></script>
 <script src="main.cf3e59f2.js"></script>
+
+    
+        <script src="cup.ddfdea4a.js"></script>
+    
 
 </body>
 </html>

@@ -2542,6 +2542,14 @@ body b {
     margin-bottom: 20px;
   }
 }
+.cup__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
 .player-card {
   margin-top: 30px;
   margin-bottom: 50px;

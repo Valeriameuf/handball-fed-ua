@@ -2,81 +2,65 @@
 @use "../utils/variables";
 
 .calendar {
-    &__container {
-        margin-top: 40px;
-        margin-bottom: 50px;
+  &__container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  .table {
+    &__respons {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
-    &__title {
-        margin-bottom: 15px;
+    tbody tr td:first-child {
+      width: 80px;
     }
+  }
 
-    .table {
-        &__respons {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        thead {
-            // position: sticky;
-            // top: 0;
-            // background-color: white;
-            // z-index: 5;
-        }
-
-        tbody tr td:first-child {
-            width: 80px;
-        }
+  .cell {
+    &--team {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
     }
+  }
 
-    .cell {
-        &--team {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-    }
-
-    .team {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 7px;
-    }
+  .team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
 }
 
 .tour {
-    &__inner {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
 
 @include breakpoint.laptopxl {
-    .table {
-        .cell {
-            padding: 5px;
-        }
+  .table {
+    .cell {
+      padding: 5px;
     }
-}
-
-@include breakpoint.laptopl {
-}
-
-@include breakpoint.tablet {
-}
-
-@include breakpoint.mobilel {
+  }
 }
 
 @include breakpoint.mobilexs {
-    .tour {
-        &__subtitle {
-            margin-bottom: 20px;
-        }
+  .tour {
+    &__subtitle {
+      margin-bottom: 20px;
     }
+  }
 }
