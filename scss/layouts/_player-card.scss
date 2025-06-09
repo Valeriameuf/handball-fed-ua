@@ -169,8 +169,6 @@
   }
 }
 
-@include breakpoint.tablet {}
-
 @include breakpoint.mobilel {
   .player-card {
     margin-top: 20px;
