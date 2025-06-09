@@ -190,6 +190,11 @@
   }
 
   .overview {
+    &__title {
+      font-size: 18px;
+      padding-bottom: 15px;
+    }
+
     &__item {
       margin-bottom: 10px;
 
@@ -228,6 +233,47 @@
 
 @include breakpoint.mobilel {}
 
-@include breakpoint.mobilexs {}
+@include breakpoint.mobilexs {
+  .players-club {
+    &__overview {
+      margin-bottom: 10px;
+    }
+  }
+
+  .button-container {
+    &__button {
+      &--border {
+        padding: 15px 15px;
+
+        &:first-child {
+          border-radius: 0;
+        }
+
+        &:last-child {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .overview {
+
+    &__prop,
+    &__value {
+      font-size: 16px;
+    }
+
+    &__buttons {
+      flex-direction: column;
+    }
+  }
+
+  .roster {
+    &__link {
+      font-size: 16px;
+
+    }
+  }
+}
 
 @include breakpoint.mobilessmall {}

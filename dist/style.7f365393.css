@@ -2907,6 +2907,10 @@ body b {
   .players-club__title {
     padding-bottom: 28px;
   }
+  .overview__title {
+    font-size: 18px;
+    padding-bottom: 15px;
+  }
   .overview__item {
     margin-bottom: 10px;
   }
@@ -2929,6 +2933,29 @@ body b {
   }
   .roster__entry--last::after {
     content: none;
+  }
+}
+@media (max-width: 480px) {
+  .players-club__overview {
+    margin-bottom: 10px;
+  }
+  .button-container__button--border {
+    padding: 15px 15px;
+  }
+  .button-container__button--border:first-child {
+    border-radius: 0;
+  }
+  .button-container__button--border:last-child {
+    border-radius: 0;
+  }
+  .overview__prop, .overview__value {
+    font-size: 16px;
+  }
+  .overview__buttons {
+    flex-direction: column;
+  }
+  .roster__link {
+    font-size: 16px;
   }
 }
 .footer {
