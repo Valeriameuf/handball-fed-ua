@@ -1,0 +1,176 @@
+@use "../utils/breakpoint";
+@use "../utils/variables";
+
+.players-club {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &__title {
+    padding-bottom: 35px;
+  }
+
+  &__box {
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    background: #fff;
+    padding: 25px;
+  }
+
+  &__name {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: #F0F0F0;
+    border-radius: 10px;
+    padding: 12px 10px;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+  }
+
+  &__info {
+    max-width: 996px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__overview {
+    margin-bottom: 24px;
+  }
+}
+
+.overview {
+  &__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: variables.$color-brand-black;
+    padding-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    background-color: #F0F0F0;
+    border-radius: 15px;
+    padding: 10px;
+  }
+
+  &__prop {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: variables.$color-brand-black;
+  }
+
+  &__value {
+    font-size: 18px;
+    font-weight: 400;
+    color: variables.$color-brand-black;
+  }
+
+  &__link {
+
+    &:hover {
+      color: #F9E725;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: #035CA2;
+    }
+  }
+
+  &__buttons {
+    margin-bottom: 20px;
+  }
+
+  &__roster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 230px;
+  }
+}
+
+.roster {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 20px;
+
+  &__entry {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 450px;
+      height: 1px;
+      background-color: #ddd;
+    }
+  }
+
+  &__img {
+    img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 700;
+    color: variables.$color-brand-black;
+    margin-bottom: 5px;
+  }
+
+  &__details {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: variables.$color-brand-dark;
+  }
+}

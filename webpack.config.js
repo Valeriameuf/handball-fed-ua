@@ -41,6 +41,9 @@ module.exports = {
                 "player-card": {
                     import: "./views/player-card.ejs",
                 },
+                "players-club": {
+                    import: "./views/players-club.ejs",
+                },
             },
             preprocessor: "ejs",
             // preprocessorOptions: {...},

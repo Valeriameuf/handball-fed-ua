@@ -34,7 +34,7 @@ body {
 }
 
 .title {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
@@ -68,6 +68,11 @@ body {
   color: variables.$color-brand-white;
   transition: color 0.3s, text-decoration 0.3s;
   white-space: nowrap;
+}
+
+.link-settings {
+  display: inline-block;
+  cursor: pointer;
 }
 
 .overflow-hidden {

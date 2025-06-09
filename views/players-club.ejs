@@ -1,0 +1,325 @@
+<%- include('./partials/header'); %>
+<main class="main">
+    <section class="players-club">
+        <div class="players-club__container container">
+            <h1 class="title players-club__title">Команда</h1>
+            <div class="players-club__box">
+                <div class="players-club__name">
+                    <a href="#"><img src="@img/motor.png" alt="team img"></a>
+                    <div class="players-club__team">
+                        <h2 class="subtitle player-link players-club__subtitle">Мотор</h2>
+                    </div>
+                </div>
+                <div class="players-club__info">
+                    <img class="players-club__img" src="@img/players-club.png" alt="club photo">
+                    <div class="players-club__overview overview">
+                        <h3 class="overview__title">Основна інформація:</h3>
+                        <div class="overview__container">
+                            <div class="overview__column">
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="@img/group-blue.svg" alt="team name">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Команда:</span>
+                                        <a class="overview__link overview__value link-settings" href="#"><span>«Мотор»</span></a>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="@img/mail-blue.svg" alt="mail">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Сайт:</span>
+                                        <a class="overview__link overview__value link-settings" href="https://www.dush1.com">www.dush1.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overview__column">
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="@img/pin-blue.svg" alt="team location">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Місто:</span>
+                                        <span class="overview__value">Київ</span>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="@img/mail-blue.svg" alt="mail">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Електронна пошта:</span>
+                                        <a class="overview__link overview__value link-settings" href="mailto:info@dush1.com">info@dush1.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overview__column">
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="@img/pin-blue.svg" alt="team location">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Адреса:</span>
+                                        <span class="overview__value">вул. Спортивна,17</span>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="@img/phone-blue.svg" alt="phone">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Телефон:</span>
+                                        <a class="overview__link overview__value link-settings" href="tel:+380678677474">067 867 74 74</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview__tabs">
+                        <nav class="overview__buttons button-container">
+                            <button class="button-container__button button-container__button--font" data-tab="Склад команди">Склад команди</button>
+                            <button class="button-container__button button-container__button--font" data-tab="Матчі">Матчі</button>
+                            <button class="button-container__button button-container__button--font" data-tab="Lorem">Lorem</button>
+                        </nav>
+                        <div class="overview__content">
+                            <div class="overview__tab-content" data-tab="Склад команди">
+                                <h3 class="overview__title">Склад команди:</h3>
+                                <div class="overview__roster roster">
+                                    <ul class="roster__list">
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="roster__list">
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="@img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="overview__tab-content" data-tab="Матчі">
+
+                            </div>
+                            <div class="overview__tab-content" data-tab="Lorem">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('./partials/footer'); %>

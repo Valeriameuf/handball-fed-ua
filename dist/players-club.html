@@ -359,176 +359,322 @@
         </div>
     </header>
 <main class="main">
-    <section class="calendar">
-        <div class="calendar__container container">
-            <div class="calendar__tour tour">
-                <div class="calendar__title title">
-                    <h1>Суперліга (Чоловіки)</h1>
-                </div>
-                <div class="tour__inner">
-                    <div class="tour__subtitle subtitle">
-                        <h2>Тур 1</h2>
+    <section class="players-club">
+        <div class="players-club__container container">
+            <h1 class="title players-club__title">Команда</h1>
+            <div class="players-club__box">
+                <div class="players-club__name">
+                    <a href="#"><img src="img/motor.png" alt="team img"></a>
+                    <div class="players-club__team">
+                        <h2 class="subtitle player-link players-club__subtitle">Мотор</h2>
                     </div>
-                    <form class="form-filters" method="get">
-                        <div class="custom-select">
-                            <select name="tour" id="tour">
-                                <option value="1">Тур 1</option>
-                                <option value="3">Тур 2</option>
-                                <option value="2">Тур 3</option>
-                            </select>
-                        </div>
-                        <div class="custom-select">
-                            <select name="season" id="season">
-                                <option value="2024/2025">Сезон 2024/2025</option>
-                                <option value="2025/2026">Сезон 2025/2026</option>
-                                <option value="2026/2027">Сезон 2026/2027</option>
-                                <option value="2027/2028">Сезон 2027/2028</option>
-                                <option value="2028/2029">Сезон 2028/2029</option>
-                                <option value="2029/2030">Сезон 2029/2030</option>
-                            </select>
-                        </div>
-                    </form>
                 </div>
-                <div class="tour__table table">
-                    <div class="table__respons">
-                        <table class="table table--spacing">
-                            <thead>
-                                <tr class="row table__header">
-                                    <th class="cell cell--center cell--nowrap">Дата</th>
-                                    <th class="cell cell--center cell--nowrap">Час</th>
-                                    <th class="cell cell--center cell--nowrap">Матч</th>
-                                    <th class="cell cell--center cell--nowrap">Рахунок</th>
-                                    <th class="cell cell--center cell--nowrap"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">12.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">18:00</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/karpati.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«Карпати»</span>
-                                            </a>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/motor.png" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«Мотор»</span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">13.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">20:00</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/dush.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«ХНУ - ДЮСШ 1»</span>
-                                            </a>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«СКА-ШВСМ»</span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">14.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">19:30</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«СКА-ШВСМ»</span>
-                                            </a>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«СКА-ШВСМ»</span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">15.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">17:45</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«СКА-ШВСМ»</span>
-                                            </a>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«СКА-ШВСМ»</span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                                <tr class="row row--color">
-                                    <td class="cell cell--center cell--nowrap">16.03.2025</td>
-                                    <td class="cell cell--center cell--nowrap">16:00</td>
-                                    <td class="cell cell--center cell--nowrap cell--team">
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«СКА-ШВСМ»</span>
-                                            </a>
-                                        </div>
-                                        /
-                                        <div class="team">
-                                            <a class="cell__link--scale" href="#">
-                                                <img class="team__logo" width="25" src="img/ska.jpg" alt="club img">
-                                            </a>
-                                            <a class="cell__link" href="#">
-                                                <span class="team__name">«СКА-ШВСМ»</span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link" href="#">1:0</a></td>
-                                    <td class="cell cell--center cell--nowrap"><a class="cell__link cell__link--scale" href="#"><img src="img/youtube-color.svg" alt="youtube"></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="players-club__info">
+                    <img class="players-club__img" src="img/players-club.png" alt="club photo">
+                    <div class="players-club__overview overview">
+                        <h3 class="overview__title">Основна інформація:</h3>
+                        <div class="overview__container">
+                            <div class="overview__column">
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="img/group-blue.svg" alt="team name">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Команда:</span>
+                                        <a class="overview__link overview__value link-settings" href="#"><span>«Мотор»</span></a>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="img/mail-blue.svg" alt="mail">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Сайт:</span>
+                                        <a class="overview__link overview__value link-settings" href="https://www.dush1.com">www.dush1.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overview__column">
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="img/pin-blue.svg" alt="team location">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Місто:</span>
+                                        <span class="overview__value">Київ</span>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="img/mail-blue.svg" alt="mail">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Електронна пошта:</span>
+                                        <a class="overview__link overview__value link-settings" href="mailto:info@dush1.com">info@dush1.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overview__column">
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="img/pin-blue.svg" alt="team location">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Адреса:</span>
+                                        <span class="overview__value">вул. Спортивна,17</span>
+                                    </div>
+                                </div>
+                                <div class="overview__item">
+                                    <div class="overview__img">
+                                        <img src="img/phone-blue.svg" alt="phone">
+                                    </div>
+                                    <div class="overview__info">
+                                        <span class="overview__prop">Телефон:</span>
+                                        <a class="overview__link overview__value link-settings" href="tel:+380678677474">067 867 74 74</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overview__tabs">
+                        <nav class="overview__buttons button-container">
+                            <button class="button-container__button button-container__button--font" data-tab="Склад команди">Склад команди</button>
+                            <button class="button-container__button button-container__button--font" data-tab="Матчі">Матчі</button>
+                            <button class="button-container__button button-container__button--font" data-tab="Lorem">Lorem</button>
+                        </nav>
+                        <div class="overview__content">
+                            <div class="overview__tab-content" data-tab="Склад команди">
+                                <h3 class="overview__title">Склад команди:</h3>
+                                <div class="overview__roster roster">
+                                    <ul class="roster__list">
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="roster__list">
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                        <li class="roster__entry">
+                                            <div class="roster__img">
+                                                <img src="img/logo.png" alt="logo">
+                                            </div>
+                                            <div class="roster__info">
+                                                <a class="roster__link link-settings" href="#">Перекупко Богдан</a>
+                                                <p class="roster__details">0 номер, центральний</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="overview__tab-content" data-tab="Матчі">
+
+                            </div>
+                            <div class="overview__tab-content" data-tab="Lorem">
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -642,10 +788,6 @@
 </div>
 <script src="vendors.d209b72a.js"></script>
 <script src="main.13a37f15.js"></script>
-
-    
-        <script src="calendar.459443d5.js"></script>
-    
 
 </body>
 </html>
