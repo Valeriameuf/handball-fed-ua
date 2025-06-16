@@ -28,6 +28,7 @@
 
   &__subtitle {
     font-weight: 700;
+    color: variables.$color-brand-light;
   }
 
   &__info {
@@ -172,6 +173,14 @@
     font-weight: 700;
     color: variables.$color-brand-black;
     margin-bottom: 5px;
+
+    &:hover {
+      color: variables.$color-brand-yellow;
+    }
+
+    &:active {
+      color: variables.$color-brand-dark;
+    }
   }
 
   &__details {

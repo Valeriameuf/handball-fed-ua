@@ -2777,6 +2777,7 @@ body b {
 }
 .players-club__subtitle {
   font-weight: 700;
+  color: #035ca2;
 }
 .players-club__info {
   max-width: 996px;
@@ -2895,6 +2896,12 @@ body b {
   font-weight: 700;
   color: #353535;
   margin-bottom: 5px;
+}
+.roster__link:hover {
+  color: #f9e725;
+}
+.roster__link:active {
+  color: #044f8b;
 }
 .roster__details {
   font-size: 14px;
