@@ -2849,9 +2849,15 @@ body b {
   margin-bottom: 20px;
 }
 .overview__roster {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 30px;
+  background-image: url(img/svg-group.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
 }
 
 .roster {
@@ -2871,6 +2877,7 @@ body b {
   justify-content: start;
   align-items: center;
   gap: 10px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 .roster__entry:not(:last-child) {
@@ -2946,6 +2953,9 @@ body b {
   .players-club__overview {
     margin-bottom: 10px;
   }
+  .players-club__box {
+    padding: 10px;
+  }
   .button-container__button--border {
     padding: 15px 15px;
   }
@@ -2961,8 +2971,17 @@ body b {
   .overview__buttons {
     flex-direction: column;
   }
+  .roster {
+    padding: 10px;
+  }
   .roster__link {
     font-size: 16px;
+  }
+}
+@media (max-width: 360px) {
+  .roster__img img {
+    width: 50px;
+    height: 50px;
   }
 }
 .footer {
