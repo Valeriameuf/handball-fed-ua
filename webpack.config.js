@@ -44,6 +44,9 @@ module.exports = {
                 "players-club": {
                     import: "./views/players-club.ejs",
                 },
+                "team-list": {
+                    import: "./views/team-list.ejs",
+                },
             },
             preprocessor: "ejs",
             // preprocessorOptions: {...},

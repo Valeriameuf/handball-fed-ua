@@ -359,117 +359,59 @@
         </div>
     </header>
 <main class="main">
-    <section class="player-card">
-        <div class="player-card__container container">
-            <h1 class="hidden-title">Lorem</h1>
-            <nav class="player-card__buttons button-container">
-                <button class="button-container__button button-container__button--font">Основні данні</button>
-                <button class="button-container__button button-container__button--font">Ігри</button>
-                <button class="button-container__button button-container__button--font">Кар’єра</button>
-            </nav>
-            <div class="tab-content">
-                <div class="player-card__profile player-card__bg profile" id="info">
-                    <div class="profile__photo">
-                        <img src="img/player-photo.png" alt="player photo">
-                    </div>
-                    <div class="profile__info">
-                        <h2 class="profile__title">Петрук Дмитро Володимирович</h2>
-                        <div class="profile__details">
-                            <dl class="details">
-                                <div class="details__container details__container--highlight">
-                                    <dt class="player-highlight"><strong>Команда:</strong></dt>
-                                    <dd><a class="player-link details__link" href="#">«Одеса»</a></dd>
-                                </div>
-                                <div class="details__container">
-                                    <dt><strong>Країна:</strong></dt>
-                                    <dd>Украина</dd>
-                                </div>
-                                <div class="details__container">
-                                    <dt><strong>Дата народження:</strong></dt>
-                                    <dd>Дата</dd>
-                                </div>
-                                <div class="details__container">
-                                    <dt><strong>Амплуа:</strong></dt>
-                                    <dd>Лівий Півсередній</dd>
-                                </div>
-                                <div class="details__container">
-                                    <dt><strong>Зріст:</strong></dt>
-                                    <dd>187 см</dd>
-                                </div>
-                                <div class="details__container">
-                                    <dt><strong>Вага:</strong></dt>
-                                    <dd>88 кг</dd>
-                                </div>
-                                <div class="details__container">
-                                    <dt><strong>Голи:</strong></dt>
-                                    <dd>66</dd>
-                                </div>
-                            </dl>
-                        </div>
-                    </div>
+    <section class="team-list">
+        <div class="team-list__container container">
+            <h1 class="team-list__title title">Список команд</h1>
+            <div class="team-list__inner">
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/donbas.png" alt="club logo">
+                        <p class="team-card__name">Донбас</p>
+                    </a>
                 </div>
-                <div class="player-card__bg" id="matches">
-                    <h2 class="profile__title">Петрук Дмитро Володимирович</h2>
-                    <p class="player-card__team">
-                        <span class="player-highlight"><strong>Команда:</strong></span>
-                        <span class="player-link">«Одеса»</span>
-                    </p>
-                    <div class="game">
-                        <p class="game__title player-title-small">Кубок України</p>
-                        <table class="match-table">
-                            <tbody>
-                                <tr>
-                                    <td class="match-table__date">02.05.2025</td>
-                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«СКА-Львів»</a></td>
-                                    <td class="match-table__result">43 : 22</td>
-                                    <td class="match-table__achievement">5</td>
-                                </tr>
-                                <tr>
-                                    <td class="match-table__date">01.05.2025</td>
-                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Шахтар»</a></td>
-                                    <td class="match-table__result">30 : 15</td>
-                                    <td class="match-table__achievement">3</td>
-                                </tr>
-                                <tr>
-                                    <td class="match-table__date">30.04.2025</td>
-                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Ворскла»</a></td>
-                                    <td class="match-table__result">25 : 10</td>
-                                    <td class="match-table__achievement">2</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="game">
-                        <p class="game__title player-title-small">Кубок України</p>
-                        <table class="match-table">
-                            <tbody>
-                                <tr>
-                                    <td class="match-table__date">02.05.2025</td>
-                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«СКА-Львів»</a></td>
-                                    <td class="match-table__result">43 : 22</td>
-                                    <td class="match-table__achievement">5</td>
-                                </tr>
-                                <tr>
-                                    <td class="match-table__date">01.05.2025</td>
-                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Шахтар»</a></td>
-                                    <td class="match-table__result">30 : 15</td>
-                                    <td class="match-table__achievement">3</td>
-                                </tr>
-                                <tr>
-                                    <td class="match-table__date">30.04.2025</td>
-                                    <td class="match-table__opponent"><a class="player-link" href="#">«Одеса»</a> / <a class="player-link" href="#">«Ворскла»</a></td>
-                                    <td class="match-table__result">25 : 10</td>
-                                    <td class="match-table__achievement">2</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/izmail.png" alt="club logo">
+                        <p class="team-card__name">Ізмаїл</p>
+                    </a>
                 </div>
-                <div class="tab-pane player-card__bg" id="career" style="display: none;">
-                    <h3>Кар’єра</h3>
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/motor-club.png" alt="club logo">
+                        <p class="team-card__name">Мотор</p>
+                    </a>
+                </div>
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/spartak.jpg" alt="club logo">
+                        <p class="team-card__name">Спартак-ШВСМ</p>
+                    </a>
+                </div>
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/donbas.png" alt="club logo">
+                        <p class="team-card__name">Донбас</p>
+                    </a>
+                </div>
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/donbas.png" alt="club logo">
+                        <p class="team-card__name">Донбас</p>
+                    </a>
+                </div>
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/donbas.png" alt="club logo">
+                        <p class="team-card__name">Донбас</p>
+                    </a>
+                </div>
+                <div class="team-list__item team-card">
+                    <a class="team-card__link" href="#">
+                        <img class="team-card__logo" src="img/donbas.png" alt="club logo">
+                        <p class="team-card__name">Донбас</p>
+                    </a>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 </main>
